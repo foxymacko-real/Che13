@@ -225,10 +225,10 @@
 	name = "PKM ammo belt (7.62x54mmR)"
 	icon_state = "maximbelt"
 	mag_type = MAGAZINE
-	caliber = "a762x54_weak"
+	caliber = "a762x54"
 	w_class = ITEM_SIZE_LARGE
 
-	ammo_type = /obj/item/ammo_casing/a762x54/weak
+	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 250
 	multiple_sprites = TRUE
 	belt = TRUE
@@ -238,10 +238,10 @@
 	name = "PKM ammo belt (7.62x54mmR)"
 	icon_state = "b762x54"
 	mag_type = MAGAZINE
-	caliber = "a762x54_weak"
+	caliber = "a762x54"
 	w_class = ITEM_SIZE_NORMAL
 
-	ammo_type = /obj/item/ammo_casing/a762x54/weak
+	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 100
 	multiple_sprites = TRUE
 
@@ -716,7 +716,7 @@
 	name = ".50 BMG ammo can"
 	icon_state = "b762x51"
 	mag_type = MAGAZINE
-	ammo_type = /obj/item/ammo_casing/a50cal/weak
+	ammo_type = /obj/item/ammo_casing/a50cal
 	caliber = "a50cal"
 	max_ammo = 150
 	weight = 0.8

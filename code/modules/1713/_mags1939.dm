@@ -143,8 +143,8 @@
 	name = "MG34 magazine (7.92x57mm)"
 	icon_state = "mg34"
 	mag_type = MAGAZINE
-	caliber = "a792x57_weak"
-	ammo_type = /obj/item/ammo_casing/a792x57/weak
+	caliber = "a792x57"
+	ammo_type = /obj/item/ammo_casing/a792x57
 	max_ammo = 50
 	weight = 0.34
 	multiple_sprites = TRUE
@@ -153,8 +153,8 @@
 	name = "MG13 magazine (7.92x57mm)"
 	icon_state = "mg13mag"
 	mag_type = MAGAZINE
-	caliber = "a792x57_weak"
-	ammo_type = /obj/item/ammo_casing/a792x57/weak
+	caliber = "a792x57"
+	ammo_type = /obj/item/ammo_casing/a792x57
 	max_ammo = 25
 	weight = 0.15
 	multiple_sprites = TRUE
@@ -204,8 +204,8 @@ obj/item/ammo_magazine/dp
 	name = "DP pan (7.62x54mmR)"
 	icon_state = "dpdisk"
 	mag_type = MAGAZINE
-	caliber = "a762x54_weak"
-	ammo_type = /obj/item/ammo_casing/a762x54/weak
+	caliber = "a762x54"
+	ammo_type = /obj/item/ammo_casing/a762x54
 	max_ammo = 47
 	weight = 0.40
 	multiple_sprites = FALSE
@@ -404,9 +404,9 @@ obj/item/ammo_magazine/dp
 /obj/item/ammo_magazine/bar
 	name = "BAR magazine (30-06)"
 	icon_state = "bar"
-	caliber = "a3006_weak"
+	caliber = "a3006"
 
-	ammo_type = /obj/item/ammo_casing/a3006/weak
+	ammo_type = /obj/item/ammo_casing/a3006
 	max_ammo = 20
 	weight = 0.038
 	mag_type = MAGAZINE

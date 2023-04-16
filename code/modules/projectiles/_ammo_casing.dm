@@ -548,16 +548,6 @@
 	caliber = "a50cal"
 	value = 7
 
-/obj/item/ammo_casing/a50cal/weak
-	name = ".50 BMG cartridge"
-	desc = "A big heavy brass casing designed to take out unarmored targets."
-	icon_state = "big-bullet"
-	spent_icon = "big-casing"
-	weight = 0.08
-	projectile_type = /obj/item/projectile/bullet/rifle/a50cal/weak
-	caliber = "a50cal"
-	value = 7
-
 /obj/item/ammo_casing/a50cal_ap
 	name = ".50 BMG AP cartridge"
 	desc = "A big heavy brass casing designed to penetrate armor."
@@ -648,10 +638,6 @@
 	caliber = "a792x94"
 	value = 12
 
-/obj/item/ammo_casing/a65x50/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a65x50/weak
-	caliber = "a65x50_weak"
-
 /obj/item/ammo_casing/a65x52
 	name = "6.5x52mm Carcano cartridge"
 	desc = "A brass casing containing powder and a lead bullet."
@@ -681,10 +667,6 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a8x50
 	caliber = "a8x50"
 	value = 5
-
-/obj/item/ammo_casing/a8x50/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a8x50/weak
-	caliber = "a8x50_weak"
 
 /obj/item/ammo_casing/c9mm_jap_revolver
 	name = "9x22mm Type 26 cartridge"
@@ -815,10 +797,6 @@
 	caliber = "a792x57"
 	value = 8
 
-/obj/item/ammo_casing/a792x57/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a792x57/weak
-	caliber = "a792x57_weak"
-
 /obj/item/ammo_casing/a765x53
 	name = "7.65x53mm Mauser cartridge"
 	desc = "A brass casing."
@@ -890,10 +868,6 @@
 	caliber = "a762x54"
 	value = 2
 
-/obj/item/ammo_casing/a762x54/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x54/weak
-	caliber = "a762x54_weak"
-
 /obj/item/ammo_casing/a303
 	name = ".303 british cartridge"
 	desc = "A brass casing."
@@ -904,10 +878,6 @@
 	caliber = "a303"
 	value = 2
 
-/obj/item/ammo_casing/a303/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a303/weak
-	caliber = "a303_weak"
-
 /obj/item/ammo_casing/a3006
 	name = ".30-06 cartridge"
 	desc = "A brass casing."
@@ -917,10 +887,6 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a3006
 	caliber = "a3006"
 	value = 2
-
-/obj/item/ammo_casing/a3006/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a3006/weak
-	caliber = "a3006_weak"
 
 /obj/item/ammo_casing/a762x38
 	name = "7.62x38mmR cartridge"
@@ -1069,10 +1035,6 @@
 	projectile_type = /obj/item/projectile/bullet/rifle/a762x51
 	caliber = "a762x51"
 	value = 2
-
-/obj/item/ammo_casing/a762x51/weak
-	projectile_type = /obj/item/projectile/bullet/rifle/a762x51/weak
-	caliber = "a762x51_weak"
 
 /obj/item/ammo_casing/a762x39
 	name = "7.62x39mm cartridge"

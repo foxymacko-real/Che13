@@ -219,7 +219,7 @@
 	corpse = /mob/living/human/corpse/ww2_american_mg
 	rapid = 2
 	grenades = 0
-	projectiletype = /obj/item/projectile/bullet/rifle/a762x54/weak
+	projectiletype = /obj/item/projectile/bullet/rifle/a762x54
 
 	New()
 		..()

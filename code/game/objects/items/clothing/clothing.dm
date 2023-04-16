@@ -446,7 +446,7 @@ BLIND	 // can't see anything
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	permeability_coefficient = 0.90
 	slot_flags = SLOT_ICLOTHING
-	armor = list(melee = FALSE, arrow = FALSE, gun = FALSE, energy = FALSE, bomb = FALSE, bio = FALSE, rad = FALSE)
+	armor = list(melee = 1, arrow = FALSE, gun = FALSE, energy = 1, bomb = 1, bio = 1, rad = 1) //wearing something is better than nothing
 	w_class = ITEM_SIZE_NORMAL
 	ripable = TRUE
 	rag_amt = 3
