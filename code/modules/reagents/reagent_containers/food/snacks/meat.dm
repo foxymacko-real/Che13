@@ -4,6 +4,8 @@
 #define DRY_MODIFIER 15 //temporary it placed here. TO DO - move after categorising snacks to snacks.dm
 #define GROWN_DRY_MODIFIER 21 //temporary it placed here. TO DO - move after categorising snacks to snacks.dm
 
+/obj/item/weapon/reagent_containers/food/snacks
+	value = 45
 /obj/item/weapon/reagent_containers/food/snacks/meat
 	name = "meat"
 	desc = "A slab of meat."

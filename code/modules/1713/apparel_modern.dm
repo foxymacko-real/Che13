@@ -94,7 +94,7 @@
 	sharp = FALSE
 	edge = TRUE
 	w_class = ITEM_SIZE_SMALL
-
+	value = 60
 /obj/item/weapon/armorplatesswimmer
 	name = "swimmer plate"
 	desc = "Used to increase the protection of some body armors."
@@ -106,7 +106,7 @@
 	opacity = FALSE
 	force = 8.0
 	throwforce = 6.0
-
+	value = 60
 	attack_verb = list("bashed", "bludgeoned", "whacked")
 	sharp = FALSE
 	edge = TRUE
@@ -123,7 +123,7 @@
 	opacity = FALSE
 	force = 8.0
 	throwforce = 6.0
-
+	value = 60
 	attack_verb = list("bashed", "bludgeoned", "whacked")
 	sharp = FALSE
 	edge = TRUE
@@ -140,7 +140,7 @@
 	opacity = FALSE
 	force = 8.0
 	throwforce = 6.0
-
+	value = 60
 	attack_verb = list("bashed", "bludgeoned", "whacked")
 	sharp = FALSE
 	edge = TRUE
@@ -629,6 +629,7 @@
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 90, arrow = 110, gun = 96, energy = 27, bomb = 76, bio = 30, rad = FALSE)
+	value = 135
 
 /obj/item/clothing/head/helmet/modern/sovietfacehelmet/welding
 	name = "K6-3 helmet"
@@ -727,6 +728,7 @@
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 60, arrow = 100, gun = 86, energy = 27, bomb = 76, bio = 30, rad = FALSE)
+	value = 100
 
 /obj/item/clothing/head/helmet/modern/a6b47/camo
 	name = "camo 6B47 helmet"
@@ -755,6 +757,7 @@
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 80, arrow = 100, gun = 95, energy = 36, bomb = 76, bio = 30, rad = FALSE)
+	value = 120
 
 /obj/item/clothing/head/helmet/modern/zsh1 //1990's helmet for reference, specific date unknown.
 	name = "ZSh-1 helmet"
@@ -1522,6 +1525,7 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
 	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS
 	cold_protection = UPPER_TORSO|LOWER_TORSO|LEG_LEFT|LEG_RIGHT|ARM_LEFT|ARM_RIGHT
+	armor = list(melee = 15, arrow = 15, gun = 5, energy = 5, bomb = 15, bio = 10, rad = FALSE)
 
 /obj/item/clothing/under/tacticool_hawaiian
 	name = "tacticool hawaiian outfit"
@@ -2051,6 +2055,7 @@
 	worn_state = "cg634"
 	body_parts_covered = HEAD
 	armor = list(melee = 75, arrow = 95, gun = 93, energy = 22, bomb = 60, bio = 20, rad = FALSE)
+	value = 105
 
 /obj/item/clothing/head/helmet/modern/cg634/arid
 	icon_state = "cg634_arid"

@@ -4,6 +4,7 @@
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "smoke_grenade"
 	det_time = 20
+	value = 25
 	item_state = "smoke_grenade"
 	slot_flags = SLOT_BELT
 	var/datum/effect/effect/system/smoke_spread/bad/smoke
@@ -351,7 +352,7 @@
 	name = "K51 CS gas grenade"
 	desc = "A Soviet riot control CS hand grenade used to control counter-insurgencies and for other tactical missions."
 	icon_state = "k51"
-	
+
 /obj/item/weapon/grenade/smokebomb/ugl/attack_self(mob/user)
 	return
 

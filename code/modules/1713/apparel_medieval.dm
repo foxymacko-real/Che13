@@ -1023,6 +1023,7 @@
 			flags_inv = BLOCKHAIR
 
 /obj/item/clothing/head/helmet/medieval
+	value = 45
 	name = "knight helmet"
 	desc = "A thick knight helmet."
 	icon_state = "knight_simple"

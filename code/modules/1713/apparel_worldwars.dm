@@ -1762,6 +1762,8 @@ obj/item/clothing/accessory/storage/webbing/ww1/ww2/stormgroup/Scout
 
 /obj/item/clothing/accessory/armor/modern
 	health = 20
+	value = 120
+
 /obj/item/clothing/accessory/armor/modern/plate
 	name = "breastplate body armor"
 	desc = "Wearable armor made of steel sheets."

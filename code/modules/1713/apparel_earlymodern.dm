@@ -833,6 +833,10 @@
 	icon_state = "tactical1"
 	item_state = "tactical1"
 	worn_state = "tactical1"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEG_LEFT|LEG_RIGHT|ARM_LEFT|ARM_RIGHT
+	armor = list(melee = 15, arrow = 15, gun = 5, energy = 5, bomb = 15, bio = 10, rad = FALSE)
 
 /obj/item/clothing/under/pmc
 	name = "pmc outfit"
@@ -840,6 +844,10 @@
 	icon_state = "pmc"
 	item_state = "pmc"
 	worn_state = "pmc"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	heat_protection = UPPER_TORSO|LOWER_TORSO|LEGS
+	cold_protection = UPPER_TORSO|LOWER_TORSO|LEG_LEFT|LEG_RIGHT|ARM_LEFT|ARM_RIGHT
+	armor = list(melee = 15, arrow = 15, gun = 5, energy = 5, bomb = 15, bio = 10, rad = FALSE)
 
 /obj/item/clothing/under/mafia
 	name = "fancy outfit"

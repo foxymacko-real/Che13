@@ -38,6 +38,7 @@
 	spawn(10)
 		warning_played = FALSE
 /obj/item/weapon/gun
+	value = 95
 	var/gtype = "rifle"
 /obj/item/weapon/gun/projectile/New()
 	..()

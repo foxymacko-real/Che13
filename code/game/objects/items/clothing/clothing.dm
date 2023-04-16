@@ -83,8 +83,10 @@
 ///////////////////////////////////////////////////////////////////////
 /obj/item/clothing/head
 	heat_protection = HEAD
+	value = 10
 
 /obj/item/clothing/head/helmet
+	value = 25
 	restricts_view = 1
 	health = 35
 // Ears: headsets, earmuffs and tiny objects
@@ -182,6 +184,7 @@ SEE_PIXELS// if an object is located on an unlit area, but some of its pixels ar
 BLIND	 // can't see anything
 */
 /obj/item/clothing/glasses
+	value = 30
 	name = "glasses"
 	icon = 'icons/obj/clothing/glasses.dmi'
 	w_class = ITEM_SIZE_SMALL
@@ -211,6 +214,7 @@ BLIND	 // can't see anything
 	var/wired = FALSE
 	var/obj/item/weapon/cell/cell = FALSE
 	var/clipped = FALSE
+	value = 10
 	var/fingerprint_chance = 0 //How likely the glove is to let fingerprints through
 	body_parts_covered = HANDS
 	slot_flags = SLOT_GLOVES
@@ -328,6 +332,7 @@ BLIND	 // can't see anything
 	var/list/say_verbs
 	var/blocks_scope = FALSE
 	heat_protection = HEAD
+	value = 15
 
 /obj/item/clothing/mask/update_clothing_icon()
 	if (ismob(loc))
@@ -347,6 +352,7 @@ BLIND	 // can't see anything
 	siemens_coefficient = 0.9
 	body_parts_covered = FEET
 	slot_flags = SLOT_FEET
+	value = 25
 
 	ripable = FALSE
 	var/can_hold_knife = TRUE
@@ -429,6 +435,7 @@ BLIND	 // can't see anything
 	w_class = ITEM_SIZE_NORMAL
 	ripable = TRUE
 	rag_amt = 4
+	value = 45
 /obj/item/clothing/suit/update_clothing_icon()
 	if (ismob(loc))
 		var/mob/M = loc
@@ -450,6 +457,7 @@ BLIND	 // can't see anything
 	w_class = ITEM_SIZE_NORMAL
 	ripable = TRUE
 	rag_amt = 3
+	value = 1
 	//var/has_sensor = TRUE //For the crew computer 2 = unable to change mode
 //	var/sensor_mode = FALSE
 		/*

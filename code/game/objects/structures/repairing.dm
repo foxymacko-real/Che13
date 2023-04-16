@@ -119,6 +119,7 @@
 	force = WEAPON_FORCE_NORMAL
 	throwforce = WEAPON_FORCE_NORMAL
 	w_class = ITEM_SIZE_SMALL
+	value = 100
 
 /obj/item/weapon/gun/projectile/attackby(obj/item/M as obj, mob/user as mob)
 	if (istype(M, /obj/item/weapon/material/kitchen/utensil/knife) && (!(istype(src, /obj/item/weapon/gun/projectile/bow))))

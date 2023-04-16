@@ -1,6 +1,9 @@
 /***********************************
 RUSSO-JAPANESE WAR WEAPONS MAGS N AMMO
 ***********************************/
+/obj/item/ammo_magazine
+	value = 35
+
 /obj/item/ammo_magazine/mosin
 	name = "clip (7.62x54mm)"
 	icon_state = "clip"
@@ -10,7 +13,6 @@ RUSSO-JAPANESE WAR WEAPONS MAGS N AMMO
 	weight = 0.04
 	multiple_sprites = TRUE
 	clip = TRUE
-
 /obj/item/ammo_magazine/mosinbox
 	name = "magazine box (7.62x54mm)"
 	icon_state = "mosin_ammo"
@@ -433,7 +435,7 @@ RUSSO-JAPANESE WAR WEAPONS MAGS N AMMO
 	icon_state = "pouch"
 	ammo_type = /obj/item/ammo_casing/a9x19
 	caliber = "a9x19"
-	max_ammo = 30
+	max_ammo = 60
 	weight = 1.1
 	multiple_sprites = TRUE
 

@@ -1,5 +1,6 @@
 //Melee Weapons, non edged or piercing (clubs, batons, maces)
 /obj/item/weapon/melee
+	value = 55
 	edge = FALSE
 	sharp = FALSE
 	var/force_multiplier = 1.2

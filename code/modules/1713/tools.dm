@@ -35,6 +35,7 @@
 	flags = CONDUCT
 
 /obj/item/weapon/foldable
+	value = 105
 	force = 12
 	nothrow = TRUE
 	w_class = ITEM_SIZE_GARGANTUAN
@@ -61,6 +62,7 @@
 	icon_state = "mortar"
 	item_state = "type89"
 	path = /obj/structure/cannon/mortar/foldable/generic
+	value = 105
 
 /obj/item/weapon/foldable/type89_mortar
 	name = "Type 89 Mortar"
@@ -68,6 +70,7 @@
 	icon_state = "type89"
 	item_state = "type89"
 	path = /obj/structure/cannon/mortar/foldable/type89
+	value = 85
 
 /obj/item/weapon/foldable/atgm
 	name = "Anti-Tank Guided Missile system"
@@ -75,6 +78,7 @@
 	icon_state = "atgm"
 	item_state = "atgm"
 	path = /obj/item/weapon/gun/projectile/automatic/stationary/atgm/foldable
+	value = 155
 
 /obj/item/weapon/foldable/pkm
 	name = "Foldable PKM machine gun"
@@ -88,6 +92,7 @@
 	slowdown = 0.3
 	slot_flags = SLOT_SHOULDER|SLOT_BACK
 	path = /obj/item/weapon/gun/projectile/automatic/stationary/modern/foldable/pkm
+	value = 55
 
 /obj/item/weapon/material/shovel
 	name = "shovel"

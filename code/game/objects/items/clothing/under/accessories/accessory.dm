@@ -1,4 +1,5 @@
 /obj/item/clothing/accessory
+	value = 10
 	name = "tie"
 	desc = "A neosilk clip-on tie."
 	icon = 'icons/obj/clothing/ties.dmi'

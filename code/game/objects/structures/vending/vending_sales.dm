@@ -644,3 +644,57 @@
 		return
 
 	return
+
+//vending exports
+
+/obj/structure/vending/sales/ffa/clothingbasic
+	name = "Basic Equipment"
+	desc = "Cointains clothing."
+	icon_state = "apparel_usa"
+	products = list(
+		/obj/item/clothing/under/tacticool_hawaiian = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/green = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/orange = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/purple = 10,
+		/obj/item/clothing/under/ww2/civ1 = 5,
+		/obj/item/clothing/under/ww2/civ2 = 5,
+		/obj/item/clothing/under/ww2/soviet_amoeba = 5,
+		/obj/item/clothing/under/tacti = 5,
+		/obj/item/clothing/under/tactical1 = 5,
+	)
+	prices = list(
+		/obj/item/clothing/under/tacticool_hawaiian = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/green = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/orange = 10,
+		/obj/item/clothing/under/tacticool_hawaiian/purple = 10,
+		/obj/item/clothing/under/ww2/civ1 = 10,
+		/obj/item/clothing/under/ww2/civ2 = 10,
+		/obj/item/clothing/under/ww2/soviet_amoeba = 20,
+		/obj/item/clothing/under/tacti = 50,
+		/obj/item/clothing/under/tactical1 = 50,
+	)
+
+
+/obj/structure/ffa/export
+	name = "Export guy"
+	desc = "Give me things and i will give you money."
+	icon = 'icons/mob/npcs.dmi'
+	icon_state = "greenistani_2"
+	flammable = FALSE
+	not_movable = TRUE
+	not_disassemblable = TRUE
+	density = TRUE
+	opacity = FALSE
+	anchored = TRUE
+
+/obj/structure/ffa/export/attackby(obj/item/W, mob/living/human/user)
+	if (istype(W, /obj/item))
+		if (!W)
+			return
+		user << "Here's your payment, pleasure doing business with you."
+		new/obj/item/stack/money/rubles(src.loc, round(W.value))
+		qdel(W)
+		return
+	else
+		user << "I dont accept that, get lost."
+		return

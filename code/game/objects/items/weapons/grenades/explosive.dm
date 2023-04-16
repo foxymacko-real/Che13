@@ -16,6 +16,7 @@
 	damage = 30
 
 /obj/item/weapon/grenade/frag
+	value = 45
 	name = "fragmentation grenade"
 	desc = "A military fragmentation grenade, designed to explode in a deadly shower of fragments, while avoiding massive structural damage."
 	icon_state = "frggrenade"
@@ -49,7 +50,7 @@
 /obj/proc/fragmentate(var/turf/T, var/fragment_number = 30, var/spreading_range = 5, var/list/fragtypes=list(/obj/item/projectile/bullet/pellet/fragment/))
 	set waitfor = 0
 	..()
-	
+
 	if(!T) return
 
 	var/list/target_turfs = getcircle(T, spreading_range)

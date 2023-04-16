@@ -416,6 +416,18 @@
 /obj/item/clothing/head //why is this HERE? @fantasticfwoosh
 	var/list/attachments = list()
 
+/obj/item/clothing/head/helmet/modern
+	name = "placeholder"
+	desc = "A typical placeholder helmet."
+	icon_state = "m1_standard"
+	item_state = "m1_standard"
+	worn_state = "m1_standard"
+	body_parts_covered = HEAD
+	flags_inv = BLOCKHEADHAIR
+	armor = list(melee = 55, arrow = 45, gun = 15, energy = 15, bomb = 55, bio = 20, rad = FALSE)
+	health = 24
+	value = 70
+
 /obj/item/clothing/head/helmet/modern/ushelmet
 	name = "M1 helmet"
 	desc = "A typical us army helmet."
@@ -983,6 +995,7 @@
 /obj/item/clothing/accessory/armor //again im confused why this is the case. It should be moved somewhere higher up into armor.dm or/and tagged into /modern especially @fantasticfwoosh
 	health = 20
 	ripable = FALSE
+	value = 40
 
 /obj/item/clothing/accessory/armor/coldwar
 	icon = 'icons/obj/clothing/ties.dmi'
@@ -1007,6 +1020,7 @@
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 55, arrow = 75, gun = 40, energy = 24, bomb = 66, bio = 25, rad = FALSE)
+	value = 75
 
 /obj/item/clothing/head/helmet/modern/ssh_68/med
 	icon_state = "ssh_68med"
@@ -1048,7 +1062,7 @@
 	slots = 2
 	slowdown = 0.1
 	weight = 5
-
+	value = 100
 /obj/item/clothing/accessory/armor/coldwar/plates/b3/blue
 	name = "6B3 Blue body armor"
 	icon_state = "6b3blu"
@@ -1073,7 +1087,7 @@
 	flags = CONDUCT
 	slowdown = 0.2
 	weight = 5.1
-
+	value = 70
 /obj/item/clothing/accessory/armor/coldwar/plates/b5
 	name = "6B5 body armor"
 	desc = "A ballistic vest of Soviet origin, issued in the late 1980s."
@@ -1086,7 +1100,7 @@
 	flags = CONDUCT
 	slots = 2
 	slowdown = 0.1
-
+	value = 180
 /obj/item/clothing/accessory/armor/coldwar/flakjacket // Google searches only reveal M-1965 Field Jacket's being normal american jackets, replace eventually please.
 	name = "M-1952 Flak Jacket"
 	desc = "Wearable armor meant to protect against shrapnel and light hits. Won't do much against large caliber weapons."
@@ -1097,7 +1111,7 @@
 	armor = list(melee = 60, arrow = 75, gun = 15, energy = 15, bomb = 55, bio = 20, rad = FALSE)
 	value = 60
 	slowdown = 0.2
-
+	value = 50
 /obj/item/clothing/accessory/armor/coldwar/flakjacket/m1969 // see note above, this highly likely isn't real article.
 	name = "M-1969 Flak Jacket"
 	desc = "Wearable armor with neck protection meant to protect against shrapnel and light hits. Won't do much against large caliber weapons."
@@ -1108,7 +1122,7 @@
 	armor = list(melee = 65, arrow = 75, gun = 20, energy = 15, bomb = 60, bio = 20, rad = FALSE)
 	value = 60
 	slowdown = 0.2
-
+	value = 50
 /obj/item/clothing/accessory/armor/coldwar/flakjacket/b1 //used by spetznaz vdv and soviets in afgan
 	name = "6B1 vest"
 	desc = "Wearable Armor meant to protect against shrapnel and light caliber weaponry. Won't do much against large caliber weapons."
@@ -1119,7 +1133,7 @@
 	armor = list(melee = 65, arrow = 80, gun = 20, energy = 15, bomb = 60, bio = 20, rad = FALSE)
 	value = 60
 	slowdown = 0.1
-
+	value = 50
 /* Cold War Belts*/
 
 /obj/item/weapon/storage/belt/largepouches/olive/m60
@@ -1882,6 +1896,7 @@
 /* NBC &  Hazmat Suits*/
 
 /obj/item/clothing/head/nbc
+	value = 100
 	name = "yellow NBC hood"
 	desc = "A yellow coloured NBC hood, made protect against biological, chemical and nuclear threats."
 	icon_state = "nbc"
@@ -1890,6 +1905,7 @@
 	armor = list(melee = FALSE, arrow = FALSE, gun = FALSE, energy = 25, bomb = 10, bio = 100, rad = 80)
 
 /obj/item/clothing/suit/nbc
+	value = 100
 	name = "yellow NBC suit"
 	desc = "A yellow coloured NBC suit, made protect against biological, chemical and nuclear threats."
 	icon_state = "nbc"

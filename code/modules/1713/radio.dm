@@ -508,6 +508,7 @@ var/global/FREQM = rand(101,120)
 
 ////////////////PORTABLE RADIOS//////////////////
 /obj/item/weapon/radio
+	value = 110
 	name = "portable radio"
 	desc = "Used to communicate with distant places. Set to 150kHz."
 	icon = 'icons/obj/device.dmi'
