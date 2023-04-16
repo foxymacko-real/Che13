@@ -688,13 +688,14 @@
 	anchored = TRUE
 
 /obj/structure/ffa/export/attackby(obj/item/W, mob/living/human/user)
-	if (istype(W, /obj/item))
-		if (!W)
-			return
-		user << "Here's your payment, pleasure doing business with you."
-		new/obj/item/stack/money/rubles(src.loc, round(W.value))
-		qdel(W)
+	if (!W)
+		user << "I don't accept this."
+		return
+	else if (istype(W, /obj/item/stack))
+		user << "Blabla."
 		return
 	else
-		user << "I dont accept that, get lost."
-		return
+		qdel(W)
+		user << "Blabla2, here's money."
+		new/obj/item/stack/money/rubles (src.loc, round(W.value))
+	return
