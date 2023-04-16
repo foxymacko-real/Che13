@@ -1,27 +1,14 @@
-# Civilization 13
+# Chevilization 13
 
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13.svg?style=flat)
 
 ## WHAT IS THIS?
-
-Civ13 (formerly 1713) is a game based on Space Station 13 code, which features several epochs of human history. It features both RP and Combat maps and gamemodes.
-
-<kbd>
- <img src="https://i.imgur.com/napac0L.png">
-</kbd>
+a my own take on civ13, expect bad code.
 
 
-## Civ13 Discord
-[![discord](https://discordapp.com/api/guilds/468979034571931648/widget.png)](https://civ13.com/discord)
-
-
-## Official Website
-https://civ13.com/
-
-
-## Trello
-https://trello.com/b/DW0RQAEX
+## Discord
+[![discord]( none yet )
 
 
 ## Playing the game
