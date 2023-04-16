@@ -188,7 +188,7 @@
 				MAP_OMAHA = 20,
 //				MAP_BIGSIEGEMOSCOW = 20,
 				MAP_FOREST = 20,
-//				MAP_KARELIA = 14,
+				MAP_KARELIA = 14,
 				MAP_BERLIN = 20,
 //				MAP_IWO_JIMA = 40,
 			)
