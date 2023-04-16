@@ -110,7 +110,7 @@
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "trauma_kit"
 	item_state = "trauma_kit"
-	heal_brute = 0
+	heal_brute = 20
 	flammable = TRUE
 
 /obj/item/stack/medical/advanced/bruise_pack/attack(mob/living/human/M as mob, mob/user as mob)
@@ -172,7 +172,7 @@
 			H.update_bandaging(1)
 
 		var/mob/living/human/H_user = user
-		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_VERY_HIGH))
+		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_LOW))
 			if (affecting && affecting.open == FALSE)
 				if (affecting.is_bandaged() && affecting.is_disinfected())
 					affecting.wounds.Cut()
@@ -200,7 +200,7 @@
 
 		if(!affecting)
 			return
-			
+
 		if (affecting.open)
 			user << "<span class='notice'>The [affecting.name] is cut open, you'll need more than some healing herbs!</span>"
 
@@ -238,7 +238,7 @@
 			use(used)
 
 		var/mob/living/human/H_user = user
-		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_VERY_HIGH))
+		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_LOW))
 			if (affecting)
 				if (affecting.is_salved() && affecting.is_disinfected())
 					affecting.wounds.Cut()
