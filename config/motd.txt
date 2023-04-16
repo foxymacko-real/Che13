@@ -1,0 +1,8 @@
+<h2><small><span style = "font-size: 1.20em;">Welcome to <b><span style = "font-size: 1.20em;">Che 13<span style = "color: #CD4C6C"> - Beta Edition</span></span></b></span></small></h2>
+<i>
+The current map is <b>{server_map}</b>.
+<br>
+This server is running {server_version}, and you are running {client_version}.
+<h2>RULES: dont be a asshole, be nice, dont grief, most of original CIV13 rules apply here</h2>
+
+</i>
