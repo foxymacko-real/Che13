@@ -826,6 +826,7 @@
 #include "code\modules\1713\weapons\guns\crossbow.dm"
 #include "code\modules\1713\weapons\guns\flintlock.dm"
 #include "code\modules\1713\weapons\guns\grenade_launcher.dm"
+#include "code\modules\1713\weapons\guns\laser_guns.dm"
 #include "code\modules\1713\weapons\guns\lever_action.dm"
 #include "code\modules\1713\weapons\guns\pistols.dm"
 #include "code\modules\1713\weapons\guns\revolvers.dm"
