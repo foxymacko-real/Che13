@@ -260,7 +260,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = rand(4,7)
+		dropwood.amount = rand(10,15)
 		qdel(src)
 		return
 
@@ -333,7 +333,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 7
+		dropwood.amount = 15
 		if (leaves>0)
 			new/obj/item/stack/material/leaf(get_turf(src))
 			new/obj/item/stack/material/leaf(get_turf(src))
@@ -490,7 +490,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 4
+		dropwood.amount = 10
 		qdel(src)
 		return
 
@@ -498,7 +498,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 3
+		dropwood.amount = 9
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
@@ -874,7 +874,7 @@ var/list/seed_list_jungle
 			release_stored()
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 7
+		dropwood.amount = 15
 		if (leaves>0)
 			new/obj/item/stack/material/leaf(get_turf(src))
 			new/obj/item/stack/material/leaf(get_turf(src))
@@ -1078,5 +1078,5 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/bamboo(get_turf(src))
-		dropwood.amount = 5
+		dropwood.amount = 10
 		qdel(src)

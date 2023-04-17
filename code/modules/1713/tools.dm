@@ -104,8 +104,22 @@
 	weight = 9.5
 	w_class = ITEM_SIZE_HUGE
 	slowdown = 0.1
-	slot_flags = SLOT_SHOULDER|SLOT_BACK
+	slot_flags = SLOT_BACK
 	path = /obj/structure/barricade/hescobastion
+	value = 55
+
+/obj/item/weapon/foldable/antitankkit
+	name = "Deployable Anti tank barrier Kit"
+	desc = "A few sturdy Metal beams, if deployed they form a formidable anti tank trap."
+	icon_state = "attrap"
+	item_state = "ammo_can"
+	force = 20
+	throwforce = 30
+	weight = 16.5
+	w_class = ITEM_SIZE_HUGE
+	slowdown = 0.2
+	slot_flags = SLOT_BACK
+	path = /obj/structure/barricade/antitank
 	value = 55
 
 /obj/item/weapon/material/shovel

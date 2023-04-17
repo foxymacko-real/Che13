@@ -604,7 +604,7 @@
 	if (prob(20))
 		if (prob(60))
 			var/obj/item/stack/ore/copper/mineral = new/obj/item/stack/ore/copper(src)
-			mineral.amount = rand(8,12)
+			mineral.amount = rand(10,15)
 			if (istype(get_area(src), /area/caribbean/void/caves/special))
 				mineral.amount *= 2
 			if (H)
@@ -615,7 +615,7 @@
 			return
 		else
 			var/obj/item/stack/ore/tin/mineral = new/obj/item/stack/ore/tin(src)
-			mineral.amount = rand(8,12)
+			mineral.amount = rand(10,15)
 			if (istype(get_area(src), /area/caribbean/void/caves/special))
 				mineral.amount *= 2
 				if (H)
@@ -626,7 +626,7 @@
 			return
 	if (prob(40) && map.ordinal_age >= 1)
 		var/obj/item/stack/ore/iron/mineral = new/obj/item/stack/ore/iron(src)
-		mineral.amount = rand(8,12)
+		mineral.amount = rand(10,15)
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 			if (H)
@@ -660,7 +660,7 @@
 				return
 			else if (pickperc == 2)
 				var/obj/item/stack/ore/saltpeter/mineral = new/obj/item/stack/ore/saltpeter(src)
-				mineral.amount = 4
+				mineral.amount = 10
 				if (istype(get_area(src), /area/caribbean/void/caves/special))
 					mineral.amount *= 2
 				if (H)
@@ -671,7 +671,7 @@
 				return
 			else if (pickperc == 3)
 				var/obj/item/stack/ore/sulphur/mineral = new/obj/item/stack/ore/sulphur(src)
-				mineral.amount = 4
+				mineral.amount = 12
 				if (istype(get_area(src), /area/caribbean/void/caves/special))
 					mineral.amount *= 2
 				if (mineral && mineral.get_material())
@@ -684,7 +684,7 @@
 			else if (pickperc == 4)
 				if (prob(50))
 					var/obj/item/stack/ore/lead/mineral = new/obj/item/stack/ore/lead(src)
-					mineral.amount = 4
+					mineral.amount = 10
 					if (istype(get_area(src), /area/caribbean/void/caves/special))
 						mineral.amount *= 2
 					if (H)
@@ -695,7 +695,7 @@
 					return
 				else if (prob(10) && map.ordinal_age >= 7)
 					var/obj/item/stack/ore/uranium/mineral = new/obj/item/stack/ore/uranium(src)
-					mineral.amount = rand(4,12)
+					mineral.amount = rand(10,15)
 					if (istype(get_area(src), /area/caribbean/void/caves/special))
 						mineral.amount *= 2
 					if (H)
@@ -717,7 +717,7 @@
 */
 	if (prob(5))
 		var/obj/item/stack/ore/silver/mineral = new/obj/item/stack/ore/silver(src)
-		mineral.amount = 4
+		mineral.amount = 9
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
@@ -728,7 +728,7 @@
 		return
 	if (prob(2))
 		var/obj/item/stack/ore/gold/mineral = new/obj/item/stack/ore/gold(src)
-		mineral.amount = 4
+		mineral.amount = 8
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
@@ -739,7 +739,7 @@
 		return
 	if (prob(1))
 		var/obj/item/stack/ore/diamond/mineral = new/obj/item/stack/ore/diamond(src)
-		mineral.amount = 4
+		mineral.amount = 6
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
@@ -774,14 +774,14 @@
 				return
 	if(istype(T, /turf/floor/dirt/underground/sandy) || (area_above && area_above.climate == "desert"))
 		var/obj/item/stack/material/sandstone/mineral = new/obj/item/stack/material/sandstone(src)
-		mineral.amount = rand(8,16)
+		mineral.amount = rand(10,16)
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
 			H << "<span class='danger'>You found some <font color=[get_material_by_name("sandstone").icon_colour]><b>sandstone</font> rocks</b>!</span>"
 	if(prob(20) && (map.ID != MAP_NOMADS_PANGEA || map.ID != MAP_NOMADS_CONTINENTAL || map.ID != MAP_NOMADS_NEW_WORLD && map.ID != MAP_NOMADS_MEDITERRANEAN && map.ID != MAP_GULAG13 && map.ID != MAP_RIVER_KWAI) && map.ordinal_age >=1)
 		var/obj/item/stack/material/marble/mineral = new/obj/item/stack/material/marble(src)
-		mineral.amount = rand(8,12)
+		mineral.amount = rand(10,12)
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
@@ -792,7 +792,7 @@
 		return
 	else if(prob(20) && (area_above && area_above.climate == "jungle") && map.ordinal_age >=1 && map.ordinal_age <= 3)
 		var/obj/item/stack/ore/obsidian/mineral = new/obj/item/stack/ore/obsidian(src)
-		mineral.amount = rand(8,12)
+		mineral.amount = rand(10,12)
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
@@ -806,7 +806,7 @@
 			H << "<span class='danger'>You found some <font color=[get_material_by_name("marble").icon_colour]><b>marble</font> rocks</b>!</span>"
 	else
 		var/obj/item/stack/material/stone/mineral = new/obj/item/stack/material/stone(src)
-		mineral.amount = rand(8,16)
+		mineral.amount = rand(12,19)
 		if (istype(get_area(src), /area/caribbean/void/caves/special))
 			mineral.amount *= 2
 		if (H)
