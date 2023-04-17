@@ -658,20 +658,28 @@
 		/obj/item/clothing/under/tacticool_hawaiian/purple = 10,
 		/obj/item/clothing/under/ww2/civ1 = 5,
 		/obj/item/clothing/under/ww2/civ2 = 5,
-		/obj/item/clothing/under/ww2/soviet_amoeba = 5,
+		/obj/item/clothing/under/ww2/soviet_amoeba/winter = 5,
+		/obj/item/clothing/under/ww2/soviet_berezka = 5,
+		/obj/item/clothing/under/sov_klmk = 5,
+		/obj/item/clothing/under/sov_kzs = 5,
 		/obj/item/clothing/under/tacti = 5,
 		/obj/item/clothing/under/tactical1 = 5,
+		/obj/item/clothing/under/gorka/frag = 5,
 	)
 	prices = list(
-		/obj/item/clothing/under/tacticool_hawaiian = 10,
-		/obj/item/clothing/under/tacticool_hawaiian/green = 10,
-		/obj/item/clothing/under/tacticool_hawaiian/orange = 10,
-		/obj/item/clothing/under/tacticool_hawaiian/purple = 10,
-		/obj/item/clothing/under/ww2/civ1 = 10,
-		/obj/item/clothing/under/ww2/civ2 = 10,
-		/obj/item/clothing/under/ww2/soviet_amoeba = 20,
-		/obj/item/clothing/under/tacti = 50,
-		/obj/item/clothing/under/tactical1 = 50,
+		/obj/item/clothing/under/tacticool_hawaiian = 50,
+		/obj/item/clothing/under/tacticool_hawaiian/green = 50,
+		/obj/item/clothing/under/tacticool_hawaiian/orange = 50,
+		/obj/item/clothing/under/tacticool_hawaiian/purple = 50,
+		/obj/item/clothing/under/ww2/civ1 = 50,
+		/obj/item/clothing/under/ww2/civ2 = 50,
+		/obj/item/clothing/under/ww2/soviet_amoeba/winter = 70,
+		/obj/item/clothing/under/ww2/soviet_berezka = 70,
+		/obj/item/clothing/under/sov_klmk = 80,
+		/obj/item/clothing/under/sov_kzs = 80,
+		/obj/item/clothing/under/tacti = 120,
+		/obj/item/clothing/under/tactical1 = 120,
+		/obj/item/clothing/under/gorka/frag = 120,
 	)
 
 
@@ -692,10 +700,10 @@
 		user << "I don't accept this."
 		return
 	else if (istype(W, /obj/item/stack))
-		user << "Blabla."
+		user << "I don't accept this."
 		return
 	else
 		qdel(W)
-		user << "Blabla2, here's money."
+		user << "Nice, here's the money."
 		new/obj/item/stack/money/rubles (src.loc, round(W.value))
 	return

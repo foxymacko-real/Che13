@@ -311,7 +311,6 @@
 				MAP_HUNGERGAMES = 0,)
 		else if (epoch == "Fiction")
 			maps = list(
-				MAP_TANTIVEIV = 0,
 				MAP_WHITERUN = 10,)
 		spawn(10)
 			vote.initiate_vote("map", "MapSwap Process", TRUE, list(src, "swap"))

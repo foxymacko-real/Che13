@@ -1062,8 +1062,6 @@ var/global/redirect_all_players = null
 			dat += "[alive_civilians.len] Soviet Remnants "
 		else if (map && istype(map, /obj/map_metadata/missionary_ridge))
 			dat += "[alive_civilians.len] Confederates "
-		else if (map && istype(map, /obj/map_metadata/tantiveiv))
-			dat += "[alive_civilians.len] Rebels "
 		else if (map && istype(map, /obj/map_metadata/ruhr_uprising))
 			dat += "[alive_civilians.len] Revolutionaries "
 		else if (map && istype(map, /obj/map_metadata/bank_robbery))
@@ -1127,8 +1125,6 @@ var/global/redirect_all_players = null
 			dat += "[alive_american.len] American Government "
 		else if (map && istype(map, /obj/map_metadata/missionary_ridge))
 			dat += "[alive_american.len] Union Soldiers "
-		else if (map && istype(map, /obj/map_metadata/tantiveiv))
-			dat += "[alive_american.len] Imperials "
 		else if (map && istype(map, /obj/map_metadata/east_los_santos))
 			dat += "[alive_american.len] Grove Street "
 		else if (map && istype(map, /obj/map_metadata/eft_factory))
@@ -1319,11 +1315,6 @@ var/global/redirect_all_players = null
 						temp_name = "Mujahideen"
 					else if (temp_name == "Civilian")
 						temp_name = "DRA and Civilians"
-				else if (map && map.ID == "TANTIVEIV")
-					if (temp_name == "Civilian")
-						temp_name = "Rebels"
-					else if (temp_name == "American")
-						temp_name = "Imperials"
 				else if (map && map.ID == "RED_MENACE")
 					if (temp_name == "Russian")
 						temp_name = "Soviets"
