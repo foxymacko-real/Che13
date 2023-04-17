@@ -648,7 +648,7 @@
 //vending exports
 
 /obj/structure/vending/sales/ffa/clothingbasic
-	name = "Basic Equipment"
+	name = "Clothing Shop"
 	desc = "Cointains clothing."
 	icon_state = "apparel_usa"
 	products = list(
@@ -682,6 +682,32 @@
 		/obj/item/clothing/under/gorka/frag = 120,
 	)
 
+/obj/structure/vending/sales/ffa/bootsaglovesbasic
+	name = "Shoes and boots Shop"
+	desc = "Cointains boots and gloves."
+	icon_state = "apparel_german2"
+	products = list(
+		/obj/item/clothing/gloves/fingerless = 5,
+		/obj/item/clothing/gloves/thick = 10,
+		/obj/item/clothing/gloves/thick/combat = 10,
+		/obj/item/clothing/gloves/toughguy = 5,
+		/obj/item/clothing/shoes/leather = 35,
+		/obj/item/clothing/shoes/workboots = 25,
+		/obj/item/clothing/shoes/soldiershoes = 10,
+		/obj/item/clothing/shoes/jackboots = 10,
+		/obj/item/clothing/shoes/iogboots/black = 5,
+	)
+	prices = list(
+		/obj/item/clothing/gloves/fingerless = 25,
+		/obj/item/clothing/gloves/thick = 50,
+		/obj/item/clothing/gloves/thick/combat = 80,
+		/obj/item/clothing/gloves/toughguy = 70,
+		/obj/item/clothing/shoes/leather = 35,
+		/obj/item/clothing/shoes/workboots = 45,
+		/obj/item/clothing/shoes/soldiershoes = 60,
+		/obj/item/clothing/shoes/jackboots = 70,
+		/obj/item/clothing/shoes/iogboots/black = 200,
+	)
 
 /obj/structure/ffa/export
 	name = "Export guy"

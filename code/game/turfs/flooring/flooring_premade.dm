@@ -287,7 +287,7 @@
 	desc = "Darker than normal dirt, spooky."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dark_dirt"
-	is_diggable = FALSE
+	is_diggable = TRUE
 	uses_winter_overlay = FALSE
 	may_become_muddy = FALSE
 //	flags = TURF_HAS_EDGES

@@ -43,7 +43,7 @@
 	name = "spanish reales"
 	desc = "A small silver coin."
 	singular_name = "real"
-	icon_state = "dollar" 
+	icon_state = "dollar"
 	amount = 1
 	value = 1
 	flags = CONDUCT
@@ -89,15 +89,18 @@
 	name = "soviet ruble"
 	desc = "A Soviet 1 ruble banknote."
 	singular_name = "ruble"
-	icon_state = "ruble" 
+	icon_state = "ruble"
 	amount = 1
 	value = 1
+
+/obj/item/stack/money/rubles/onehun
+	amount = 100
 
 /obj/item/stack/money/yen
 	name = "yen"
 	desc = "A japanese 1 yen coin."
 	singular_name = "yen"
-	icon_state = "yen" 
+	icon_state = "yen"
 	amount = 1
 	value = 0.01
 	max_amount = 2500
@@ -489,7 +492,7 @@
 	name = "septim"
 	desc = "A single septim coin."
 	singular_name = "septim"
-	icon_state = "septim" 
+	icon_state = "septim"
 	amount = 1
 	value = 1
 	max_amount = 500
