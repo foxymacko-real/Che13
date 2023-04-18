@@ -6,7 +6,7 @@
 	nutriment_amt = 1
 	nutriment_desc = list("fruit" = TRUE)
 	w_class = ITEM_SIZE_TINY
-	value = 3
+	value = 20
 	bitesize = 2
 	decay = 25*600
 /obj/item/weapon/reagent_containers/food/snacks/grown/chinchona

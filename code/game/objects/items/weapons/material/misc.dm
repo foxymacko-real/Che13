@@ -367,7 +367,7 @@
 	material = "iron"
 	attack_verb = list("chopped", "torn", "cut")
 	applies_material_colour = TRUE
-	value = 15
+	value = 60
 	slot_flags = SLOT_BELT
 	block_chance = 15
 	cooldownw = 5
@@ -382,6 +382,7 @@
 	material = "steel"
 	default_material = "steel"
 	applies_material_colour = FALSE
+	value = 90
 
 /obj/item/weapon/material/hatchet/bronze
 	chopping_speed = 1.65

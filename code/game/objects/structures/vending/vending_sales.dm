@@ -679,7 +679,7 @@
 		/obj/item/clothing/under/sov_kzs = 80,
 		/obj/item/clothing/under/tacti = 120,
 		/obj/item/clothing/under/tactical1 = 120,
-		/obj/item/clothing/under/gorka/frag = 120,
+		/obj/item/clothing/under/gorka/frag = 160,
 	)
 
 /obj/structure/vending/sales/ffa/bootsaglovesbasic
@@ -707,6 +707,201 @@
 		/obj/item/clothing/shoes/soldiershoes = 60,
 		/obj/item/clothing/shoes/jackboots = 70,
 		/obj/item/clothing/shoes/iogboots/black = 200,
+	)
+
+/obj/structure/vending/sales/ffa/weaponry
+	name = "Weaponry Shop"
+	desc = "Cointains Weapons and ammo for them."
+	icon_state = "equipment_russia"
+	products = list(
+		/obj/item/weapon/gun/projectile/boltaction/singleshot/makeshiftbolt = 5,
+		/obj/item/weapon/gun/projectile/boltaction/mosin/m30 = 10,
+		/obj/item/ammo_magazine/mosin = 50,
+		/obj/item/ammo_magazine/mosinbox = 20,
+		/obj/item/weapon/gun/projectile/semiautomatic/svt = 20,
+		/obj/item/ammo_magazine/svt = 40,
+		/obj/item/weapon/gun/projectile/submachinegun/makeshiftak47 = 25,
+		/obj/item/weapon/gun/projectile/submachinegun/ak47/akms = 27,
+		/obj/item/ammo_magazine/ak47 = 60,
+		/obj/item/weapon/gun/projectile/submachinegun/ermaemp = 20,
+		/obj/item/weapon/gun/projectile/submachinegun/mp40 = 30,
+		/obj/item/ammo_magazine/mp40/box = 25,
+		/obj/item/ammo_magazine/mp40 = 30,
+		/obj/item/weapon/gun/projectile/submachinegun/sten = 20,
+		/obj/item/ammo_magazine/sten2 = 30,
+		/obj/item/weapon/gun/projectile/pistol/glock17 = 20,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74/aks74 = 35,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74 = 30,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 30,
+		/obj/item/ammo_magazine/ak74 = 90,
+		/obj/item/ammo_magazine/ak74/box = 30,
+	)
+	prices = list(
+		/obj/item/weapon/gun/projectile/boltaction/singleshot/makeshiftbolt = 250,
+		/obj/item/weapon/gun/projectile/boltaction/mosin/m30 = 350,
+		/obj/item/ammo_magazine/mosin = 200,
+		/obj/item/ammo_magazine/mosinbox = 600,
+		/obj/item/weapon/gun/projectile/semiautomatic/svt = 430,
+		/obj/item/ammo_magazine/svt = 400,
+		/obj/item/weapon/gun/projectile/submachinegun/makeshiftak47 = 350,
+		/obj/item/weapon/gun/projectile/submachinegun/ak47/akms = 450,
+		/obj/item/ammo_magazine/ak47 = 520,
+		/obj/item/weapon/gun/projectile/submachinegun/ermaemp = 300,
+		/obj/item/weapon/gun/projectile/submachinegun/mp40 = 340,
+		/obj/item/ammo_magazine/mp40/box = 455,
+		/obj/item/ammo_magazine/mp40 = 90,
+		/obj/item/weapon/gun/projectile/submachinegun/sten = 290,
+		/obj/item/ammo_magazine/sten2 = 95,
+		/obj/item/weapon/gun/projectile/pistol/glock17 = 280,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74/aks74 = 505,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74 = 520,
+		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 600,
+		/obj/item/ammo_magazine/ak74 = 300,
+		/obj/item/ammo_magazine/ak74/box = 490,
+	)
+
+/obj/structure/vending/sales/ffa/heavyweaponry
+	name = "Heavy Support Weaponry Shop"
+	desc = "Cointains Deployable Heavy Support weapons and ammo for them, Devastating but not cheap."
+	icon_state = "modern_british"
+	products = list(
+		/obj/item/weapon/foldable/pkm = 5,
+		/obj/item/weapon/gun/projectile/automatic/pkm = 5,
+		/obj/item/ammo_magazine/pkm = 20,
+		/obj/item/ammo_magazine/pkm/c100 = 20,
+		/obj/item/weapon/foldable/generic = 2,
+		/obj/item/cannon_ball/mortar_shell = 80,
+		/obj/item/cannon_ball/mortar_shell/smoke = 40,
+		/obj/item/weapon/foldable/atgm = 2,
+		/obj/item/weapon/storage/backpack/heavyrucksack/atgm = 2,
+		/obj/item/ammo_casing/rocket/atgm = 5,
+		/obj/item/ammo_casing/rocket/atgm/apcr = 5,
+		/obj/item/ammo_casing/rocket/atgm/he = 5,
+		/obj/item/weapon/gun/projectile/automatic/dp28 = 5,
+		/obj/item/ammo_magazine/dp = 45,
+		/obj/item/weapon/gun/projectile/boltaction/singleshot/ptrd = 2,
+		/obj/item/ammo_magazine/ptrd_pouch = 5,
+		/obj/item/ammo_magazine/ptrd_pouch/ap = 5,
+		/obj/item/weapon/grenade/antitank/custom = 5,
+		/obj/item/weapon/grenade/smokebomb = 25,
+		/obj/item/weapon/grenade/modern/custom = 15,
+	)
+	prices = list(
+		/obj/item/weapon/foldable/pkm = 700,
+		/obj/item/weapon/gun/projectile/automatic/pkm = 550,
+		/obj/item/ammo_magazine/pkm = 600,
+		/obj/item/ammo_magazine/pkm/c100 = 400,
+		/obj/item/cannon_ball/mortar_shell = 350,
+		/obj/item/cannon_ball/mortar_shell/smoke = 390,
+		/obj/item/weapon/foldable/atgm = 900,
+		/obj/item/weapon/storage/backpack/heavyrucksack/atgm = 700,
+		/obj/item/ammo_casing/rocket/atgm = 250,
+		/obj/item/ammo_casing/rocket/atgm/apcr = 300,
+		/obj/item/ammo_casing/rocket/atgm/he = 250,
+		/obj/item/weapon/gun/projectile/automatic/dp28 = 450,
+		/obj/item/ammo_magazine/dp = 400,
+		/obj/item/weapon/gun/projectile/boltaction/singleshot/ptrd = 600,
+		/obj/item/ammo_magazine/ptrd_pouch = 600,
+		/obj/item/ammo_magazine/ptrd_pouch/ap = 650,
+		/obj/item/weapon/grenade/antitank/custom = 250,
+		/obj/item/weapon/grenade/smokebomb = 150,
+		/obj/item/weapon/grenade/modern/custom = 190,
+	)
+
+/obj/structure/vending/sales/ffa/survivaltools
+	name = "Survival tools shop"
+	desc = "Cointains equipment that might increase your odds of survival."
+	icon_state = "apparel_pirates"
+	products = list(
+		/obj/item/weapon/attachment/bayonet = 50,
+		/obj/item/weapon/reagent_containers/food/snacks/MRE/generic/american = 50,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/canteen/full = 25,
+		/obj/item/weapon/attachment/scope/adjustable/binoculars/binoculars = 25,
+		/obj/item/weapon/compass = 25,
+		/obj/item/weapon/foldable_shovel/trench/etool = 50,
+		/obj/item/weapon/gun_cleaning_kit = 50,
+		/obj/item/weapon/storage/toolbox/emergency = 20,
+		/obj/item/weapon/tent = 20,
+		/obj/item/weapon/radio = 20,
+		/obj/item/weapon/radio/walkietalkie = 20,
+		/obj/item/weapon/bedroll = 20,
+		/obj/item/weapon/foldable/antitankkit = 50,
+		/obj/item/weapon/foldable/hescokit = 50,
+		/obj/item/weapon/storage/box/sandbags = 50,
+		/obj/item/weapon/storage/box/firstaid/advsmall = 6,
+		/obj/item/weapon/storage/box/firstaid/advsmall/small = 6,
+		/obj/item/clothing/mask/gas/soviet/gp5 = 50,
+		/obj/item/clothing/glasses/nvg = 7,
+		/obj/item/clothing/glasses/thermal = 9,
+	)
+	prices = list(
+		/obj/item/weapon/attachment/bayonet = 120,
+		/obj/item/weapon/reagent_containers/food/snacks/MRE/generic/american = 100,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/canteen/full = 95,
+		/obj/item/weapon/attachment/scope/adjustable/binoculars/binoculars = 90,
+		/obj/item/weapon/compass = 100,
+		/obj/item/weapon/foldable_shovel/trench/etool = 110,
+		/obj/item/weapon/gun_cleaning_kit = 130,
+		/obj/item/weapon/storage/toolbox/emergency = 300,
+		/obj/item/weapon/tent = 250,
+		/obj/item/weapon/radio = 200,
+		/obj/item/weapon/radio/walkietalkie = 400,
+		/obj/item/weapon/bedroll = 220,
+		/obj/item/weapon/foldable/antitankkit = 250,
+		/obj/item/weapon/foldable/hescokit = 250,
+		/obj/item/weapon/storage/box/sandbags = 90,
+		/obj/item/weapon/storage/box/firstaid/advsmall = 255,
+		/obj/item/weapon/storage/box/firstaid/advsmall/small = 155,
+		/obj/item/clothing/mask/gas/soviet/gp5 = 355,
+		/obj/item/clothing/glasses/nvg = 900,
+		/obj/item/clothing/glasses/thermal = 1100,
+	)
+
+/obj/structure/vending/sales/ffa/armor
+	name = "Armor shop"
+	desc = "Cointains armor that will increase your odds of surviving a firefight."
+	icon_state = "apparel_british"
+	products = list(
+		/obj/item/clothing/accessory/armor/modern/lightplate = 10,
+		/obj/item/clothing/accessory/armor/modern/lightplate/black = 10,
+		/obj/item/clothing/accessory/armor/coldwar/flakjacket/b1 = 5,
+		/obj/item/clothing/accessory/armor/nomads/civiliankevlar = 25,
+		/obj/item/clothing/accessory/armor/coldwar/pasgt/blizzard = 25,
+		/obj/item/clothing/accessory/armor/coldwar/plates/interceptor = 25,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b3 = 25,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b2 = 15,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b5 = 15,
+		/obj/item/clothing/head/helmet/kevlarhelmet = 15,
+		/obj/item/clothing/head/helmet/ww2/soviet = 15,
+		/obj/item/clothing/head/helmet/ww2/soviet/winter = 15,
+		/obj/item/clothing/head/helmet/modern/pasgt = 15,
+		/obj/item/clothing/head/helmet/modern/ssh_68 = 15,
+		/obj/item/clothing/head/helmet/modern/ssh_68/winter = 15,
+		/obj/item/clothing/head/helmet/modern/zsh1 = 15,
+		/obj/item/clothing/head/helmet/modern/sfera = 15,
+		/obj/item/clothing/head/helmet/modern/a6b47 = 15,
+		/obj/item/clothing/head/helmet/modern/sovietfacehelmet = 5,
+	)
+	prices = list(
+		/obj/item/clothing/accessory/armor/modern/lightplate = 155,
+		/obj/item/clothing/accessory/armor/modern/lightplate/black = 155,
+		/obj/item/clothing/accessory/armor/coldwar/flakjacket/b1 = 145,
+		/obj/item/clothing/accessory/armor/nomads/civiliankevlar = 180,
+		/obj/item/clothing/accessory/armor/coldwar/pasgt/blizzard = 200,
+		/obj/item/clothing/accessory/armor/coldwar/plates/interceptor = 225,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b3 = 195,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b2 = 150,
+		/obj/item/clothing/accessory/armor/coldwar/plates/b5 = 350,
+		/obj/item/clothing/head/helmet/kevlarhelmet = 355,
+		/obj/item/clothing/head/helmet/ww2/soviet = 125,
+		/obj/item/clothing/head/helmet/ww2/soviet/winter = 125,
+		/obj/item/clothing/head/helmet/modern/pasgt = 175,
+		/obj/item/clothing/head/helmet/modern/ssh_68 = 145,
+		/obj/item/clothing/head/helmet/modern/ssh_68/winter = 145,
+		/obj/item/clothing/head/helmet/modern/zsh1 = 355,
+		/obj/item/clothing/head/helmet/modern/sfera = 255,
+		/obj/item/clothing/head/helmet/modern/a6b47 = 195,
+		/obj/item/clothing/head/helmet/modern/sovietfacehelmet = 455,
 	)
 
 /obj/structure/ffa/export

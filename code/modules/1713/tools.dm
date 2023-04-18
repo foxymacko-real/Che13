@@ -142,6 +142,7 @@
 	thrown_force_divisor = 0.15
 	health = 25
 	maxhealth = 25
+	value = 90
 
 /obj/item/weapon/material/shovel/steel
 	material = "steel"
@@ -149,6 +150,7 @@
 	default_material = "steel"
 	health = 50
 	maxhealth = 50
+	value = 100
 
 /obj/item/weapon/material/shovel/bone
 	icon_state = "shovel_bone"
@@ -281,6 +283,7 @@
 	thrown_force_divisor = 0.25
 	health = 25
 	maxhealth = 25
+	value = 90
 
 /obj/item/weapon/material/pickaxe/steel
 	material = "steel"
