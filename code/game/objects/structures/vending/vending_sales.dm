@@ -665,6 +665,13 @@
 		/obj/item/clothing/under/tacti = 5,
 		/obj/item/clothing/under/tactical1 = 5,
 		/obj/item/clothing/under/gorka/frag = 5,
+		/obj/item/clothing/head/chinaguardcap = 5,
+		/obj/item/clothing/head/sov_ushanka_new = 5,
+		/obj/item/clothing/head/olivebandana = 9,
+		/obj/item/clothing/head/flatcap1 = 9,
+		/obj/item/clothing/head/flatcap2 = 9,
+		/obj/item/clothing/head/flatcap3 = 9,
+		/obj/item/clothing/head/commando_bandana = 9,
 	)
 	prices = list(
 		/obj/item/clothing/under/tacticool_hawaiian = 50,
@@ -680,6 +687,13 @@
 		/obj/item/clothing/under/tacti = 120,
 		/obj/item/clothing/under/tactical1 = 120,
 		/obj/item/clothing/under/gorka/frag = 160,
+		/obj/item/clothing/head/chinaguardcap = 65,
+		/obj/item/clothing/head/sov_ushanka_new = 100,
+		/obj/item/clothing/head/olivebandana = 55,
+		/obj/item/clothing/head/flatcap1 = 55,
+		/obj/item/clothing/head/flatcap2 = 55,
+		/obj/item/clothing/head/flatcap3 = 55,
+		/obj/item/clothing/head/commando_bandana = 55,
 	)
 
 /obj/structure/vending/sales/ffa/bootsaglovesbasic
@@ -735,6 +749,11 @@
 		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 30,
 		/obj/item/ammo_magazine/ak74 = 90,
 		/obj/item/ammo_magazine/ak74/box = 30,
+		/obj/item/weapon/gun/projectile/submachinegun/m16 = 30,
+		/obj/item/weapon/gun/projectile/submachinegun/m16/commando/m4 = 20,
+		/obj/item/weapon/gun/projectile/submachinegun/m16/m16a4 = 20,
+		/obj/item/ammo_magazine/m16 = 90,
+		/obj/item/ammo_magazine/m16/box = 30,
 	)
 	prices = list(
 		/obj/item/weapon/gun/projectile/boltaction/singleshot/makeshiftbolt = 250,
@@ -758,11 +777,16 @@
 		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 600,
 		/obj/item/ammo_magazine/ak74 = 300,
 		/obj/item/ammo_magazine/ak74/box = 490,
+		/obj/item/weapon/gun/projectile/submachinegun/m16 = 520,
+		/obj/item/weapon/gun/projectile/submachinegun/m16/commando/m4 = 550,
+		/obj/item/weapon/gun/projectile/submachinegun/m16/m16a4 = 650,
+		/obj/item/ammo_magazine/m16 = 320,
+		/obj/item/ammo_magazine/m16/box = 530,
 	)
 
 /obj/structure/vending/sales/ffa/heavyweaponry
 	name = "Heavy Support Weaponry Shop"
-	desc = "Cointains Deployable Heavy Support weapons and ammo for them, Devastating but not cheap."
+	desc = "Cointains Deployable Heavy Support weapons and ammo for them and some other things too, Devastating but not cheap."
 	icon_state = "modern_british"
 	products = list(
 		/obj/item/weapon/foldable/pkm = 5,
@@ -785,6 +809,7 @@
 		/obj/item/weapon/grenade/antitank/custom = 5,
 		/obj/item/weapon/grenade/smokebomb = 25,
 		/obj/item/weapon/grenade/modern/custom = 15,
+		/obj/item/weapon/gun/launcher/rocket/single_shot/rpg22 = 2,
 	)
 	prices = list(
 		/obj/item/weapon/foldable/pkm = 700,
@@ -806,6 +831,7 @@
 		/obj/item/weapon/grenade/antitank/custom = 250,
 		/obj/item/weapon/grenade/smokebomb = 150,
 		/obj/item/weapon/grenade/modern/custom = 190,
+		/obj/item/weapon/gun/launcher/rocket/single_shot/rpg22 = 800,
 	)
 
 /obj/structure/vending/sales/ffa/survivaltools
@@ -828,11 +854,16 @@
 		/obj/item/weapon/foldable/antitankkit = 50,
 		/obj/item/weapon/foldable/hescokit = 50,
 		/obj/item/weapon/storage/box/sandbags = 50,
+		/obj/item/stack/medical/bruise_pack/gauze = 50,
 		/obj/item/weapon/storage/box/firstaid/advsmall = 6,
 		/obj/item/weapon/storage/box/firstaid/advsmall/small = 6,
 		/obj/item/clothing/mask/gas/soviet/gp5 = 50,
 		/obj/item/clothing/glasses/nvg = 7,
 		/obj/item/clothing/glasses/thermal = 9,
+		/obj/item/weapon/storage/box/canned = 25,
+		/obj/item/weapon/storage/box/flare = 25,
+		/obj/item/weapon/flame/lighter/zippo = 25,
+		/obj/item/flashlight/militarylight = 55,
 	)
 	prices = list(
 		/obj/item/weapon/attachment/bayonet = 120,
@@ -850,11 +881,16 @@
 		/obj/item/weapon/foldable/antitankkit = 250,
 		/obj/item/weapon/foldable/hescokit = 250,
 		/obj/item/weapon/storage/box/sandbags = 90,
+		/obj/item/stack/medical/bruise_pack/gauze = 50,
 		/obj/item/weapon/storage/box/firstaid/advsmall = 255,
 		/obj/item/weapon/storage/box/firstaid/advsmall/small = 155,
 		/obj/item/clothing/mask/gas/soviet/gp5 = 355,
 		/obj/item/clothing/glasses/nvg = 900,
 		/obj/item/clothing/glasses/thermal = 1100,
+		/obj/item/weapon/storage/box/canned = 150,
+		/obj/item/weapon/storage/box/flare = 120,
+		/obj/item/weapon/flame/lighter/zippo = 100,
+		/obj/item/flashlight/militarylight = 150,
 	)
 
 /obj/structure/vending/sales/ffa/armor
@@ -902,6 +938,113 @@
 		/obj/item/clothing/head/helmet/modern/sfera = 255,
 		/obj/item/clothing/head/helmet/modern/a6b47 = 195,
 		/obj/item/clothing/head/helmet/modern/sovietfacehelmet = 455,
+	)
+
+obj/structure/vending/sales/ffa/matsshop
+	name = "Material shop"
+	desc = "Cointains Materials so you can fortify and build."
+	icon_state = "apparel_confed"
+	products = list(
+		/obj/item/stack/material/barbwire = 1000,
+		/obj/item/stack/material/bronze = 500,
+		/obj/item/stack/material/copper = 500,
+		/obj/item/stack/material/cloth = 900,
+		/obj/item/stack/material/kevlar = 505,
+		/obj/item/stack/material/plastic = 900,
+		/obj/item/stack/material/steel = 2000,
+		/obj/item/stack/material/stone = 2000,
+		/obj/item/stack/material/wood = 2000,
+		/obj/item/stack/material/glass = 1000,
+	)
+	prices = list(
+		/obj/item/stack/material/barbwire = 9,
+		/obj/item/stack/material/bronze = 30,
+		/obj/item/stack/material/copper = 25,
+		/obj/item/stack/material/cloth = 15,
+		/obj/item/stack/material/kevlar = 50,
+		/obj/item/stack/material/plastic = 15,
+		/obj/item/stack/material/steel = 10,
+		/obj/item/stack/material/stone = 6,
+		/obj/item/stack/material/wood = 2,
+		/obj/item/stack/material/glass = 5,
+	)
+
+obj/structure/vending/sales/ffa/logishop
+	name = "Logistical shop"
+	desc = "Cointains Logistical items such as webbing belts backpacks and crates.."
+	icon_state = "apparel_china"
+	products = list(
+		/obj/item/weapon/storage/belt/smallpouches = 60,
+		/obj/item/weapon/storage/belt/smallpouches/white = 60,
+		/obj/item/weapon/storage/belt/largepouches = 50,
+		/obj/item/weapon/storage/belt/largepouches/white = 50,
+		/obj/item/weapon/storage/belt/tacpouches = 50,
+		/obj/item/weapon/storage/belt/tacpouches/white = 50,
+		/obj/item/weapon/storage/belt = 50,
+		/obj/item/weapon/storage/ammo_can = 15,
+		/obj/item/weapon/storage/backpack/buttpack = 55,
+		/obj/item/weapon/storage/backpack/sovpack = 55,
+		/obj/item/weapon/storage/backpack/satchel = 45,
+		/obj/item/weapon/storage/backpack/civbag = 25,
+		/obj/item/weapon/storage/backpack/duffel = 25,
+		/obj/item/weapon/storage/backpack/duffel/black = 25,
+		/obj/item/weapon/storage/backpack/rucksack = 25,
+		/obj/item/weapon/storage/backpack/heavyrucksack = 35,
+		/obj/item/clothing/accessory/storage/webbing/light = 55,
+		/obj/item/clothing/accessory/storage/webbing/pouches = 55,
+		/obj/item/clothing/accessory/storage/webbing/us_bandolier = 35,
+		/obj/item/clothing/accessory/storage/webbing/us_vest = 35,
+		/obj/item/clothing/accessory/storage/webbing/largepouches = 35,
+		/obj/item/clothing/accessory/storage/webbing/russian = 35,
+	)
+	prices = list(
+		/obj/item/weapon/storage/belt/smallpouches = 60,
+		/obj/item/weapon/storage/belt/smallpouches/white = 60,
+		/obj/item/weapon/storage/belt/largepouches = 50,
+		/obj/item/weapon/storage/belt/largepouches/white = 50,
+		/obj/item/weapon/storage/belt/tacpouches = 90,
+		/obj/item/weapon/storage/belt/tacpouches/white = 90,
+		/obj/item/weapon/storage/belt = 125,
+		/obj/item/weapon/storage/ammo_can = 95,
+		/obj/item/weapon/storage/backpack/buttpack = 159,
+		/obj/item/weapon/storage/backpack/sovpack = 200,
+		/obj/item/weapon/storage/backpack/satchel = 210,
+		/obj/item/weapon/storage/backpack/civbag = 230,
+		/obj/item/weapon/storage/backpack/duffel = 250,
+		/obj/item/weapon/storage/backpack/duffel/black = 250,
+		/obj/item/weapon/storage/backpack/rucksack = 300,
+		/obj/item/weapon/storage/backpack/heavyrucksack = 390,
+		/obj/item/clothing/accessory/storage/webbing/light = 90,
+		/obj/item/clothing/accessory/storage/webbing/pouches = 90,
+		/obj/item/clothing/accessory/storage/webbing/us_bandolier = 120,
+		/obj/item/clothing/accessory/storage/webbing/us_vest = 125,
+		/obj/item/clothing/accessory/storage/webbing/largepouches = 155,
+		/obj/item/clothing/accessory/storage/webbing/russian = 160,
+	)
+
+obj/structure/vending/sales/ffa/uselessshop
+	name = "Useless things shop"
+	desc = "Cointains Things that may seem useless to you."
+	icon_state = "apparel_china"
+	products = list(
+		/obj/item/clothing/accessory/ruffle/neck = 10,
+		/obj/item/clothing/accessory/catears = 1,
+		/obj/item/clothing/accessory/custom/armband = 50,
+		/obj/item/weapon/storage/fancy/cigarettes/randompack/lighter = 50,
+		/obj/item/weapon/storage/fancy/candle_box = 50,
+		/obj/item/weapon/storage/ww2 = 50,
+		/obj/item/trombone = 5,
+		/obj/item/violin = 5,
+	)
+	prices = list(
+		/obj/item/clothing/accessory/ruffle/neck = 100,
+		/obj/item/clothing/accessory/catears = 255,
+		/obj/item/clothing/accessory/custom/armband = 50,
+		/obj/item/weapon/storage/fancy/cigarettes/randompack/lighter = 55,
+		/obj/item/weapon/storage/fancy/candle_box = 50,
+		/obj/item/weapon/storage/ww2 = 60,
+		/obj/item/trombone = 120,
+		/obj/item/violin = 120,
 	)
 
 /obj/structure/ffa/export

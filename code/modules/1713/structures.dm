@@ -132,7 +132,7 @@
 	desc = "A sheet metal fence."
 	icon = 'icons/obj/fence.dmi'
 	icon_state = "metal_fence1"
-	health = 80
+	health = 500
 	opacity = TRUE
 	hitsound = 'sound/weapons/blade_parry1.ogg'
 /obj/structure/grille/metalsheetfence/blue
