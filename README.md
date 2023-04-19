@@ -7,6 +7,7 @@
 
 ## WHAT IS THIS?
 my own take on civ13, expect bad code.
+good code,mid code, good staff, ok rules, and fun most likely.
 
 
 ## Discord
