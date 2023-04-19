@@ -822,6 +822,7 @@
 		/obj/item/weapon/gun/projectile/automatic/pkm = 550,
 		/obj/item/ammo_magazine/pkm = 600,
 		/obj/item/ammo_magazine/pkm/c100 = 400,
+		/obj/item/weapon/foldable/generic = 600,
 		/obj/item/cannon_ball/mortar_shell = 350,
 		/obj/item/cannon_ball/mortar_shell/smoke = 390,
 		/obj/item/weapon/foldable/atgm = 900,
