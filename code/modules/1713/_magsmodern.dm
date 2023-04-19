@@ -233,6 +233,26 @@
 	multiple_sprites = TRUE
 	belt = TRUE
 
+/obj/item/ammo_magazine/ammo127
+	name = "Ammo can (12.7x108mm)"
+	icon_state = "b127"
+	mag_type = MAGAZINE
+	caliber = "a127"
+	w_class = ITEM_SIZE_NORMAL
+	ammo_type = /obj/item/ammo_casing/a127
+	max_ammo = 50
+	multiple_sprites = TRUE
+
+/obj/item/ammo_magazine/ammo127/box
+	name = "Ammo Box (12.7x108mm)"
+	icon_state = "ab127"
+	mag_type = MAGAZINE
+	caliber = "a127"
+	w_class = ITEM_SIZE_NORMAL
+	ammo_type = /obj/item/ammo_casing/a127
+	max_ammo = 100
+	multiple_sprites = TRUE
+	pouch = TRUE
 
 /obj/item/ammo_magazine/pkm/c100
 	name = "PKM ammo belt (7.62x54mmR)"

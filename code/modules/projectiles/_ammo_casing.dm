@@ -668,6 +668,16 @@
 	caliber = "a8x50"
 	value = 5
 
+/obj/item/ammo_casing/a127
+	name = "12.7x108 cartridge"
+	desc = "A big heavy brass casing designed to penetrate armor."
+	icon_state = "big-bullet"
+	spent_icon = "big-casing"
+	weight = 0.06
+	projectile_type = /obj/item/projectile/bullet/rifle/a127
+	caliber = "a127"
+	value = 6
+
 /obj/item/ammo_casing/c9mm_jap_revolver
 	name = "9x22mm Type 26 cartridge"
 	desc = "A brass casing."
