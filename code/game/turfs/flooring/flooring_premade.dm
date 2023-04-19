@@ -284,10 +284,12 @@
 
 /turf/floor/dirt/dark_dirt
 	name = "dark dirt"
-	desc = "Darker than normal dirt, spooky."
+	desc = "Darker than normal dirt."
 	icon = 'icons/turf/floors.dmi'
 	icon_state = "dark_dirt"
 	is_diggable = TRUE
+	may_become_muddy = TRUE
+	available_dirt = 3
 	uses_winter_overlay = FALSE
 	may_become_muddy = FALSE
 //	flags = TURF_HAS_EDGES

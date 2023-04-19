@@ -744,6 +744,7 @@
 		/obj/item/weapon/gun/projectile/submachinegun/sten = 20,
 		/obj/item/ammo_magazine/sten2 = 30,
 		/obj/item/weapon/gun/projectile/pistol/glock17 = 20,
+		/obj/item/ammo_magazine/glock17 = 90,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74/aks74 = 35,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74 = 30,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 30,
@@ -754,6 +755,8 @@
 		/obj/item/weapon/gun/projectile/submachinegun/m16/m16a4 = 20,
 		/obj/item/ammo_magazine/m16 = 90,
 		/obj/item/ammo_magazine/m16/box = 30,
+		/obj/item/weapon/gun/projectile/pistol/makarov = 30,
+		/obj/item/ammo_magazine/makarov = 90,
 	)
 	prices = list(
 		/obj/item/weapon/gun/projectile/boltaction/singleshot/makeshiftbolt = 250,
@@ -768,10 +771,11 @@
 		/obj/item/weapon/gun/projectile/submachinegun/ermaemp = 300,
 		/obj/item/weapon/gun/projectile/submachinegun/mp40 = 340,
 		/obj/item/ammo_magazine/mp40/box = 455,
-		/obj/item/ammo_magazine/mp40 = 90,
+		/obj/item/ammo_magazine/mp40 = 115,
 		/obj/item/weapon/gun/projectile/submachinegun/sten = 290,
-		/obj/item/ammo_magazine/sten2 = 95,
+		/obj/item/ammo_magazine/sten2 = 105,
 		/obj/item/weapon/gun/projectile/pistol/glock17 = 280,
+		/obj/item/ammo_magazine/glock17 = 100,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74/aks74 = 505,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74 = 520,
 		/obj/item/weapon/gun/projectile/submachinegun/ak74m = 600,
@@ -782,6 +786,8 @@
 		/obj/item/weapon/gun/projectile/submachinegun/m16/m16a4 = 650,
 		/obj/item/ammo_magazine/m16 = 320,
 		/obj/item/ammo_magazine/m16/box = 530,
+		/obj/item/weapon/gun/projectile/pistol/makarov = 290,
+		/obj/item/ammo_magazine/makarov = 95,
 	)
 
 /obj/structure/vending/sales/ffa/heavyweaponry
@@ -1035,6 +1041,7 @@ obj/structure/vending/sales/ffa/uselessshop
 		/obj/item/weapon/storage/ww2 = 50,
 		/obj/item/trombone = 5,
 		/obj/item/violin = 5,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 5,
 	)
 	prices = list(
 		/obj/item/clothing/accessory/ruffle/neck = 100,
@@ -1045,6 +1052,7 @@ obj/structure/vending/sales/ffa/uselessshop
 		/obj/item/weapon/storage/ww2 = 60,
 		/obj/item/trombone = 120,
 		/obj/item/violin = 120,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/vodka = 120,
 	)
 
 /obj/structure/ffa/export
