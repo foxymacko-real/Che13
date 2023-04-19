@@ -11,7 +11,7 @@ good code,mid code, good staff, ok rules, and fun most likely.
 
 
 ## Discord
-[![discord](https://discord.gg/6x9aCfc6Mr)
+https://discord.gg/6x9aCfc6Mr
 
 
 ## Playing the game
