@@ -252,7 +252,6 @@
 	ammo_type = /obj/item/ammo_casing/a127
 	max_ammo = 100
 	multiple_sprites = TRUE
-	pouch = TRUE
 
 /obj/item/ammo_magazine/pkm/c100
 	name = "PKM ammo belt (7.62x54mmR)"
