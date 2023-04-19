@@ -19,3 +19,4 @@ You can disarm mines and tripmines by clicking on a trap with barehands or a wir
 Butchering an animal with GRAB intent active will output pelts instead of leather.
 Use an empty hand with grab intent on a water source to drink from it.
 Tools and melee weapons only take durability damage from attacking people and animals, actions like throwing, using for intended purpose (tools only), and breaking stuff (other than targets) does not damage it in any way.
+Proning behind sandbags provides alot of cover, prone while you are reloading/bandaging youself to increase your odds of survival
