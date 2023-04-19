@@ -3,12 +3,15 @@
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13.svg?style=flat)
 
+![chevilization13](https://user-images.githubusercontent.com/79454795/233169184-048b11a8-e577-402e-8032-eb6068b10a1e.jpg)
+
 ## WHAT IS THIS?
-a my own take on civ13, expect bad code.
+my own take on civ13, expect bad code.
+good code,mid code, good staff, ok rules, and fun most likely.
 
 
 ## Discord
-[![discord]( none yet )
+[![discord](https://discord.gg/6x9aCfc6Mr)
 
 
 ## Playing the game
