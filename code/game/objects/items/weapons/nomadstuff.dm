@@ -8,6 +8,7 @@
 	throwforce = WEAPON_FORCE_WEAK
 	w_class = ITEM_SIZE_NORMAL
 	flags = FALSE
+	slot_flags = SLOT_BELT | SLOT_BACK
 
 	attack_verb = list("battered","whacked")
 	flammable = TRUE

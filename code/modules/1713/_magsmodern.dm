@@ -238,7 +238,7 @@
 	icon_state = "b127"
 	mag_type = MAGAZINE
 	caliber = "a127"
-	w_class = ITEM_SIZE_NORMAL
+	w_class = 2
 	ammo_type = /obj/item/ammo_casing/a127
 	max_ammo = 50
 	multiple_sprites = TRUE
@@ -248,7 +248,7 @@
 	icon_state = "ab127"
 	mag_type = MAGAZINE
 	caliber = "a127"
-	w_class = ITEM_SIZE_NORMAL
+	w_class = ITEM_SIZE_LARGE
 	ammo_type = /obj/item/ammo_casing/a127
 	max_ammo = 100
 	multiple_sprites = TRUE

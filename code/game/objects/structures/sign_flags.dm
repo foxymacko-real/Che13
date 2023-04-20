@@ -639,6 +639,11 @@
 	desc = "The flag of Syria."
 	icon_state = "flag_syria"
 
+/obj/structure/sign/flag/syria/ssg
+	name = "Syrian salvation goverment flag"
+	desc = "The flag of the SSG."
+	icon_state = "flag_syriansal"
+
 /obj/structure/sign/flag/fsa
 	name = "FSA flag"
 	desc = "The flag of the Free Syrian Army."

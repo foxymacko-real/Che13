@@ -101,7 +101,12 @@
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/russian
 	name = "Russian MRE: Potatoes"
 	desc = "A package of precooked potatoes."
-	nutriment_desc = list("potatoes" = 1,)
+	nutriment_desc = list("potatoes" = 1)
+
+/obj/item/weapon/reagent_containers/food/snacks/MRE/generic/russian/modern
+	name = "Russian MRE: Combat rations"
+	desc = "A package of potatoes, canned meat, canned veggies and some tea."
+	nutriment_desc = list("potatoes" = 1, "canned meat" = 2, "canned vegetables" = 2,"tea" = 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/idf
 	name = "IDF MRE: Whitefish"

@@ -197,6 +197,7 @@
 	desc = "A foldable shovel used specifically for digging trenches."
 	icon_state = "etool"
 	dig_speed = 8
+	force = 45
 	usespeed = 0.8
 	path = /obj/item/weapon/foldable_shovel/trench/etool
 

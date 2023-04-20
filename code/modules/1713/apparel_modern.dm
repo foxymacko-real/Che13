@@ -360,11 +360,11 @@
 	item_state = "6b45"
 	worn_state = "6b45"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-	armor = list(melee = 67, arrow = 95, gun = 52, energy = 22, bomb = 60, bio = 20, rad = FALSE)
+	armor = list(melee = 65, arrow = 95, gun = 65, energy = 30, bomb = 70, bio = 20, rad = FALSE)
 	value = 130
-	slowdown = 0.2
 	w_class = ITEM_SIZE_LARGE
 	weight = 3.8
+	slots = 2
 
 /* Us Army*/
 
@@ -591,6 +591,15 @@
 	slot_flags = SLOT_GLOVES
 	fingerprint_chance = 100
 
+/obj/item/clothing/gloves/fingerless/army
+	name = "fingerless combat gloves"
+	icon_state = "fingerless"
+	item_state = "fingerless"
+	body_parts_covered = HANDS
+	slot_flags = SLOT_GLOVES
+	fingerprint_chance = 100
+	armor = list(melee = 25, arrow = 25, gun = 5, energy = 22, bomb = 45, bio = 20, rad = 5)
+
 /* US belts*/
 
 /obj/item/weapon/storage/belt/smallpouches/us/modern/m14
@@ -725,6 +734,16 @@
 	icon_state = "a6b47"
 	item_state = "a6b47"
 	worn_state = "a6b47"
+	body_parts_covered = HEAD
+	flags_inv = BLOCKHEADHAIR
+	armor = list(melee = 60, arrow = 100, gun = 86, energy = 27, bomb = 76, bio = 30, rad = FALSE)
+	value = 100
+
+/obj/item/clothing/head/helmet/modern/a6b47/desert
+	name = "6B47 desert helmet"
+	icon_state = "64b7D"
+	item_state = "64b7D"
+	worn_state = "64b7D"
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 60, arrow = 100, gun = 86, energy = 27, bomb = 76, bio = 30, rad = FALSE)
@@ -1845,6 +1864,39 @@
 			item_state = "russian_emr_rolled"
 			worn_state = "russian_emr_rolled"
 			item_state_slots["w_uniform"] = "russian_emr_rolled"
+			usr << "<span class = 'danger'>You roll up your uniform's sleeves.</span>"
+			rolled = TRUE
+			heat_protection = ARMS
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS
+			update_clothing_icon()
+
+/obj/item/clothing/under/russiandesert
+	name = "EMR desert pattern uniform"
+	desc = "The standard Russian Federation Army camo uniform."
+	icon_state = "russian_emr_desert"
+	item_state = "russian_emr_desert"
+	worn_state = "russian_emr_desert"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	var/rolled = FALSE
+
+/obj/item/clothing/under/russiandesert/verb/roll_sleeves()
+	set category = null
+	set src in usr
+	if (type != /obj/item/clothing/under/russiandesert)
+		return
+	else
+		if (rolled)
+			item_state = "russian_emr_desert"
+			worn_state = "russian_emr_desert"
+			item_state_slots["w_uniform"] = "russian_emr_desert"
+			usr << "<span class = 'danger'>You roll down your uniform's sleeves.</span>"
+			rolled = FALSE
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+			update_clothing_icon()
+		else if (!rolled)
+			item_state = "russian_emr_desert_rolled"
+			worn_state = "russian_emr_desert_rolled"
+			item_state_slots["w_uniform"] = "russian_emr_desert_rolled"
 			usr << "<span class = 'danger'>You roll up your uniform's sleeves.</span>"
 			rolled = TRUE
 			heat_protection = ARMS
