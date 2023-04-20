@@ -96,6 +96,9 @@
 /obj/item/stack/money/rubles/onehun
 	amount = 100
 
+/obj/item/stack/money/rubles/fivehun
+	amount = 500
+
 /obj/item/stack/money/yen
 	name = "yen"
 	desc = "A japanese 1 yen coin."

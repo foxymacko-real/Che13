@@ -1,12 +1,13 @@
 /obj/structure/cannon/modern
 	name = "field cannon"
+	desc = "A artillery cannon, usually used to support offensives via long range shelling."
 	icon = 'icons/obj/cannon.dmi'
 	icon_state = "modern_cannon"
 	ammotype = /obj/item/cannon_ball/shell
 	spritemod = FALSE
-	maxsway = 10
-	firedelay = 30
-	maxrange = 80
+	maxsway = 25
+	firedelay = 20
+	maxrange = 85
 	w_class = ITEM_SIZE_GARGANTUAN
 
 /obj/structure/cannon/modern/naval
@@ -478,6 +479,30 @@
 	see_amount_loaded = TRUE
 
 /obj/structure/cannon/rocket/loaded/New()
+	..()
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+	loaded += new /obj/item/cannon_ball/rocket(src)
+
+/obj/structure/cannon/rocket/mount
+	name = "Mounted rocket artillery"
+	desc = "A mounted artillery piece that fires dumb rockets, very inaccurate but deadly in numbers."
+	icon = 'icons/obj/vehicles/vehicleparts.dmi'
+	icon_state = "tank_cannon"
+	bound_height = 32
+	bound_width = 32
+	maxsway = 20
+	firedelay = 10
+	maxrange = 70
+	anchored = TRUE
+
+/obj/structure/cannon/rocket/mount/loaded/New()
 	..()
 	loaded += new /obj/item/cannon_ball/rocket(src)
 	loaded += new /obj/item/cannon_ball/rocket(src)

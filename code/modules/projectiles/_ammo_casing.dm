@@ -1114,7 +1114,7 @@
 	weight = 1
 	projectile_type = /obj/item/projectile/bullet/autocannon/a30mm_ap
 	caliber = "a30"
-	value = 2
+	value = 12
 
 /obj/item/ammo_casing/frag/a30mm_he
 	name = "3UOR6 HE"
@@ -1124,7 +1124,27 @@
 	weight = 1
 	projectile_type = /obj/item/projectile/bullet/autocannon/frag/a30mm_he
 	caliber = "a30"
-	value = 2
+	value = 12
+
+/obj/item/ammo_casing/a20mm_ap
+	name = "20mm autocannon shell AP"
+	desc = "A VERY big brass casing."
+	icon_state = "huge-bullet"
+	spent_icon = "huge-casing"
+	weight = 1
+	projectile_type = /obj/item/projectile/bullet/autocannon/a20mm_ap
+	caliber = "a20"
+	value = 6
+
+/obj/item/ammo_casing/frag/a20mm_he
+	name = "20mm autocannon shell HE"
+	desc = "A VERY big brass casing."
+	icon_state = "huge-bullet"
+	spent_icon = "huge-casing"
+	weight = 1
+	projectile_type = /obj/item/projectile/bullet/autocannon/frag/a20mm_he
+	caliber = "a20"
+	value = 6
 
 // Shotguns
 

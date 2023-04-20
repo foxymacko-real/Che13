@@ -113,8 +113,8 @@ Parts of code courtesy of Super3222
 	if (!checking)
 		if (airstrikes_remaining > 0)
 			if (debounce <= world.time)
-				
-				
+
+
 				checking = TRUE
 				var/dist1 = abs(H.x-target.x)
 				var/dist2 = abs(H.y-target.y)

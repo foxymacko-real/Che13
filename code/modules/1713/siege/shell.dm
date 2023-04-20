@@ -44,6 +44,8 @@
 	icon_state = "shell"
 	w_class = ITEM_SIZE_LARGE
 	value = 20
+	damage = 200
+	heavy_armor_penetration = 5
 	atype = "HE"
 
 /obj/item/cannon_ball/shell/incendiary

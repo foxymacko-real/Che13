@@ -807,6 +807,36 @@
 /obj/item/ammo_magazine/autocannon_he/small
 	max_ammo = 10
 
+/obj/item/ammo_magazine/autocannon20_ap
+	name = "20mm AP ammo belt"
+	icon_state = "autobeltmini"
+	mag_type = MAGAZINE
+	caliber = "a20"
+	w_class = ITEM_SIZE_LARGE
+	slot_flags = SLOT_BACK|SLOT_SHOULDER
+	ammo_type = /obj/item/ammo_casing/a20mm_ap
+	max_ammo = 40
+	multiple_sprites = TRUE
+	belt = TRUE
+
+/obj/item/ammo_magazine/autocannon20_ap/small
+	max_ammo = 20
+
+/obj/item/ammo_magazine/autocannon20_he
+	name = "20mm HE ammo belt"
+	icon_state = "autobeltmini"
+	mag_type = MAGAZINE
+	caliber = "a20"
+	w_class = ITEM_SIZE_LARGE
+	slot_flags = SLOT_BACK|SLOT_SHOULDER
+	ammo_type = /obj/item/ammo_casing/frag/a20mm_he
+	max_ammo = 40
+	multiple_sprites = TRUE
+	belt = TRUE
+
+/obj/item/ammo_magazine/autocannon20_he/small
+	max_ammo = 20
+
 /obj/item/ammo_magazine/flare
 	name = "flare casing pouch (.50 BMG)"
 	icon_state = "pouch_closed"

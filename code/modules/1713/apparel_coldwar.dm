@@ -1023,16 +1023,19 @@
 	value = 75
 
 /obj/item/clothing/head/helmet/modern/ssh_68/med
+	name = "SSh-68 medical helmet"
 	icon_state = "ssh_68med"
 	item_state = "ssh_68med"
 	worn_state = "ssh_68med"
 
 /obj/item/clothing/head/helmet/modern/ssh_68/winter
+	name = "SSh-68 winter helmet"
 	icon_state = "ssh_68_winter"
 	item_state = "ssh_68_winter"
 	worn_state = "ssh_68_winter"
 
 /obj/item/clothing/head/helmet/modern/ssh_68/winter/med
+	name = "SSh-68 medical winter helmet"
 	icon_state = "ssh_68wintmed"
 	item_state = "ssh_68wintmed"
 	worn_state = "ssh_68wintmed"
