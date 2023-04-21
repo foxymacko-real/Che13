@@ -1903,6 +1903,74 @@
 			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS
 			update_clothing_icon()
 
+//syria
+
+/obj/item/clothing/under/syrian_gov
+	name = "Syrian Army uniform"
+	desc = "Standard Uniform of the syrian army."
+	icon_state = "syr_army"
+	item_state = "syr_army"
+	worn_state = "syr_army"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	var/rolled = FALSE
+
+/obj/item/clothing/under/syrian_gov/verb/roll_sleeves()
+	set category = null
+	set src in usr
+	if (type != /obj/item/clothing/under/syrian_gov)
+		return
+	else
+		if (rolled)
+			item_state = "syr_army"
+			worn_state = "syr_army"
+			item_state_slots["w_uniform"] = "syr_army"
+			usr << "<span class = 'danger'>You roll down your uniform's sleeves.</span>"
+			rolled = FALSE
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+			update_clothing_icon()
+		else if (!rolled)
+			item_state = "syr_army_rolled"
+			worn_state = "syr_army_rolled"
+			item_state_slots["w_uniform"] = "syr_army_rolled"
+			usr << "<span class = 'danger'>You roll up your uniform's sleeves.</span>"
+			rolled = TRUE
+			heat_protection = ARMS
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS
+			update_clothing_icon()
+
+/obj/item/clothing/under/syrian_salv //cant find any source on what they use so im just gonna use this
+	name = "Syrian Salvation goverment uniform"
+	desc = "Standard Uniform Used by the syrian salvation goverment army forces."
+	icon_state = "salv_army"
+	item_state = "salv_army"
+	worn_state = "salv_army"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+	var/rolled = FALSE
+
+/obj/item/clothing/under/syrian_salv/verb/roll_sleeves()
+	set category = null
+	set src in usr
+	if (type != /obj/item/clothing/under/syrian_salv)
+		return
+	else
+		if (rolled)
+			item_state = "salv_army"
+			worn_state = "salv_army"
+			item_state_slots["w_uniform"] = "salv_army"
+			usr << "<span class = 'danger'>You roll down your uniform's sleeves.</span>"
+			rolled = FALSE
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS
+			update_clothing_icon()
+		else if (!rolled)
+			item_state = "salv_army_rolled"
+			worn_state = "salv_army_rolled"
+			item_state_slots["w_uniform"] = "salv_army_rolled"
+			usr << "<span class = 'danger'>You roll up your uniform's sleeves.</span>"
+			rolled = TRUE
+			heat_protection = ARMS
+			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS
+			update_clothing_icon()
+
 /obj/item/clothing/head/cap/usec
 	name = "USEC field cap"
 	desc = "An USEC pattern field cap, standard issue for USEC PMCs"
