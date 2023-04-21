@@ -349,6 +349,11 @@
 	desc = "A flag of Russsia."
 	icon_state = "flag_russia"
 
+/obj/structure/sign/flag/russia/wagner
+	name = "Wagner group Flag"
+	desc = "A PMC group flag."
+	icon_state = "flag_wag"
+
 /obj/structure/sign/flag/russia/empire
 	name = "Russian Empire flag"
 	desc = "A flag of the Russsian Empire."

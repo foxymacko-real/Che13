@@ -1386,6 +1386,7 @@ obj/structure/vending/hezammo
 		/obj/item/ammo_magazine/svd = 16,
 		/obj/item/ammo_magazine/makarov = 25,
 		/obj/item/ammo_magazine/mp443 = 25,
+		/obj/item/ammo_magazine/mp40/box = 25,
 		/obj/item/ammo_magazine/pkm = 8,
 		/obj/item/ammo_magazine/srm = 8,
 		/obj/item/ammo_magazine/srm/box = 8,

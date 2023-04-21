@@ -215,3 +215,41 @@
 	icon_state = "bmd2new_frame_steel_back_right"
 	w_back = list("bmd2new_back_right_frame",TRUE,TRUE,25,30,TRUE,TRUE)
 	w_right = list("none",TRUE,TRUE,30,40,FALSE,FALSE)
+
+///////////BRDM-2///////////
+/obj/structure/vehicleparts/frame/brdm2
+	flammable = TRUE
+	resistance = 125
+
+/obj/structure/vehicleparts/frame/brdm2/rb
+	w_right = list("c_wall",TRUE,TRUE,8,9,FALSE,FALSE)
+	w_back = list("c_wall",TRUE,TRUE,9,10,FALSE,FALSE)
+
+/obj/structure/vehicleparts/frame/brdm2/lb
+	w_left = list("c_wall",TRUE,TRUE,8,9,FALSE,FALSE)
+	w_back = list("c_wall",TRUE,TRUE,9,10,FALSE,FALSE)
+
+/obj/structure/vehicleparts/frame/brdm2/rb/compart
+	w_right = list("c_wall",TRUE,TRUE,8,9,FALSE,FALSE)
+	w_back = list("c_wall",TRUE,TRUE,9,10,FALSE,FALSE)
+	w_front = list("c_door",TRUE,TRUE,10,10,FALSE,FALSE)
+	doorcode = 4975
+
+/obj/structure/vehicleparts/frame/brdm2/lb/compart
+	w_left = list("c_wall",TRUE,TRUE,8,9,FALSE,FALSE)
+	w_back = list("c_wall",TRUE,TRUE,9,10,FALSE,FALSE)
+	w_front = list("c_wall",TRUE,TRUE,10,10,FALSE,FALSE)
+
+/obj/structure/vehicleparts/frame/brdm2/l
+	w_left = list("c_wall",TRUE,TRUE,10,11,FALSE,FALSE)
+
+/obj/structure/vehicleparts/frame/brdm2/rdoor
+	w_right = list("c_door",TRUE,TRUE,10,11,TRUE,TRUE)
+	doorcode = 4975
+
+/obj/structure/vehicleparts/frame/brdm2/rf
+	w_right = list("c_wall",TRUE,TRUE,13,14,FALSE,FALSE)
+	w_front = list("c_armoredfront",TRUE,TRUE,15,16,FALSE,FALSE)
+/obj/structure/vehicleparts/frame/brdm2/lf
+	w_left = list("c_wall",TRUE,TRUE,13,14,FALSE,FALSE)
+	w_front = list("c_armoredfront",TRUE,TRUE,15,16,FALSE,FALSE)

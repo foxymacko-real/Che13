@@ -109,7 +109,7 @@
 	multiple_sprites = TRUE
 
 /obj/item/ammo_magazine/mp40/box
-	name = "magazine box (9x19mm)"
+	name = "Ammo box (9x19mm)"
 	icon_state = "9mm"
 	mag_type = MAGAZINE
 	caliber = "a9x19"

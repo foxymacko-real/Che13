@@ -660,6 +660,10 @@
 	name = "BAF 12 gasoline engine"
 	enginesize = 12000
 
+/obj/structure/engine/internal/gasoline/premade/v8
+	name = "GAZ-41 gasoline V-8"
+	enginesize = 11000
+
 /obj/structure/engine/internal/diesel/premade/v12
 	name = "V12 diesel engine"
 	enginesize = 15000
