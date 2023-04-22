@@ -365,10 +365,10 @@
 /obj/structure/vehicleparts/axis/heavy/brdm2
 	name = "BRDM-2"
 	desc = "A powered axis from a car."
-	icon = 'icons/obj/vehicles/vehicleparts.dmi'
-	icon_state = "axis_powered"
 	speeds = 6
 	maxpower = 800
+	icon = 'icons/obj/vehicles/vehicleparts.dmi'
+	icon_state = "axis_powered"
 	speedlist = list(1=10,2=6,3=4,4=3,5=3,6=2)
 	turntimer = 6
 	reg_number = ""

@@ -218,6 +218,7 @@
 
 ///////////BRDM-2///////////
 /obj/structure/vehicleparts/frame/brdm2
+	icon_state = "frame_steel"
 	flammable = TRUE
 	resistance = 125
 

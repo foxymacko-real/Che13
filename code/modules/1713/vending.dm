@@ -1400,7 +1400,6 @@ obj/structure/vending/hezammo
 	products = list(
 		/obj/item/clothing/shoes/combat = 15,
 		/obj/item/clothing/shoes/soldiershoes = 10,
-		/obj/item/clothing/under/russian = 5,
 		/obj/item/clothing/accessory/armor/coldwar/plates/b45 = 20,
 		/obj/item/clothing/accessory/armor/coldwar/plates/b5 = 10,
 		/obj/item/clothing/accessory/armor/coldwar/plates/tatba/green = 15,
