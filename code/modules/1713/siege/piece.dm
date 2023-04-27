@@ -700,7 +700,7 @@
 												if (tgtbelow)
 													explosion(tgtbelow, 2, 3, 3, 3)
 										else
-											explosion(target, 1, 2, 3, 4)
+											explosion(target, 1, 2, 4, 4)
 											if (locate(/obj/structure/vehicleparts/frame) in target)
 												for (var/obj/structure/vehicleparts/frame/F in range(1,target))
 													for (var/mob/M in F.axis.transporting)
