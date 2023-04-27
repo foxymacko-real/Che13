@@ -1187,7 +1187,7 @@
 	min_positions = 10
 	max_positions = 20
 
-/datum/job/arab/syrianwag/equip(var/mob/living/human/H)
+/datum/job/arab/wagner_pmc/equip(var/mob/living/human/H)
 	if (!H)	return FALSE
 //under
 	if (prob(60))
