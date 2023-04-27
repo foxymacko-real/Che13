@@ -89,6 +89,7 @@
 /obj/item/weapon/grenade/old_grenade
 	name = "grenade"
 	desc = "A hand held grenade, with a 5 second fuse."
+	var/heavy_armor_penetration = 5
 	var/explosion_size = 2
 
 /obj/item/weapon/grenade/old_grenade/prime()
@@ -291,6 +292,7 @@
 	var/damage_step = 1	  //projectiles lose a fragment each time they travel this distance. Can be a non-integer.
 	var/big_bomb = FALSE
 	var/spread_range = 7
+	var/heavy_armor_penetration = 12
 	explosion_sound = 'sound/weapons/Explosives/FragGrenade.ogg'
 /obj/item/weapon/grenade/modern/prime()
 	set waitfor = 0
@@ -411,9 +413,8 @@
 	det_time = 45
 	throw_range = 11
 	explosion_size = 2
-	fragment_type = /obj/item/projectile/bullet/pellet/fragment/strong
 	num_fragments = 6
-	fragment_damage = 25
+	fragment_damage = 20
 	damage_step = 1
 	spread_range = 7
 
@@ -696,6 +697,7 @@
 		qdel(src)
 
 /obj/item/weapon/grenade/ww2
+	var/heavy_armor_penetration = 10
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
 	var/num_fragments = 37  //total number of fragments produced by the grenade
 	var/fragment_damage = 15
@@ -709,6 +711,7 @@
 	secondary_action = TRUE
 
 /obj/item/weapon/grenade/coldwar
+	var/heavy_armor_penetration = 15
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
 	var/num_fragments = 37  //total number of fragments produced by the grenade
 	var/fragment_damage = 15
@@ -979,7 +982,7 @@
 	icon_state = "rpg40"
 	det_time = 50
 	throw_range = 3
-	heavy_armor_penetration = 18
+	heavy_armor_penetration = 22
 
 /obj/item/weapon/grenade/modern/custom
 	name = "shrapnel grenade"
@@ -993,31 +996,23 @@
 	desc = "A powerful grenade, useful against armored vehicles."
 	icon_state = "rpg40"
 	det_time = 50
-	throw_range = 5
-	heavy_armor_penetration = 22
-
-/obj/item/weapon/grenade/antitank
-	name = "anti-tank grenade"
-	desc = "A powerful grenade, useful against armored vehicles."
-	icon_state = "rpg40"
-	det_time = 50
-	throw_range = 5
-	heavy_armor_penetration = 22
+	throw_range = 4
+	heavy_armor_penetration = 24
 
 /obj/item/weapon/grenade/antitank/rpg40
 	name = "RPG-40"
 	icon_state = "rpg40"
 	det_time = 50
-	throw_range = 5
-	heavy_armor_penetration = 23 //about 20–25 millimetres (0.79–0.98 in) of armour can be penetrated
+	throw_range = 4
+	heavy_armor_penetration = 25 //about 20–25 millimetres (0.79–0.98 in) of armour can be penetrated
 
 /obj/item/weapon/grenade/antitank/rpg43
 	name = "RPG-43"
 	desc = "A Powerful soviet anti-tank grenade, useful against armored vehicles."
 	icon_state = "rpg43"
 	det_time = 50
-	throw_range = 6
-	heavy_armor_penetration = 30 //The RPG-43 had a penetration of around 75 millimetres, to not make it too op im giving it only 30
+	throw_range = 5
+	heavy_armor_penetration = 50 //The RPG-43 had a penetration of around 75 millimetres, to not make it too op im giving it only 50
 
 
 /obj/item/weapon/grenade/antitank/stg24_bundle
@@ -1026,19 +1021,21 @@
 	icon_state = "stgbundle"
 	det_time = 50
 	throw_range = 6
-	heavy_armor_penetration = 18
+	heavy_armor_penetration = 24
 
 /obj/item/weapon/grenade/antitank/n73
 	name = "N73 AT grenade"
 	desc = "A British anti-tank hand percussion grenade used during WW2. Also known as \"Thermos\". "
 	icon_state = "n73"
-	heavy_armor_penetration = 20
+	heavy_armor_penetration = 47 //it was able to penetrate 2 inches (51 mm)
+	throw_range = 5
 
 /obj/item/weapon/grenade/antitank/n74
 	name = "N74 AT grenade"
 	desc = "A British anti-tank hand grenade used during WW2. Also known as the \"Sticky Bomb\"."
 	icon_state = "n74"
-	heavy_armor_penetration = 18
+	heavy_armor_penetration = 25
+	det_time = 50
 
 /obj/item/weapon/grenade/antitank/n75
 	name = "n75 AT grenade"
