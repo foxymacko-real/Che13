@@ -1,6 +1,6 @@
 /obj/item/projectile/bullet/pellet/fragment
 	damage = 18
-	range_step = 2 //controls damage falloff with distance. projectiles lose a "pellet" each time they travel this distance. Can be a non-integer.
+	range_step = 1 //controls damage falloff with distance. projectiles lose a "pellet" each time they travel this distance. Can be a non-integer.
 
 	base_spread = FALSE //causes it to be treated as a shrapnel explosion instead of cone
 	spread_step = 12
@@ -27,7 +27,7 @@
 	throw_range = 30
 
 	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment = 1)
-	var/num_fragments = 72  //total number of fragments produced by the grenade
+	var/num_fragments = 60  //total number of fragments produced by the grenade
 	var/explosion_size = 2   //size of the center explosion
 
 	//The radius of the circle used to launch projectiles. Lower values mean less projectiles are used but if set too low gaps may appear in the spread pattern
