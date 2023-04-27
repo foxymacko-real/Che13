@@ -239,6 +239,7 @@
 	icon_state = "shell_mortar"
 	w_class = ITEM_SIZE_LARGE
 	value = 20
+	damage = 100
 
 /obj/item/cannon_ball/mortar_shell/type89
 	name = "type 89 mortar shell"
