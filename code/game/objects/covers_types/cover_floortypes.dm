@@ -9,7 +9,7 @@
 	flammable = TRUE
 	value = 0
 	flags = FALSE
-	
+
 /obj/covers/repairedfloor
 	name = "repaired floor"
 	desc = "a repaired wood floor."

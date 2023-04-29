@@ -264,6 +264,39 @@
 				qdel(I)
 	..()
 
+/obj/covers/tiled_wall
+	name = "tiled wall"
+	desc = "A tiled wall"
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "tiles0"
+	base_icon_state = "tiles"
+	passable = FALSE
+	density = TRUE
+	opacity = TRUE
+	amount = 0
+	layer = 3
+	health = 3250 //until there are stronger alternatives.
+	wood = FALSE
+	wall = TRUE
+	flammable = FALSE
+	explosion_resistance = 13
+	material = "Stone"
+	hardness = 95
+	adjusts = TRUE
+	buildstack = /obj/item/weapon/clay/advclaybricks/fired/cement //For now, until proper crafting materials are done
+
+/obj/covers/tiled_wall/attackby(var/obj/item/weapon/material/kitchen/utensil/I, var/mob/living/human/U)
+	if (istype(I,/obj/item/weapon/material/kitchen/utensil/spoon) || istype(I,/obj/item/weapon/material/kitchen/utensil/fork) || istype(I,/obj/item/weapon/material/kitchen/utensil/chopsticks))
+		if (I.shiv < 10)
+			I.shiv++
+			visible_message("<span class='warning'>[U] sharpens \the [I] on \the [src]!</span>")
+			if (I.shiv >= 10)
+				U.drop_from_inventory(I)
+				var/obj/item/weapon/material/kitchen/utensil/knife/shank/SHK = new /obj/item/weapon/material/kitchen/utensil/knife/shank(U,I.material.name)
+				U.put_in_hands(SHK)
+				U << "\The [I] turns into a shank."
+				qdel(I)
+	..()
 
 /obj/covers/cement_wall
 	name = "concrete wall"
