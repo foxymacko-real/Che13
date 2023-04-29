@@ -333,6 +333,16 @@
 				qdel(I)
 	..()
 
+/obj/covers/cement_wall/horizontal
+	name = "concrete blocks wall"
+	icon_state = "horizontal_concrete_blocks0"
+	base_icon_state = "horizontal_concrete_blocks"
+
+/obj/covers/cement_wall/vertical
+	name = "concrete blocks wall"
+	icon_state = "vertical_concrete_blocks0"
+	base_icon_state = "vertical_concrete_blocks"
+
 /obj/covers/cement_wall/incomplete
 	name = "incomplete concrete wall"
 	desc = "A cement brick wall."
