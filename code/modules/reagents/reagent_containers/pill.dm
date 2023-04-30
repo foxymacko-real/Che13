@@ -131,6 +131,22 @@
 		..()
 		reagents.add_reagent("sal_acid", 10)
 
+/obj/item/weapon/reagent_containers/pill/disodium
+	name = "Diclofenac Sodium pill"
+	desc = "Diclofenac is a medicine that reduces swelling,pain and helps with recorvery,3 pills will cause a Overdose, Overdose will worsen existing bruising and weaken the person affected."
+	icon_state = "pill18"
+	New()
+		..()
+		reagents.add_reagent("disodium", 30)
+
+/obj/item/weapon/reagent_containers/pill/procrit
+	name = "Procrit pill"
+	desc = "Procrit is a man-made medicine that helps your body produce red blood cells, overdosing will Weaken a person and cause hallucinations."
+	icon_state = "pill18"
+	New()
+		..()
+		reagents.add_reagent("procrit", 10)
+
 /obj/item/weapon/reagent_containers/pill/tramadol
 	name = "Tramadol pill"
 	desc = "A moderate painkiller."
