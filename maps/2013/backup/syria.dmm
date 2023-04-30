@@ -313,13 +313,13 @@
 "ga" = (/obj/structure/bed/wood,/obj/item/weapon/bedsheet,/turf/floor/carpet/redcarpet,/area/caribbean/roofed/semiarid)
 "gb" = (/obj/structure/lamp/lamp_big/alwayson{dir = 1; icon_state = "tube"},/turf/floor/carpet/redcarpet,/area/caribbean/roofed/semiarid)
 "gc" = (/obj/structure/wild/rock,/turf/floor/beach/sand/desert,/area/caribbean/no_mans_land/invisible_wall/two{climate = "semiarid"})
-"gd" = (/obj/structure/shelf,/obj/structure/lamp/lamp_big/alwayson{icon_state = "tube"; dir = 1},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ge" = (/obj/structure/bed/chair/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"gf" = (/obj/structure/shelf,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"gd" = (/obj/structure/shelf,/obj/structure/lamp/lamp_big/alwayson{icon_state = "tube"; dir = 1},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ge" = (/obj/structure/bed/chair/wood/alt,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"gf" = (/obj/structure/shelf,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
 "gg" = (/obj/structure/window/classic/reinforced,/obj/structure/curtain/leather/open,/turf/floor/carpet/redcarpet,/area/caribbean/roofed/semiarid)
 "gh" = (/obj/structure/window/classic,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"gi" = (/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"gj" = (/obj/structure/table/wood,/obj/item/flashlight/lamp/littlelamp,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"gi" = (/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"gj" = (/obj/structure/table/wood,/obj/item/flashlight/lamp/littlelamp,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
 "gk" = (/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_66%"},/obj/structure/barbwire{icon_state = "barbwire"; dir = 1},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
 "gl" = (/obj/structure/window/barrier/sandbag/incomplete,/obj/structure/barbwire{icon_state = "barbwire"; dir = 1},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
 "gm" = (/obj/structure/barbwire{icon_state = "barbwire"; dir = 1},/obj/structure/barbwire{dir = 4; icon_state = "barbwire"},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
@@ -410,17 +410,17 @@
 "hT" = (/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_33%"; dir = 4},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
 "hU" = (/obj/structure/window/barrier/sandbag/incomplete{dir = 4; icon_state = "sandbag_66%"},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
 "hV" = (/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_66%"; dir = 8},/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_66%"},/turf/floor/beach/sand/desert,/area/caribbean/nomads/semiarid)
-"hW" = (/obj/structure/table/wood,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"hX" = (/obj/structure/lamp/lamp_small/tank/red{dir = 4},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"hW" = (/obj/structure/table/wood,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"hX" = (/obj/structure/lamp/lamp_small/tank/red{dir = 4},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
 "hY" = (/obj/structure/table/modern/table,/obj/structure/TV,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
-"hZ" = (/obj/item/weapon/stool/wood,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ia" = (/obj/structure/lamp/lamp_small/tank/red{dir = 1},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ib" = (/obj/covers/saloon_door{dir = 4},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ic" = (/obj/structure/window/barrier/sandbag/incomplete{dir = 4; icon_state = "sandbag_66%"},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"id" = (/obj/structure/window/classic,/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_33%"; dir = 8},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ie" = (/obj/structure/bed/chair/wood/alt{dir = 8},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"if" = (/obj/structure/lamp/lamp_big/alwayson,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
-"ig" = (/obj/structure/table/wood/poker,/obj/item/weapon/deck/cards,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"hZ" = (/obj/item/weapon/stool/wood,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ia" = (/obj/structure/lamp/lamp_small/tank/red{dir = 1},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ib" = (/obj/covers/saloon_door{dir = 4},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ic" = (/obj/structure/window/barrier/sandbag/incomplete{dir = 4; icon_state = "sandbag_66%"},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"id" = (/obj/structure/window/classic,/obj/structure/window/barrier/sandbag/incomplete{icon_state = "sandbag_33%"; dir = 8},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ie" = (/obj/structure/bed/chair/wood/alt{dir = 8},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"if" = (/obj/structure/lamp/lamp_big/alwayson,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"ig" = (/obj/structure/table/wood/poker,/obj/item/weapon/deck/cards,/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
 "ih" = (/obj/structure/window/classic/metal,/obj/structure/curtain/open/bed,/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "ii" = (/obj/covers/brick_wall,/turf/wall/brick,/area/caribbean/roofed/semiarid)
 "ij" = (/obj/structure/window/classic/metal,/obj/structure/curtain/open,/turf/floor/wood,/area/caribbean/roofed/semiarid)
@@ -435,7 +435,7 @@
 "is" = (/obj/structure/potted_plant,/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "it" = (/obj/structure/bed/chair{icon_state = "chair"; dir = 1},/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "iu" = (/obj/structure/simple_door/key_door/anyone/wood,/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
-"iv" = (/obj/covers/tiled_wall,/turf/wall/cement,/area/caribbean/roofed/semiarid)
+"iv" = (/obj/structure/sign/flag/medical/crescent,/obj/covers/tiled_wall,/turf/wall/tiles,/area/caribbean/roofed/semiarid)
 "iw" = (/obj/structure/lamp/lamp_big/broken,/turf/floor/wood_broken,/area/caribbean/nomads/semiarid)
 "ix" = (/obj/structure/bed/chair{icon_state = "chair"; dir = 4},/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "iy" = (/obj/structure/bed/chair{dir = 8; icon_state = "chair"},/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
@@ -668,10 +668,10 @@
 "mR" = (/obj/structure/wild/flowers,/turf/floor/dirt/dust,/area/caribbean/nomads/semiarid)
 "mS" = (/obj/structure/wild/rock/basalt,/turf/floor/dirt/dust,/area/caribbean/nomads/semiarid)
 "mT" = (/obj/structure/toilet{dir = 8; icon_state = "toilet00"},/obj/structure/sink,/obj/structure/lamp/lamp_big/alwayson,/turf/floor/plating/white,/area/caribbean/roofed/semiarid)
-"mU" = (/obj/covers/repairedfloor,/obj/structure/window/barrier/railing{dir = 1},/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
+"mU" = (/obj/covers/repairedfloor,/obj/covers/wood/alt/two,/obj/structure/window/barrier/railing{dir = 1},/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
 "mV" = (/obj/covers/sandstone_wall/brick,/obj/structure/closet/cabinet/extinguisher_cabinet{pixel_x = 5},/turf/wall/brick,/area/caribbean/roofed/semiarid)
 "mW" = (/obj/covers/sandstone_wall/brick,/obj/structure/closet/cabinet/extinguisher_cabinet{pixel_x = -7},/turf/wall/brick,/area/caribbean/roofed/semiarid)
-"mX" = (/obj/structure/sign/flag/medical/crescent,/obj/covers/tiled_wall,/turf/wall/cement,/area/caribbean/roofed/semiarid)
+"mX" = (/obj/covers/tiled_wall,/obj/structure/closet/cabinet/extinguisher_cabinet,/turf/wall/tiles,/area/caribbean/roofed/semiarid)
 "mY" = (/obj/covers/cement_wall,/obj/structure/closet/cabinet/extinguisher_cabinet,/turf/wall/cement,/area/caribbean/roofed/semiarid)
 "mZ" = (/obj/covers/sandstone_wall/brick,/obj/structure/closet/cabinet/extinguisher_cabinet{pixel_x = 4},/turf/wall/brick,/area/caribbean/roofed/semiarid)
 "na" = (/obj/structure/closet/fridge,/turf/floor/wood/alt/four,/area/caribbean/roofed/semiarid)
@@ -680,9 +680,9 @@
 "nd" = (/obj/structure/closet/fridge/icebox,/obj/item/weapon/reagent_containers/food/drinks/bottle/plastic/large/water,/obj/item/weapon/reagent_containers/food/drinks/bottle/plastic/large/water,/obj/item/weapon/reagent_containers/food/drinks/bottle/plastic/large/water,/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "ne" = (/obj/structure/closet/fridge/icebox,/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,/turf/floor/plating/concrete,/area/caribbean/roofed/semiarid)
 "nf" = (/obj/covers/wood/stairs{icon_state = "wood2_stairs"; dir = 8},/turf/floor/beach/sand/dark,/area/caribbean/nomads/semiarid)
-"ng" = (/obj/covers/repairedfloor,/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
-"nh" = (/obj/covers/repairedfloor,/obj/structure/window/barrier/railing,/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
-"ni" = (/obj/covers/repairedfloor,/obj/structure/window/barrier/railing,/turf/floor/beach/water/deep,/area/caribbean/nomads/semiarid)
+"ng" = (/obj/covers/repairedfloor,/obj/covers/wood/alt/two,/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
+"nh" = (/obj/covers/repairedfloor,/obj/covers/wood/alt/two,/obj/structure/window/barrier/railing,/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
+"ni" = (/obj/covers/repairedfloor,/obj/covers/wood/alt/two,/obj/structure/window/barrier/railing,/turf/floor/beach/water/deep,/area/caribbean/nomads/semiarid)
 "nj" = (/obj/covers/cobblestone/stairs{dir = 8},/turf/floor/plating/road,/area/caribbean/nomads/semiarid)
 "nk" = (/obj/covers/cobblestone/stairs{dir = 4},/turf/floor/plating/road,/area/caribbean/nomads/semiarid)
 "nl" = (/obj/covers/repairedfloor,/obj/covers/cobblestone,/turf/floor/beach/water,/area/caribbean/nomads/semiarid)
@@ -759,12 +759,12 @@
 "oE" = (/obj/structure/oven,/turf/floor/wood/alt/four,/area/caribbean/roofed/semiarid)
 "oF" = (/obj/structure/table/modern/table,/obj/item/weapon/reagent_containers/glass/bucket,/turf/floor/wood/alt/four,/area/caribbean/roofed/semiarid)
 "oG" = (/obj/structure/window/classic/reinforced,/obj/structure/curtain/leather/open,/turf/floor/wood/alt/four,/area/caribbean/roofed/semiarid)
-"oH" = (/obj/covers/tiled_wall,/obj/structure/closet/cabinet/extinguisher_cabinet,/turf/wall/cement,/area/caribbean/roofed/semiarid)
+"qg" = (/obj/covers/tiled_wall,/turf/wall/tiles,/area/caribbean/roofed/semiarid)
 "sp" = (/obj/structure/simple_door/key_door/anyone/wood,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
 "GG" = (/obj/structure/bed/chair/comfy,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
 "GQ" = (/obj/structure/lamp/lamp_big/alwayson,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
 "Mt" = (/obj/structure/wild/tree/cactus,/turf/floor/beach/sand/desert,/area/caribbean/no_mans_land/invisible_wall/two{climate = "semiarid"})
-"NX" = (/obj/structure/bed/chair/wood/alt{dir = 4},/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
+"NX" = (/obj/structure/bed/chair/wood/alt{dir = 4},/obj/covers/wood/alt,/turf/floor/plating/tiled/woodh,/area/caribbean/roofed/semiarid)
 "PS" = (/turf/floor/beach/sand,/area/caribbean/no_mans_land/invisible_wall/two{climate = "semiarid"})
 "Rp" = (/obj/structure/window/classic/reinforced,/obj/structure/curtain/leather/open,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
 "Ur" = (/obj/structure/table/modern/table,/turf/floor/wood/alt/three,/area/caribbean/roofed/semiarid)
@@ -918,15 +918,15 @@ bkaaaaaaaaalaaaaaaaaaaaabkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bkbkbkbkaaaaaaadaaaaaabkbkbkbkaaaiaaaaaaaaaaaaaaamaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeaeafafafafafafaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaazaaaaaaaaaiaaaajKbfbfaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaealaaaaaaaaaaaaaaaaaaamaaaaaaaaaladdpiFiFiFdpadadaaaaaabkbkbkbkalaaaaaaaaamaaaaaaaaalaaaadpdpdpdpabaaabaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadal
 bkaabkbkaaaaaaaaaaaabkbkbkbkbkaaaaaaabaaaaaaaaaaaaaaaaamaaaaaaaaaaaaaaahaaaaaaaaaiaaaaaaaaaaaaaaaeaeaeafafafafafafaeaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaaaaaaaaaaaaaaaaajLjLjLaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaiabaaaaaaaaaaaaaaaaaaaddpiFiFiFdpadbkaaaaaabkdrbkbkaaabaaaaaaaaadaaaaaaadaaaaaaaaaadpaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 bkbkbkbkbkbkbkadaaaabkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaeaeaeafafafafafafaeaeaeaaaaaaaaaaaaaaadaaaaaaacaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaadaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaelBlCaeaeaeaeaeaeaeaeaeaaaaabaaaaaaaaaaaaaaaaaaaaabaaaaaddpiFiFiFdpadbkaaahacaabkbkbkakaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaai
-aabkbkbkbkbkbkbkaaaabkbkbkaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaamaaaaaaaaaaaaaaaaaaafafafafafafacacacaaaaaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaadalaaaaaaaaalaaaaaaacamaaaaaaaaalabaaaajJbfbfbfbfbfbfaaaeaeeqeqiheqiheqeqaeaeiiijiiiiiiiiijiiaeaeivfPfPivmXfPfPlDlEfPfPmXivfPfPivaeaeaaaaaaaaaaaaaaaaalaaacaaaaaaaaaaaddpiFiFdpdpadaaaaaaaaaabkbkaaaaaaaaaaaaabaaaaaaaaadaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaanaaamaaaaaaaaaaaaaa
-aaaabkbkbkbkbkbkbqbkbkbkaaabanaaaaaaaaaaacaiaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajKbfbfbfbfbfbfaaaeaeeqikfbimfbineqaeaeiiioipiofmirfmiiaeaeivixfbfbfbfbfbfbfbfbfbfbfbfbiyivaeaeaaaaaaaaaaaaaaaaaaaaaaaaacaaaaadaddpiFiFdpdpbkaaaaaaaabkbkbkaaaaaaaZaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaabaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaabkbkbkbkbkbkbkbkaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaafafafafafafacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaacaaaaaaaaaajKbfbfbfbfbfahaaaeaeeqisfbfbfbiteqaeaefpfmfmfmfmiofmfpaeaeivixfbfbfbfbfhfbfhfhfhfbfbfbiyivaeaeaaaaaaaaaaaaaaaaaiaaaaanaaaaaaadaddpiFiFiFadbkadbkaabkbkbkbkaaacaaaZaZaaaaanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaiaaaaaiaaaaaaaaabaaaaanaaaaadaiaaaa
-aaaaaaaaaabkbkaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaabaaaaaaaaafafafafafafacacaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaadaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaajKjLjLjLjLjLjLaaaeaeeqeqeqiueqeqeqaeaeiiiofmiofmiofmiiaeaeivixfbfbfbfbfbfbizfbfhfbfbfbiyivaeaeaaamaaaaaaaaaaabaaaaaaaaaaaaadaddpdpiFiFiFadaaaaalbkbkbkbkbkaaaaaaaZaZaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaa
-aaaaaaaaaaaaaabkbkbkbkaabkbkaaaaaaaaaaaaaaaaaaaiaaaiaaaaadaaabanaaaaaaaaaaacaiaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeiifmfsiofmfsfmiiaeaeivivfjivivoHivfjivivivfjivivivivaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddpiFiFiFdpadaaaaaabkbkbkbkdqbkaaaaaaaZaZaaacaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaaaaaaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaanaaaaaaaaaaaaamaaaaaaaaaaaaaaaaanaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaeaeaeaeaeaeaeaeaeaeaeiiijiiiiiiiiijiiaeaeiviAeneniBiviCeniDiviEeniEeniEivaeaeaaacanaaaaaaaiaaaaaaaaaaaaaaasdpdpiFiFiFdpbkaaaabkbkaabkbkbkbkaaamaaaZaZaaaaaaaaaiaaaaaaaiaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaanaaaaaaaaaaaaamaabkbkbkbkbkaaahaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacacaaaaaaaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeiviGeneniHiveneniIivenenenenenivaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaadaddpiFiFiFdpdpbkaaaabkbkbkaabkdraaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaacaaaaaaaaaaaaaaalaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaalaaaaaaaaaaaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaacaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeiviJiKeniLiviAiMiIiviEeniNeniEivaeaeaaaaaaaaaaacaaaaaaaaaaaaadaddpdpiFiFdpdpbkbkaaaibkbkbkaabkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-aaaaaaaaaaaaadaaaaaaaaaabkbkbkbqbkaaaaaaaaaaaaamaaaaaaaaaaabaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaadaaaaaaaaabaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaiacaaaaaaaaamaaaaaaaaaaaaaaaiaaacaaaiaaaaaaabaaaaaaaaaaaaaaaaaaamaaaaadaaaaaaaaaiaaaaaaaiaaaeaeivivivivivivivivivivivivivivivivaeaeaaaaaaaaaaaaaaaaaaaaaaadaaaddpiFiFiFdpadaaaaaabkbkbkbkbkbkadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aabkbkbkbkbkbkbkaaaabkbkbkaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaamaaaaaaaaaaaaaaaaaaafafafafafafacacacaaaaaaaaaaaaaaaaaaabaaaaaaadaaaaaaaaadalaaaaaaaaalaaaaaaacamaaaaaaaaalabaaaajJbfbfbfbfbfbfaaaeaeeqeqiheqiheqeqaeaeiiijiiiiiiiiijiiaeaeqgfPfPqgivfPfPlDlEfPfPivqgfPfPqgaeaeaaaaaaaaaaaaaaaaalaaacaaaaaaaaaaaddpiFiFdpdpadaaaaaaaaaabkbkaaaaaaaaaaaaabaaaaaaaaadaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaanaaamaaaaaaaaaaaaaa
+aaaabkbkbkbkbkbkbqbkbkbkaaabanaaaaaaaaaaacaiaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafacacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaajKbfbfbfbfbfbfaaaeaeeqikfbimfbineqaeaeiiioipiofmirfmiiaeaeqgixfbfbfbfbfbfbfbfbfbfbfbfbiyqgaeaeaaaaaaaaaaaaaaaaaaaaaaaaacaaaaadaddpiFiFdpdpbkaaaaaaaabkbkbkaaaaaaaZaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaabaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaabkbkbkbkbkbkbkbkaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaafafafafafafacacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaiaaaaaaaaaaaaaaacaaaaaaaaaajKbfbfbfbfbfahaaaeaeeqisfbfbfbiteqaeaefpfmfmfmfmiofmfpaeaeqgixfbfbfbfbfhfbfhfhfhfbfbfbiyqgaeaeaaaaaaaaaaaaaaaaaiaaaaanaaaaaaadaddpiFiFiFadbkadbkaabkbkbkbkaaacaaaZaZaaaaanaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaababaaaaaiaaaaaiaaaaaaaaabaaaaanaaaaadaiaaaa
+aaaaaaaaaabkbkaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaabaaaaaaaaafafafafafafacacaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaadaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaajKjLjLjLjLjLjLaaaeaeeqeqeqiueqeqeqaeaeiiiofmiofmiofmiiaeaeqgixfbfbfbfbfbfbizfbfhfbfbfbiyqgaeaeaaamaaaaaaaaaaabaaaaaaaaaaaaadaddpdpiFiFiFadaaaaalbkbkbkbkbkaaaaaaaZaZaZaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaa
+aaaaaaaaaaaaaabkbkbkbkaabkbkaaaaaaaaaaaaaaaaaaaiaaaiaaaaadaaabanaaaaaaaaaaacaiaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeiifmfsiofmfsfmiiaeaeqgqgfjqgqgmXqgfjqgqgqgfjqgqgqgqgaeaeadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddpiFiFiFdpadaaaaaabkbkbkbkdqbkaaaaaaaZaZaaacaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaaaaaaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaanaaaaaaaaaaaaamaaaaaaaaaaaaaaaaanaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaeaeaeaeaeaeaeaeaeaeaeiiijiiiiiiiiijiiaeaeqgiAeneniBqgiCeniDqgiEeniEeniEqgaeaeaaacanaaaaaaaiaaaaaaaaaaaaaaasdpdpiFiFiFdpbkaaaabkbkaabkbkbkbkaaamaaaZaZaaaaaaaaaiaaaaaaaiaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaanaaaaaaaaaaaaamaabkbkbkbkbkaaahaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacacaaaaaaaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeqgiGeneniHqgeneniIqgenenenenenqgaeaeaaaaaaaaaaaaaaaaaaaaaaaaaaadaddpiFiFiFdpdpbkaaaabkbkbkaabkdraaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaacaaaaaaaaaaaaaaalaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaalaaaaaaaaaaaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaacaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaamaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeqgiJiKeniLqgiAiMiIqgiEeniNeniEqgaeaeaaaaaaaaaaacaaaaaaaaaaaaadaddpdpiFiFdpdpbkbkaaaibkbkbkaabkbkaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+aaaaaaaaaaaaadaaaaaaaaaabkbkbkbqbkaaaaaaaaaaaaamaaaaaaaaaaabaaalaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaadaaaaaaaaabaaaaaaaaaaaaaaaaaaaaabaaaaaaaaaiacaaaaaaaaamaaaaaaaaaaaaaaaiaaacaaaiaaaaaaabaaaaaaaaaaaaaaaaaaamaaaaadaaaaaaaaaiaaaaaaaiaaaeaeqgqgqgqgqgqgqgqgqgqgqgqgqgqgqgqgaeaeaaaaaaaaaaaaaaaaaaaaaaadaaaddpiFiFiFdpadaaaaaabkbkbkbkbkbkadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaaaaaaaaaaaaaaaaabkbkbkbkabaaaaaaaaaaaaaaaaaaaaahaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaalacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaaaaaaaaacaaadaadpiFiFiFdpadadaaaaaabkbkbkbkbkbkaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaabaaaaaaaaadaaaaaaadaaaabkbkbkbkbkaaaaaaaaaaaaaaaaaaaaaaabaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaeaaaaaaaaaaaaaaaaaaaaadaddpiFiFiFdpdpadadaaadaabqbkbkaabkaiaaaaaaaaaaaaadaaaaaaacaaaaaaaaaaaaaaaaaaabaaaaaaaaadaaaaaaaaaiaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
 aaaaaaaaaaabaaaaaaaaaaaaaaaabkbkbkbkbkbkaaadaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafafafafafafaaaaaaaaaaabaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaadaaaaaaaaaaaqaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaddpdpiFiFiFdpadadaaaaaabkbkbkbkbkbkaaaaaaaaaaaaaaadaaaaaaaaaaaaaaacaaaaaaaaaaaaacaaaaaaaaaaaaabaaaaacaaaaaaaaaaaaaaaaaaaaaaaaaaaa
