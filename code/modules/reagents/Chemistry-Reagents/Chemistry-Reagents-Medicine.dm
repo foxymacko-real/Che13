@@ -592,7 +592,7 @@
 /datum/reagent/procrit
 	name = "Procrit"
 	id = "procrit"
-	description = "Procrit is a man-made medicine that helps your body produce red blood cells, overdosing will Weaken a person and cause hallucinations."
+	description = "Procrit is a man-made medicine that helps your body produce red blood cells, overdosing will Weaken a person and cause hallucinations, also rarely causes dizzyness."
 	reagent_state = LIQUID
 	color = "#3D2022"
 	metabolism = REM * 0.55
@@ -603,7 +603,8 @@
 	M << "<span class='notice'>You Feel Alive again.</span>"
 	M.SetParalysis(0)
 	M.SetWeakened(0)
-
+	if(prob(10))
+		M.make_dizzy(1)
 /datum/reagent/procrit/overdose(mob/living/M)
 	M.hallucination = max(M.hallucination, 2)
 	M.AdjustWeakened(4)
