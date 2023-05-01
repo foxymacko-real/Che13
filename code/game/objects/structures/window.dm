@@ -520,12 +520,14 @@
 	name = "medieval window frame"
 	desc = "A dark ages window, minus the window."
 	stucco_window = FALSE
+	climbable = FALSE
 
 /obj/structure/window_frame/oriental
 	icon_state = "oriental_windownew_frame"
 	name = "oriental window frame"
 	desc = "A east-oriental style window, minus the window."
 	stucco_window = FALSE
+	climbable = FALSE
 
 /obj/structure/window_frame/bamboo
 	icon_state = "bamboo_windownew_frame"
@@ -572,6 +574,7 @@
 	health = 200
 	flammable = FALSE
 	stucco_window = FALSE
+	climbable = FALSE
 
 /obj/structure/window_frame/brickfull
 	icon_state = "brick_windownew_fullframe"
@@ -798,12 +801,14 @@
 	maximal_heat = T0C + 1600
 	damage_per_fire_tick = 1.0
 	maxhealth = 300.0
+	climbable = FALSE
 
 /obj/structure/window/classic/medieval
 	icon_state = "medieval_windownew"
 	basestate = "medieval_windownew"
 	name = "medieval window"
 	desc = "A dark ages window."
+	climbable = FALSE
 
 /obj/structure/window/classic/oriental
 	icon_state = "oriental_windownew"
@@ -865,6 +870,7 @@
 	damage_per_fire_tick = 1.0
 	health = 200
 	flammable = FALSE
+	climbable = FALSE
 
 /obj/structure/window/classic/brickfull
 	icon_state = "brick_windownew_full"

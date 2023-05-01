@@ -13,8 +13,8 @@
 	climbable = TRUE
 	mouse_drop_zone = TRUE
 	var/incomplete = FALSE
-	maxhealth = 30
-	health = 30
+	maxhealth = 250
+	health = 250
 	New()
 		..()
 		health = maxhealth
@@ -245,7 +245,7 @@
 	layer = MOB_LAYER + 0.01 //just above mobs
 	anchored = TRUE
 	climbable = TRUE
-	maxhealth = 30
+	maxhealth = 350
 
 /obj/structure/window/barrier/sandstone
 	name = "sandstone wall"
@@ -254,14 +254,14 @@
 	layer = MOB_LAYER + 0.01 //just above mobs
 	anchored = TRUE
 	climbable = TRUE
-	maxhealth = 30
+	maxhealth = 250
 
 /obj/structure/window/barrier/palisade
 	name = "palisade"
 	desc = "A wooden palisade."
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "palisade"
-	health = 25
+	health = 155
 	anchored = TRUE
 	climbable = FALSE
 	flammable = TRUE
@@ -355,8 +355,8 @@
 	icon_state = "sandstone"
 	layer = MOB_LAYER + 0.01 //just above mobs
 	anchored = TRUE
-	climbable = FALSE
-	maxhealth = 10000000
+	climbable = TRUE
+	maxhealth = 9000
 
 /obj/structure/window/barrier/railing/stone
 	name = "railing"
@@ -365,8 +365,8 @@
 	icon_state = "stone"
 	layer = MOB_LAYER + 0.01 //just above mobs
 	anchored = TRUE
-	climbable = FALSE
-	maxhealth = 10000000
+	climbable = TRUE
+	maxhealth = 9000
 
 /obj/structure/window/barrier/railing/brick
 	name = "Brick Wall"
@@ -375,8 +375,8 @@
 	icon_state = "brick"
 	layer = MOB_LAYER + 0.01 //just above mobs
 	anchored = TRUE
-	climbable = FALSE
-	maxhealth = 10000000
+	climbable = TRUE
+	maxhealth = 9000
 
 /obj/structure/window/barrier/railing/New()
 	..()
@@ -387,7 +387,7 @@
 	desc = "Barrier employed to separate lanes of traffic."
 	icon_state = "jerseybarrier1"
 	icon = 'icons/obj/junk.dmi'
-	maxhealth = 80
+	maxhealth = 4500
 
 /obj/structure/window/barrier/jersey/New()
 	..()
