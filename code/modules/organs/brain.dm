@@ -1,6 +1,6 @@
 /obj/item/organ/brain
 	name = "brain"
-	health = 60 //They need to live awhile longer than other organs. Is this even used by organ code anymore?
+	health = 75 //Buffed its health to 75
 	desc = "A piece of juicy meat found in a person's head."
 	organ_tag = "brain"
 	parent_organ = "head"
@@ -15,7 +15,7 @@
 	attack_verb = list("attacked", "slapped", "whacked")
 	var/mob/living/human/brain/brainmob = null
 	map_storage_saved_vars = "density;icon_state;dir;name;pixel_x;pixel_y;container;name;real_name"
-	
+
 	var/const/damage_threshold_count = 10
 	var/damage_threshold_value = 10
 	var/healed_threshold = 1

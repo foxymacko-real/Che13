@@ -46,7 +46,7 @@
 				if (E.is_broken() && E.internal_organs && E.internal_organs.len && prob(15))
 					var/obj/item/organ/I = pick(E.internal_organs)
 					custom_pain("You feel broken bones moving in your [E.name]!", 55)
-					I.take_damage(rand(3,5))
+					I.take_damage(rand(2,3))
 
 	var/limbs_count = 4
 	var/obj/item/organ/external/E = organs_by_name["l_foot"]

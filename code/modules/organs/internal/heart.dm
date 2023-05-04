@@ -11,7 +11,7 @@
 	var/efficiency = 1.0
 	w_class = ITEM_SIZE_SMALL
 	relative_size = 15
-	max_damage = 45
+	max_damage = 55
 	var/open
 	var/list/external_pump
 
@@ -93,7 +93,7 @@
 	//Blood regeneration if there is some space
 	if (blood_volume_raw < species.blood_volume)
 		var/datum/reagent/blood/B = owner.get_blood(owner.vessel)
-		B.volume += 0.1 // regenerate blood VERY slowly
+		B.volume += 0.2 // regenerate blood slowly
 		if (CE_BLOODRESTORE in owner.chem_effects)
 			B.volume += owner.chem_effects[CE_BLOODRESTORE]
 
