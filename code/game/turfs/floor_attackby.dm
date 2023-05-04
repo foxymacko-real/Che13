@@ -492,15 +492,13 @@
 			playsound(src, 'sound/items/Crowbar.ogg', 80, TRUE)
 			return
 		else if (istype(C, /obj/item/weapon/hammer) && (flooring.flags & TURF_REMOVE_SCREWDRIVER))
-			if (broken || burnt || src.z > 1)
+			if (broken || burnt)
 				return
 			user << "<span class='notice'>You unscrew and remove the [flooring.descriptor].</span>"
 			make_grass()
 			playsound(src, 'sound/items/Screwdriver.ogg', 80, TRUE)
 			return
 		else if (istype(C, /obj/item/weapon/wrench) && (flooring.flags & TURF_REMOVE_WRENCH))
-			if (src.z > 1)
-				return
 			user << "<span class='notice'>You unwrench and remove the [flooring.descriptor].</span>"
 			make_grass()
 			playsound(src, 'sound/items/Ratchet.ogg', 80, TRUE)

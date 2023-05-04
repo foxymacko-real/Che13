@@ -50,6 +50,17 @@
 	worn_state = "satchel"
 	max_storage_space = 16
 
+/obj/item/weapon/storage/backpack/milcrate
+	name = "Small Military Crate"
+	desc = "a small military crate which can carry all sorts of things, it is very heavy."
+	icon_state = "milsmallcrate"
+	base_icon = "milsmallcrate"
+	worn_state = "milsmallcrate"
+	max_storage_space = 25
+	slot_flags = SLOT_BACK
+	w_class = ITEM_SIZE_HUGE
+	slowdown = 0.3
+
 /obj/item/weapon/storage/backpack/satchel/gator_satchel
 	name = "alligator scale satchel"
 	desc = "A fashionable satchel lined with exotic alligator scales"

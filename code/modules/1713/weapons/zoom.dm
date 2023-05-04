@@ -52,7 +52,7 @@ Parts of code courtesy of Super3222
 /obj/item/weapon/attachment/scope/adjustable/binoculars/binoculars
 	name = "binoculars"
 	desc = "A pair of binoculars."
-	icon_state = "binoculars"
+	icon_state = "spotbin"
 	max_zoom = ZOOM_CONSTANT*3
 	attachable = FALSE
 	value = 15
@@ -134,8 +134,8 @@ Parts of code courtesy of Super3222
 		if (!checking)
 			if (airstrikes_remaining > 0)
 				if (debounce <= world.time)
-					
-					
+
+
 					checking = TRUE
 					var/dist1 = abs(H.x-target.x)
 					var/dist2 = abs(H.y-target.y)
