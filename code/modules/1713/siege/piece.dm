@@ -684,11 +684,10 @@
 														shake_camera(M, 5, 5)
 													playsound(loc, pick('sound/machines/tank/tank_ricochet1.ogg','sound/machines/tank/tank_ricochet2.ogg','sound/machines/tank/tank_ricochet3.ogg'),100, TRUE)
 													visible_message(SPAN_DANGER("<big>The hull gets hit by a mortar shell!</big>"))
-													F.w_front[5] -= rand(5,12)
-													F.w_back[5] -= rand(5,12)
-													F.w_left[5] -= rand(5,12)
-													F.w_right[5] -= rand(5,12)
-													explosion(target, 0, 1, 1, 1)
+													F.w_front[5] -= rand(7,14)
+													F.w_back[5] -= rand(7,14)
+													F.w_left[5] -= rand(7,14)
+													F.w_right[5] -= rand(7,14)
 
 													F.try_destroy()
 											else
@@ -707,9 +706,9 @@
 														shake_camera(M, 7, 7)
 													playsound(loc, pick('sound/machines/tank/tank_ricochet1.ogg','sound/machines/tank/tank_ricochet2.ogg','sound/machines/tank/tank_ricochet3.ogg'),100, TRUE)
 													visible_message(SPAN_DANGER("<big>The hull gets hit by an artillery shell!</big>"))
-													F.w_front[7] -= rand(10,19)
-													F.w_back[7] -= rand(10,19)
-													F.w_left[7] -= rand(10,19)
+													F.w_front[7] -= rand(10,20)
+													F.w_back[7] -= rand(10,20)
+													F.w_left[7] -= rand(10,20)
 													F.w_right[7] -= rand(10,19)
 
 													F.try_destroy()
