@@ -119,6 +119,48 @@
 	multiple_sprites = TRUE
 	is_box = TRUE
 
+/obj/item/ammo_magazine/box/mm9
+	name = "Ammo box (9x19mm)"
+	icon_state = "9mm"
+	mag_type = MAGAZINE
+	caliber = "a9x19"
+	w_class = ITEM_SIZE_NORMAL
+	ammo_type = /obj/item/ammo_casing/a9x19
+	max_ammo = 80
+	multiple_sprites = TRUE
+	is_box = TRUE
+
+/obj/item/ammo_magazine/box/mm9ap
+	name = "AP Ammo box (9x19mm)"
+	icon_state = "9mm"
+	mag_type = MAGAZINE
+	caliber = "a9x19"
+	w_class = ITEM_SIZE_NORMAL
+	ammo_type = /obj/item/ammo_casing/a9x19/ap
+	max_ammo = 80
+	multiple_sprites = TRUE
+	is_box = TRUE
+
+/obj/item/ammo_magazine/box/mm9x18pouch
+	name = "Ammo pouch (9x18mm)"
+	icon_state = "pouch_closed"
+	ammo_type = /obj/item/ammo_casing/a9x18
+	caliber = "a9x18"
+	max_ammo = 80
+	weight = 0.8
+	multiple_sprites = TRUE
+	pouch = TRUE
+
+/obj/item/ammo_magazine/box/mm9x18pouchap
+	name = "Ammo pouch (9x18mm AP)"
+	icon_state = "pouch_closed"
+	ammo_type = /obj/item/ammo_casing/a9x18/ap
+	caliber = "a9x18"
+	max_ammo = 80
+	weight = 0.8
+	multiple_sprites = TRUE
+	pouch = TRUE
+
 /obj/item/ammo_magazine/mp40/mp5
 	name = "MP5 magazine (9x19mm)"
 	icon_state = "mp5"

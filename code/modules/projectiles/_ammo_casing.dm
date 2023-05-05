@@ -938,13 +938,33 @@
 	caliber = "a9x19"
 	value = 2
 
+/obj/item/ammo_casing/a9x19/ap
+	name = "9x19mm cartridge"
+	desc = "A brass casing."
+	icon_state = "pistol-bullet"
+	spent_icon = "pistol-casing"
+	weight = 0.05
+	projectile_type = /obj/item/projectile/bullet/pistol/a9x19/ap
+	caliber = "a9x19"
+	value = 2
+
 /obj/item/ammo_casing/a9x18
-	name = "9x18mm Makarov cartridge"
+	name = "9x18mm cartridge"
 	desc = "A brass casing."
 	icon_state = "pistol-bullet"
 	spent_icon = "pistol-casing"
 	weight = 0.05
 	projectile_type = /obj/item/projectile/bullet/pistol/a9x18
+	caliber = "a9x18"
+	value = 2
+
+/obj/item/ammo_casing/a9x18/ap
+	name = "9x18mm cartridge"
+	desc = "A brass casing."
+	icon_state = "pistol-bullet"
+	spent_icon = "pistol-casing"
+	weight = 0.05
+	projectile_type = /obj/item/projectile/bullet/pistol/a9x18/ap
 	caliber = "a9x18"
 	value = 2
 
