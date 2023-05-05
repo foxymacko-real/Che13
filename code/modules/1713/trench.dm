@@ -76,7 +76,7 @@ var/list/global/floor_cache = list()
 	base_icon_state = "trench_flooded"
 	initial_flooring = /decl/flooring/trench/flooded
 	salty = FALSE
-	move_delay = 4
+	move_delay = 5
 
 /turf/floor/trench/flooded/proc/check_bridge()
 	if(locate(/obj/covers/repairedfloor) in contents)
@@ -126,9 +126,9 @@ var/list/global/floor_cache = list()
 				user.visible_message("<span class='notice'>[user] fills \the [RG] with water.</span>","<span class='notice'>You fill \the [RG] with water.</span>")
 				playsound(user, 'sound/effects/watersplash.ogg', 100, TRUE)
 				user.setClickCooldown(5)
-				return TRUE //prevent afterattack 
+				return TRUE //prevent afterattack
 			else
-				return TRUE //prevent afterattack 
+				return TRUE //prevent afterattack
 	else if (istype(C, /obj/item/clothing) && !busy)
 		var/obj/item/clothing/CL = C
 		usr << "<span class='notice'>You start washing \the [C].</span>"

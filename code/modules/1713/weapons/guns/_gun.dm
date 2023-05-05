@@ -76,7 +76,7 @@
 	equiptimer = 10
 
 	var/headshot_kill_chance = 40 // if we have enough damage. See projectile.dm if you want to know why this needs to be set to 40 for all guns - Kachnov
-	var/KO_chance = 33 // even if we fail to kill with a headshot, chance to make the target go unconscious
+	var/KO_chance = 30 // even if we fail to kill with a headshot, chance to make the target go unconscious
 
 	// does not need to include all organs
 	var/list/redirection_chances = list(
@@ -276,7 +276,7 @@
 
 		if (hitchance_still && hitchance_delta)
 			if (prob(ceil(hitchance_delta * 0.75)))
-				if (!(zone in adjacent_redirections)) // wtf
+				if (!(zone in adjacent_redirections)) // wtf //cope retard this is real coding
 					log_debug("No '[zone]' found in '[src].adjacent_redirections'! Returning null (_gun.dm, ~line 200)")
 					return null
 				return pick(adjacent_redirections[zone])

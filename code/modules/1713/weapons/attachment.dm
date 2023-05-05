@@ -3,9 +3,8 @@
 TODO:
 Optimize this code as much as possible
 Add Sounds
-Replace snowflaked icon manipulation with proper icon mask manipulation
+Replace icon manipulation with proper icon mask manipulation
 Add more attachments
-Add attached bayonet sprite
 
 Current Defines (_defines/attachment.dm)
 

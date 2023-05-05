@@ -25,7 +25,7 @@
 			if (incomplete)
 				extra_chance += 20
 			else
-				extra_chance += 60
+				extra_chance += 65
 		if (ishuman(m))
 			var/mob/living/human/H = m
 			if (H.crouching && !H.lying)
