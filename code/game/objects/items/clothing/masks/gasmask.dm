@@ -14,9 +14,9 @@
 	var/list/filtered_gases = list("plasma", "sleeping_agent, xylyl_bromide", "mustard_gas", "white_phosphorus_gas", "chlorine_gas", "zyklon_b", "phosgene_gas")
 	slot_flags = SLOT_BELT|SLOT_MASK
 	blocks_scope = TRUE
-	restricts_view = 2
+	restricts_view = 1
 	flags = CONDUCT
-	armor = list(melee = 10, arrow = FALSE, gun = FALSE, energy = 35, bomb = 15, bio = 100, rad = 80)
+	armor = list(melee = 15, arrow = FALSE, gun = 2, energy = 35, bomb = 25, bio = 100, rad = 95)
 
 /obj/item/clothing/mask/gas/filter_air(datum/gas_mixture/air)
 	var/datum/gas_mixture/filtered = new

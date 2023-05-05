@@ -419,14 +419,24 @@
 	armor_penetration = 5
 
 /obj/item/projectile/bullet/pistol/a9x19
-	damage = DAMAGE_LOW
+	damage = DAMAGE_LOW + 3
 	penetrating = 2
 	armor_penetration = 8
 
+/obj/item/projectile/bullet/pistol/a9x19/ap
+	damage = DAMAGE_LOW + 1
+	penetrating = 2
+	armor_penetration = 13
+
 /obj/item/projectile/bullet/pistol/a9x18
-	damage = DAMAGE_LOW
+	damage = DAMAGE_LOW + 2
 	penetrating = 2
 	armor_penetration = 9
+
+/obj/item/projectile/bullet/pistol/a9x18/ap
+	damage = DAMAGE_LOW + 1
+	penetrating = 2
+	armor_penetration = 14
 
 /obj/item/projectile/bullet/pistol/a792x33
 	damage = DAMAGE_HIGH + 5

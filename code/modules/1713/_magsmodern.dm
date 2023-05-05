@@ -185,6 +185,18 @@
 	weight = 0.45
 	multiple_sprites = TRUE
 
+/obj/item/ammo_magazine/aps
+	name = "Stechkin APS magazine (9x18mm)"
+	icon_state = "m1911" //temporary, to be changed
+	mag_type = MAGAZINE
+	ammo_type = /obj/item/ammo_casing/a9x18
+	caliber = "a9x18"
+	max_ammo = 20
+	multiple_sprites = TRUE
+/obj/item/ammo_magazine/aps/empty/New()
+	..()
+	stored_ammo.Cut()
+
 /obj/item/ammo_magazine/scarh
 	name = "SCAR-H magazine (7.62x51mm)"
 	icon_state = "scarh"

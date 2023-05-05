@@ -570,7 +570,7 @@
 	ammo_type = /obj/item/ammo_casing/a9x18
 	load_method = MAGAZINE
 	handle_casings = EJECT_CASINGS
-	effectiveness_mod = 0.98
+	effectiveness_mod = 1.0
 	bad_magazine_types = list(/obj/item/ammo_magazine/c762x25_ppsh, /obj/item/ammo_magazine/c762x25_pps)
 
 /obj/item/weapon/gun/projectile/pistol/makarov/update_icon()
@@ -587,6 +587,22 @@
 	var/obj/item/weapon/attachment/silencer/pistol/SP = new/obj/item/weapon/attachment/silencer/pistol(src)
 	SP.attached(null,src,TRUE)
 
+obj/item/weapon/gun/projectile/pistol/aps
+	name = "Stechkin APS"
+	desc = "A Soviet selective fire machine pistol. Chambered in 9x18mm Makarov."
+	icon_state = "aps"
+	w_class = ITEM_SIZE_SMALL
+	caliber = "a9x18"
+	fire_sound = 'sound/weapons/guns/fire/762x25.ogg'
+	magazine_type = /obj/item/ammo_magazine/aps
+	good_mags = list(/obj/item/ammo_magazine/aps, /obj/item/ammo_magazine/aps/empty)
+	weight = 0.704
+	ammo_type = /obj/item/ammo_casing/a9x18
+	load_method = MAGAZINE
+	handle_casings = EJECT_CASINGS
+	effectiveness_mod = 1.02
+	bad_magazine_types = list(/obj/item/ammo_magazine/makarov)
+
 /obj/item/weapon/gun/projectile/pistol/m9beretta
 	name = "Beretta M9"
 	desc = "The standard issue pistol of US Armed Forces from 1985 to 2017. Chambered in 9mm Luger."
@@ -600,7 +616,7 @@
 	ammo_type = /obj/item/ammo_casing/a9x19
 	load_method = MAGAZINE
 	handle_casings = EJECT_CASINGS
-	effectiveness_mod = 1.12
+	effectiveness_mod = 1.05
 
 /obj/item/weapon/gun/projectile/pistol/m9beretta/update_icon()
 	..()
@@ -629,7 +645,7 @@
 	ammo_type = /obj/item/ammo_casing/a9x19
 	load_method = MAGAZINE
 	handle_casings = EJECT_CASINGS
-	effectiveness_mod = 1.12
+	effectiveness_mod = 1.05
 
 /obj/item/weapon/gun/projectile/pistol/m9beretta/tan/update_icon()
 	..()
