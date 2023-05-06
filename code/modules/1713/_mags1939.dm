@@ -119,7 +119,7 @@
 	multiple_sprites = TRUE
 	is_box = TRUE
 
-/obj/item/ammo_magazine/box/mm9
+/obj/item/ammo_magazine/box/a9mm
 	name = "Ammo box (9x19mm)"
 	icon_state = "9mm"
 	mag_type = MAGAZINE
@@ -130,7 +130,7 @@
 	multiple_sprites = TRUE
 	is_box = TRUE
 
-/obj/item/ammo_magazine/box/mm9ap
+/obj/item/ammo_magazine/box/a9mmap
 	name = "AP Ammo box (9x19mm)"
 	icon_state = "9mm"
 	mag_type = MAGAZINE
@@ -141,7 +141,7 @@
 	multiple_sprites = TRUE
 	is_box = TRUE
 
-/obj/item/ammo_magazine/box/mm9x18pouch
+/obj/item/ammo_magazine/box/a9x18mm
 	name = "Ammo pouch (9x18mm)"
 	icon_state = "pouch_closed"
 	ammo_type = /obj/item/ammo_casing/a9x18
@@ -151,7 +151,7 @@
 	multiple_sprites = TRUE
 	pouch = TRUE
 
-/obj/item/ammo_magazine/box/mm9x18pouchap
+/obj/item/ammo_magazine/box/a9x18mmap
 	name = "Ammo pouch (9x18mm AP)"
 	icon_state = "pouch_closed"
 	ammo_type = /obj/item/ammo_casing/a9x18/ap
