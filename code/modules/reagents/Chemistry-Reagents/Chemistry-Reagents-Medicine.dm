@@ -133,7 +133,7 @@
 	metabolism = 0.02
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/human/M, var/alien, var/removed)
-	M.add_chemical_effect(CE_PAINKILLER, 200)
+	M.add_chemical_effect(CE_PAINKILLER, 250)
 
 /datum/reagent/oxycodone/overdose(var/mob/living/human/M, var/alien)
 	..()
@@ -516,6 +516,27 @@
 	M.sleeping = max(M.sleeping, 100)
 	M.druggy = max(M.druggy, 250)
 
+/datum/reagent/methadone
+	name = "Methadone"
+	id = "methadone"
+	description = "A Stronger than morphine painkiller that might also sometimes get you out of shock, Overdosing will disorient a person"
+	taste_description = "Weird Sweetness"
+	reagent_state = LIQUID
+	color = "#880808"
+	metabolism = REM * 1
+	overdose = 15
+
+/datum/reagent/methadone/affect_blood(var/mob/living/human/M, var/alien, var/removed)
+	M.add_chemical_effect(CE_PAINKILLER, 300)
+	M.mood += removed*10
+	if (prob(2))
+		M.traumatic_shock = max(0,M.traumatic_shock-removed)
+		M.shock_stage = max(0,M.shock_stage-removed/1) //not as effective as adrenaline
+/datum/reagent/methadone/overdose(var/mob/living/human/M, var/alien)
+	..()
+	M.AdjustWeakened(5)
+	M.make_dizzy(2)
+	M.druggy = max(M.druggy, 50)
 
 /datum/reagent/pen_acid
 	name = "Pentetic Acid"
@@ -566,11 +587,14 @@
 	reagent_state = LIQUID
 	color = "#EEDC82"
 	metabolism = 0.7
-	overdose = 65
+	overdose = 40
 
 /datum/reagent/disodium/affect_blood(var/mob/living/human/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 40)
-	M.AdjustWeakened(-3)
+	M.AdjustWeakened(-10)
+	if (prob(1))
+		M.traumatic_shock = max(0,M.traumatic_shock-removed)
+		M.shock_stage = max(0,M.shock_stage-removed/1) //not as effective as adrenaline
 	if(M.getBruteLoss() > 10)
 		M.adjustBruteLoss(-2*REM)
 	else

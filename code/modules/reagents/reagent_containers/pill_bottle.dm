@@ -169,3 +169,76 @@
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
 		new /obj/item/weapon/reagent_containers/pill/citalopram( src )
+
+/obj/item/weapon/storage/pill_bottle/citalopram
+	name = "bottle of methadone pills"
+	desc = "Contains Stronger than Morphine pills."
+
+	New()
+		..()
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+		new /obj/item/weapon/reagent_containers/pill/methadone( src )
+
+/obj/item/weapon/storage/pill_bottle/procrit
+	name = "bottle of procrit pills"
+	desc = "Contains Pills that restore blood over time."
+
+	New()
+		..()
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+		new /obj/item/weapon/reagent_containers/pill/procrit( src )
+
+/obj/item/weapon/storage/pill_bottle/disodium
+	name = "bottle of Diclofenac Sodium pills"
+	desc = "Contains Pills that reduces swelling,pain and help with recorvery."
+
+	New()
+		..()
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )
+		new /obj/item/weapon/reagent_containers/pill/disodium( src )

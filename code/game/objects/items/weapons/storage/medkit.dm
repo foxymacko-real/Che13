@@ -126,6 +126,27 @@
 	new /obj/item/weapon/surgery/scalpel(src)
 	new /obj/item/stack/medical/advanced/bruise_pack(src)
 
+/obj/item/weapon/storage/firstaid/surgerymodern
+	name = "Modern surgery kit"
+	desc = "Contains Modern tools for proper surgery."
+	icon_state = "surgerykitadv"
+	item_state = "surgerykitadv"
+
+/obj/item/weapon/storage/firstaid/surgerymodern/New()
+	..()
+	new /obj/item/weapon/surgery/bonesetter(src)
+	new /obj/item/weapon/surgery/cautery(src)
+	new /obj/item/weapon/surgery/bone_saw(src)
+	new /obj/item/weapon/surgery/hemostat(src)
+	new /obj/item/weapon/surgery/retractor(src)
+	new /obj/item/weapon/surgery/scalpel(src)
+	new /obj/item/weapon/pill_pack/disodium(src)
+	new /obj/item/weapon/pill_pack/adrenaline(src)
+	new /obj/item/weapon/pill_pack/procrit(src)
+	new /obj/item/weapon/pill_pack/antitox(src)
+	new /obj/item/weapon/pill_pack/methadone(src)
+	new /obj/item/weapon/reagent_containers/spray/sterilizine(src)
+
 /obj/item/weapon/storage/firstaid/surgery_empty
 	name = "surgery kit"
 	desc = "Contains tools for surgery."

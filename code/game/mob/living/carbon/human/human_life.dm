@@ -1376,7 +1376,7 @@
 
 	if (shock_stage >= 80)
 		if (prob(5))
-			src << "<span class='danger'>[pick("The pain is excruciating", "Please, just end the pain", "Your whole body is going numb")]!</span>"
+			src << "<span class='danger'>[pick("You cant handle the pain", "AAAGHHH", "You cant feel anything but pain")]!</span>"
 			Weaken(20)
 
 	if (shock_stage >= 120)

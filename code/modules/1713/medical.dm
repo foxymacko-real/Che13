@@ -113,3 +113,8 @@
 	name = "Procrit Pill pack"
 	desc = "Procrit is a man-made medicine that helps your body produce red blood cells and thus restore your blood, overdosing will Weaken a person and cause hallucinations."
 	pill_type = /obj/item/weapon/reagent_containers/pill/procrit
+
+/obj/item/weapon/pill_pack/methadone
+	name = "Methadone Pill pack"
+	desc = "A Stronger than morphine painkiller that might also sometimes get you out of shock,Overdosing will disorient a person, 2 pills to overdose."
+	pill_type = /obj/item/weapon/reagent_containers/pill/methadone

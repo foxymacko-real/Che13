@@ -134,15 +134,23 @@
 /obj/item/weapon/reagent_containers/pill/disodium
 	name = "Diclofenac Sodium pill"
 	desc = "Diclofenac is a medicine that reduces swelling,pain and helps with recorvery,3 pills will cause a Overdose, Overdose will worsen existing bruising and weaken the person affected."
-	icon_state = "pill18"
+	icon_state = "pill2"
 	New()
 		..()
-		reagents.add_reagent("disodium", 30)
+		reagents.add_reagent("disodium", 15)
+
+/obj/item/weapon/reagent_containers/pill/methadone
+	name = "Methadone pill"
+	desc = "A Stronger than morphine painkiller that might also sometimes get you out of shock,Overdosing will disorient a person."
+	icon_state = "pill19"
+	New()
+		..()
+		reagents.add_reagent("methadone", 10)
 
 /obj/item/weapon/reagent_containers/pill/procrit
 	name = "Procrit pill"
 	desc = "Procrit is a man-made medicine that helps your body produce red blood cells, overdosing will Weaken a person and cause hallucinations."
-	icon_state = "pill18"
+	icon_state = "pill12"
 	New()
 		..()
 		reagents.add_reagent("procrit", 10)
@@ -240,7 +248,7 @@
 	icon_state = "pill20"
 	New()
 		..()
-		reagents.add_reagent("adrenaline", 30)
+		reagents.add_reagent("adrenaline", 5)
 
 
 /obj/item/weapon/reagent_containers/pill/potassium_iodide
