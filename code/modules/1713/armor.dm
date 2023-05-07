@@ -6,6 +6,7 @@
 	heat_protection = UPPER_TORSO|LOWER_TORSO
 	max_heat_protection_temperature = ARMOR_MAX_HEAT_PROTECTION_TEMPERATURE
 	siemens_coefficient = 0.6
+	permeability_coefficient = 0.1
 	flammable = FALSE
 /obj/item/clothing/suit/armor/block_check(var/obj/item/projectile/proj)
 	if (!proj || proj.nodamage || proj.is_shrapnel || istype(proj, /obj/item/projectile/arrow))
