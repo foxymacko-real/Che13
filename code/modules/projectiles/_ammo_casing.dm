@@ -938,6 +938,16 @@
 	caliber = "a9x19"
 	value = 2
 
+/obj/item/ammo_casing/a9x19/inc
+	name = "9x19mm incen cartridge"
+	desc = "A brass casing."
+	icon_state = "pistol-bullet"
+	spent_icon = "pistol-casing"
+	weight = 0.05
+	projectile_type = /obj/item/projectile/bullet/incendiary/pistol/a9x19
+	caliber = "a9x19"
+	value = 2
+
 /obj/item/ammo_casing/a9x19/ap
 	name = "9x19mm cartridge"
 	desc = "A brass casing."

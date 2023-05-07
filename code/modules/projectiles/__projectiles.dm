@@ -712,3 +712,42 @@ obj/item/projectile/bullet/rifle/a556x45
 	name = "incendiary slug"
 	damage = DAMAGE_LOW
 	armor_penetration = 5
+
+//incen munition, set your enemies and their shit on fire, death to them all
+/obj/item/projectile/bullet/incendiary
+	icon_state = "bulletincen"
+
+/obj/item/projectile/bullet/incendiary/on_impact(var/atom/A)
+	impact_effect(effect_transform)
+	playsound(src, "ric_sound", 50, TRUE, -2)
+	if (istype(A, /turf))
+		var/turf/T = A
+		if (!istype(T, /turf/floor/beach) && !istype(T, /turf/floor/broken_floor))
+			T.ChangeTurf(/turf/floor/dirt/burned)
+		if (prob(5))
+			ignite_turf(T, 10, 25, 35)
+	if (istype(A, /mob/living/human))
+		var/mob/living/human/T = A
+		var/turf/TU
+		if (!istype(TU, /turf/floor/beach) && !istype(TU, /turf/floor/broken_floor))
+			TU.ChangeTurf(/turf/floor/dirt/burned)
+		if (prob(2))
+			ignite_turf(T, 10, 25, 35)
+	if (istype(A, /obj/structure/simple_door))
+		var/obj/structure/simple_door/T = A
+		var/turf/TU
+		if (!istype(TU, /turf/floor/beach) && !istype(TU, /turf/floor/broken_floor))
+			TU.ChangeTurf(/turf/floor/dirt/burned)
+		if (prob(5))
+			ignite_turf(T, 10, 25, 35)
+	else
+		var/turf/T = A
+		if (!istype(T, /turf/floor/beach) && !istype(T, /turf/floor/broken_floor))
+			T.ChangeTurf(/turf/floor/dirt/burned)
+		if (prob(5))
+			ignite_turf(T, 10, 25, 35)
+
+/obj/item/projectile/bullet/incendiary/pistol/a9x19
+	damage = DAMAGE_LOW + 3
+	penetrating = 1
+	armor_penetration = 6
