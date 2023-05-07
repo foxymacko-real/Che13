@@ -357,6 +357,7 @@
 	anchored = TRUE
 	climbable = TRUE
 	maxhealth = 9000
+	var/extra_chance = 50
 
 /obj/structure/window/barrier/railing/stone
 	name = "railing"
