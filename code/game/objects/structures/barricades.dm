@@ -449,6 +449,28 @@
 		..()
 		icon_state = "debris[rand(1,4)]"
 
+/obj/structure/barricade/dirtmound
+	name = "Mound of dirt"
+	desc = "A mound of dirt, might provide some cover from gunfire."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "dirtmound"
+	material = "stone"
+	health = 350
+	maxhealth = 350
+	material_name = "stone"
+	protection_chance = 50
+
+/obj/structure/barricade/dirtmound/snow
+	name = "Mound of dirt with snow ontop"
+	desc = "A mound of dirt with snow ontop, it might provide abit of cover, homever dont count on it."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "dirtmoundsnow"
+	material = "stone"
+	health = 250
+	maxhealth = 250
+	material_name = "stone"
+	protection_chance = 45
+
 /obj/structure/barricade/brickdebris
 	name = "brick debris"
 	desc = "A wall of rubble and debris."

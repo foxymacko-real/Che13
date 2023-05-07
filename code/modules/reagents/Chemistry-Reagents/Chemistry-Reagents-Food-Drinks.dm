@@ -247,10 +247,16 @@
 /datum/reagent/nutriment/mint
 	name = "Mint"
 	id = "mint"
-	description = "Also known as Mentha."
+	description = "Also known as Mentha, tastes nice."
 	taste_description = "mint"
 	reagent_state = LIQUID
+	nutriment_factor = 25
 	color = "#CF3600"
+/datum/reagent/drink/coffee/affect_ingest(var/mob/living/human/M, var/alien, var/removed)
+	..()
+	M.add_chemical_effect(CE_SPEEDBOOST, TRUE)
+	M.AdjustWeakened(-1)
+	M.mood += removed*20
 
 /datum/reagent/nutriment/sprinkles
 	name = "Sprinkles"

@@ -23,6 +23,7 @@ var/list/seed_list_jungle
 	not_movable = TRUE
 	not_disassemblable = TRUE
 	var/seedtimer = 1
+	var/producetimer = 1
 	var/mob/living/human/stored_unit = null
 	var/edible = FALSE
 	var/leaves = 0
@@ -41,6 +42,11 @@ var/list/seed_list_jungle
 /obj/structure/wild/proc/seedtimer_proc()
 	spawn(6000)
 		seedtimer = 1
+		return
+
+/obj/structure/wild/proc/producetimer_proc()
+	spawn(6000)
+		producetimer = 1
 		return
 
 /obj/structure/wild/proc/generate_seed_list(var/biome)
@@ -1080,3 +1086,39 @@ var/list/seed_list_jungle
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/bamboo(get_turf(src))
 		dropwood.amount = 10
 		qdel(src)
+
+////mint
+/obj/structure/wild/mint //it doesnt let you harvest the mint so sad TODO: FIX
+	name = "mint plant"
+	icon = 'icons/obj/flora/wildharvest.dmi'
+	icon_state = "mint1"
+	deadicon = 'icons/obj/flora/wild.dmi'
+	deadicon_state = "burnedbush1"
+	opacity = FALSE
+	density = FALSE
+	health = 20
+	maxhealth = 20
+
+/obj/structure/wild/mint/attackby(obj/item/W as obj, mob/user as mob)
+	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
+	if(istype(W,/obj/item/weapon/material/kitchen/utensil/knife) && user.a_intent == I_HELP)
+		user.do_attack_animation(src)
+		if (producetimer == 1)
+			user << "You harvest some mint leaves."
+			var/obj/item/weapon/reagent_containers/food/snacks/grown/mint/n
+			new n(get_turf(user))
+			producetimer = 0
+			producetimer_proc()
+		else
+			user << "There is no mint to collect here."
+	else
+		..()
+
+/obj/structure/wild/mint/fire_act(temperature)
+	if (prob(65 * (temperature/500)))
+		visible_message("<span class = 'warning'>[src] is burned away.</span>")
+		qdel(src)
+
+/obj/structure/wild/mint/New()
+	..()
+	icon_state = "mint[rand(1,2)]"

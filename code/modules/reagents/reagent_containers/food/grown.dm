@@ -356,6 +356,19 @@
 	decay = 10*600
 	satisfaction = 2
 
+/obj/item/weapon/reagent_containers/food/snacks/grown/mint
+	name = "mint leaves"
+	icon = 'icons/obj/flora/wildharvest.dmi'
+	icon_state = "mintleaf"
+	desc = "Contains mint."
+	nutriment_amt = 1
+	nutriment_desc = "mint"
+	decay = 70*1200
+	New()
+		..()
+		reagents.del_reagents()
+		reagents.add_reagent("mint", 2)
+
 /obj/item/weapon/reagent_containers/food/snacks/grown/corn/attack_self(mob/user as mob)
 	if (do_after(user, 120, user.loc))
 		new/obj/item/clothing/mask/smokable/pipe/cobpipe(user.loc)
