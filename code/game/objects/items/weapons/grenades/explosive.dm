@@ -15,6 +15,23 @@
 /obj/item/projectile/bullet/pellet/fragment/strong
 	damage = 30
 
+/obj/item/projectile/bullet/pellet/fragment/plane
+	damage = 20
+	icon = 'icons/effects/effects.dmi'
+	icon_state = "strafe"
+	range_step = 1
+	var/num_fragments = 8
+
+/obj/item/weapon/grenade/frag/strafe //more of a airburst than a strafe but whatever
+	name = "strafe"
+	desc = "a plane is incoming! get down"
+	icon_state = "planealert"
+	icon = 'icons/effects/effects.dmi'
+	anchored = FALSE
+	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment/plane = 3)
+	det_time = 30
+	var/explosion_size = 0
+
 /obj/item/weapon/grenade/frag
 	value = 45
 	name = "fragmentation grenade"
