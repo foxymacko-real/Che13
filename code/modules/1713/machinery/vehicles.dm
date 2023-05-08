@@ -191,6 +191,21 @@
 		tank_names_soviet -= pickedname
 		name = "[name] \'[pickedname]\'"
 
+/obj/structure/vehicleparts/axis/heavy/btr
+	name = "BTR"
+	speeds = 5
+	speedlist = list(1=12,2=8,3=6,4=5,5=4)
+	reg_number = ""
+	color = "#687859"
+	turret_type = ""
+	vehicle_size = "2x4"
+	vehicle_type = "apc"
+	New()
+		..()
+		var/pickedname = pick(tank_names_soviet)
+		tank_names_soviet -= pickedname
+		name = "[name] \'[pickedname]\'"
+
 /obj/structure/vehicleparts/axis/heavy/bmd2new
 	name = "BMD-2"
 	speeds = 4

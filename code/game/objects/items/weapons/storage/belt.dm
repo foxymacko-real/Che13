@@ -219,7 +219,7 @@
 	icon_state = "pouches"
 	item_state = "pouches"
 	storage_slots = 6
-	max_w_class = 3
+	max_w_class = 2
 
 /obj/item/weapon/storage/belt/tacpouches/olive
 	icon_state = "pouches_olive"
