@@ -451,3 +451,32 @@
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/flashlight/flare(src)
 		new /obj/item/flashlight/flare(src)
+
+///medical
+/obj/item/weapon/storage/box/pocketkit
+	name = "pocket medic pouch"
+	desc = "For quickhealing in the field."
+	icon_state = "pocketpouchkit"
+	item_state = "pocketpouchkit"
+	w_class = ITEM_SIZE_SMALL
+	can_hold = list(
+		/obj/item/stack/medical,
+		/obj/item/weapon/pill_pack,
+		/obj/item/weapon/reagent_containers/syringe
+		)
+/obj/item/weapon/storage/box/pocketkit/pill/New()
+	..()
+	new /obj/item/weapon/pill_pack/disodium(src)
+	new /obj/item/weapon/pill_pack/antitox(src)
+	new /obj/item/weapon/pill_pack/adrenaline(src)
+	new /obj/item/weapon/pill_pack/methadone(src)
+	new /obj/item/weapon/pill_pack/procrit(src)
+	return
+
+/obj/item/weapon/storage/box/pocketkit/syringe/New()
+	..()
+	new /obj/item/weapon/reagent_containers/syringe(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/adrenaline(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/antitoxin(src)
+	new /obj/item/weapon/reagent_containers/glass/bottle/opium(src)
+	return
