@@ -36,7 +36,7 @@ Example for later use:
 /obj/random/proc/spawn_item()
 	if(prob(spawn_nothing_percentage))
 		return
-    
+
 	if(isnull(loc))
 		return
 
@@ -121,7 +121,7 @@ Example for later use:
 	return list(/obj/item/ammo_magazine/ak74,
                 /obj/item/ammo_magazine/ak74/drum)
 
-		
+
 ////////////////Medical////////////////
 /obj/item/weapon/storage/eft/medical
 	name = "medical bag"
@@ -187,6 +187,22 @@ Example for later use:
 	return list(/obj/structure/barricade/antitank,
 				/obj/structure/barricade/horizontal,
 				/obj/structure/barricade/vertical)
+
+/obj/random/barricade/wildrandom
+	name = "Random Barricade"
+	icon_state = "rup"
+	spawn_nothing_percentage = 5
+/obj/random/barricade/random/spawn_choices()
+	return list(/obj/structure/barricade/dirtmound,
+				/obj/structure/wild/rock/basalt)
+
+/obj/random/barricade/wildsnowrandom
+	name = "Random Barricade"
+	icon_state = "rup"
+	spawn_nothing_percentage = 5
+/obj/random/barricade/random/spawn_choices()
+	return list(/obj/structure/barricade/dirtmound/snow,
+				/obj/structure/wild/rock/basalt)
 
 /obj/random/plants/tree
 	name = "Tree"

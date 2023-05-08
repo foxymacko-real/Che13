@@ -27,10 +27,12 @@
 	desc = "a plane is incoming! get down"
 	icon_state = "planealert"
 	icon = 'icons/effects/effects.dmi'
-	anchored = FALSE
+	anchored = TRUE
 	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment/plane = 3)
 	det_time = 30
 	var/explosion_size = 0
+
+//todo: make it explode on spawn, add in a way to call in strafes
 
 /obj/item/weapon/grenade/frag
 	value = 45
