@@ -25,7 +25,7 @@
 /obj/item/organ/brain/New()
 	..()
 	health = config.default_brain_health
-	max_damage = 60
+	max_damage = 75
 	if(species)
 		max_damage = species.total_health
 	min_bruised_damage = max_damage*0.25

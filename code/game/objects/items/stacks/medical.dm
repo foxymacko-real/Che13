@@ -436,3 +436,37 @@
 		qdel(src)
 	else
 		user.visible_message("<span class='notice'>[user] stops trying to revive [M].</span>", "<span class='notice'>You stop trying to revive [M].</span>")
+
+/obj/item/defib //TODO IMPLEMENT ROTTING STAGE CHECK SO OLD PEOPLE CANT BE REVEIVED (check human_life.dm)
+	var/uses = 5
+	name = "Defibrillator"
+	desc = "A Field Defibrillator, perfect for reviving people. You have 5 uses left."
+	icon = 'icons/obj/surgery.dmi'
+	icon_state = "defibt"
+
+/obj/item/defib/examine(mob/user)
+	..()
+	desc = "A Field Defibrillator, perfect for reviving people. <b>You have [uses] uses left.</b>"
+
+/obj/item/defib/attack(var/mob/living/human/M as mob, var/mob/user as mob)
+	if (uses > 0)
+		if (M.ckey == user.ckey)
+			user << "You cannot Defibrillate youself."
+			return
+		if (M.getBrainLoss() > 10) //no reviving people with a damaged brain brother or reviving headshotted people
+			user << "[M] brain is too damaged."
+			return
+		user.visible_message("<span class='notice'>[user] starts trying to revive [M].</span>", "<span class='notice'>You start Defibrillating [M].</span>")
+		if (do_after(user, 120, src))
+			M.revive()
+			if (!M.ckey && M.lastKnownCkey)
+				M.ckey = M.lastKnownCkey
+			if (prob(50))
+				M.Weaken(5)
+			if (prob(50))
+				M.make_dizzy(3)
+			if (prob(50))
+				M.make_jittery(3)
+			user.visible_message("<font size=3>[user] Revives [M]!</font>")
+			uses--
+			playsound(get_turf(M), 'sound/hallelujah!.ogg', 200, FALSE)
