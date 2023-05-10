@@ -536,7 +536,6 @@
 #include "code\game\objects\map_metadata\syria.dm"
 #include "code\game\objects\map_metadata\tadojsville.dm"
 #include "code\game\objects\map_metadata\testing.dm"
-#include "code\game\objects\map_metadata\testingblugo.dm"
 #include "code\game\objects\map_metadata\teutoburg.dm"
 #include "code\game\objects\map_metadata\the_art_of_the_deal.dm"
 #include "code\game\objects\map_metadata\tribes.dm"
@@ -738,7 +737,6 @@
 #include "code\modules\1713\jobs\arctic_sub.dm"
 #include "code\modules\1713\jobs\badguys.dm"
 #include "code\modules\1713\jobs\british.dm"
-#include "code\modules\1713\jobs\btest.dm"
 #include "code\modules\1713\jobs\campaign_jobs.dm"
 #include "code\modules\1713\jobs\capitol.dm"
 #include "code\modules\1713\jobs\chinese.dm"
@@ -1099,5 +1097,4 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\WIP\testing.dmm"
-#include "maps\WIP\testingB.dmm"
 // END_INCLUDE
