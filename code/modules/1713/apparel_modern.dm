@@ -774,9 +774,9 @@
 
 /obj/item/clothing/head/helmet/modern/a6b47/desert
 	name = "6B47 desert helmet"
-	icon_state = "64b7D"
-	item_state = "64b7D"
-	worn_state = "64b7D"
+	icon_state = "6b47D"
+	item_state = "6b47D"
+	worn_state = "6b47D"
 	body_parts_covered = HEAD
 	flags_inv = BLOCKHEADHAIR
 	armor = list(melee = 60, arrow = 100, gun = 86, energy = 27, bomb = 76, bio = 30, rad = FALSE)
@@ -1599,6 +1599,20 @@
 	icon_state = "tacticool_hawaiian_purple"
 	item_state = "tacticool_hawaiian_purple"
 	worn_state = "tacticool_hawaiian_purple"
+
+/obj/item/clothing/accessory/armor/coldwar/plates/b5/n34
+	name = "N34-B body armor"
+	desc = "A modern piece of Blugoslavian armor introduced in 2023, made fully out of kevlar while also having some space left for plate inserts"
+	icon_state = "6b5"
+	item_state = "6b5"
+	worn_state = "6b5"
+	body_parts_covered = UPPER_TORSO|LOWER_TORSO|ARMS
+	armor = list(melee = 70, arrow = 95, gun = 72, energy = 30, bomb = 70, bio = 20, rad = FALSE)
+	ripable = FALSE
+	flags = CONDUCT
+	slots = 2
+	slowdown = 0.1
+	weight = 5.5
 
 /obj/item/clothing/under/boomerwaffen1
 	name = "camouflage shirt with blue pants"
