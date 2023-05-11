@@ -15,24 +15,29 @@
 /obj/item/projectile/bullet/pellet/fragment/strong
 	damage = 30
 
-/obj/item/projectile/bullet/pellet/fragment/plane
+/obj/item/projectile/bullet/pellet/fragment/airburst
 	damage = 20
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "strafe"
 	range_step = 1
-	var/num_fragments = 8
 
-/obj/item/weapon/grenade/frag/strafe //more of a airburst than a strafe but whatever
-	name = "strafe"
-	desc = "a plane is incoming! get down"
+/obj/item/weapon/grenade/frag/support/airburst
+	name = "shell"
+	desc = "a shell is incoming! get down"
 	icon_state = "planealert"
 	icon = 'icons/effects/effects.dmi'
 	anchored = TRUE
-	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment/plane = 3)
+	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment/airburst = 1)
 	det_time = 30
 	var/explosion_size = 0
-
-//todo: make it explode on spawn, add in a way to call in strafes
+	var/num_fragments = 13
+	density = FALSE
+	opacity = FALSE
+	flammable = FALSE
+	explosion_sound = 'sound/weapons/WW2/new_exp_2.ogg'
+/obj/item/weapon/grenade/frag/support/airburst/New()
+	spawn(1)
+		activate(src)
 
 /obj/item/weapon/grenade/frag
 	value = 45

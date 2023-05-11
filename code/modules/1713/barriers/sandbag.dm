@@ -12,6 +12,7 @@
 	anchored = TRUE
 	climbable = TRUE
 	mouse_drop_zone = TRUE
+	var/extra_chance = 50
 	var/incomplete = FALSE
 	maxhealth = 250
 	health = 250
@@ -357,7 +358,7 @@
 	anchored = TRUE
 	climbable = TRUE
 	maxhealth = 9000
-	var/extra_chance = 50
+	extra_chance = 50
 
 /obj/structure/window/barrier/railing/stone
 	name = "railing"
@@ -368,6 +369,7 @@
 	anchored = TRUE
 	climbable = TRUE
 	maxhealth = 9000
+	extra_chance = 50
 
 /obj/structure/window/barrier/railing/brick
 	name = "Brick Wall"
@@ -378,7 +380,7 @@
 	anchored = TRUE
 	climbable = TRUE
 	maxhealth = 9000
-
+	extra_chance = 50
 /obj/structure/window/barrier/railing/New()
 	..()
 	//invisibility = 101
@@ -389,7 +391,7 @@
 	icon_state = "jerseybarrier1"
 	icon = 'icons/obj/junk.dmi'
 	maxhealth = 4500
-
+	extra_chance = 35
 /obj/structure/window/barrier/jersey/New()
 	..()
 	icon_state = "jerseybarrier[rand(1,2)]"

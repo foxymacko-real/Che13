@@ -55,9 +55,17 @@
 				M.ear_damage = FALSE
 				M.sleeping = 0 //Short nap
 				M.inducedSSD = FALSE
+				M.canmove = TRUE
+				if (M.HUDneed.Find("health"))
+					var/obj/screen/health/S = M.HUDneed["health"]
+					S.icon_state = "healthdoll_BASE_ALIVE"
+				if (M.HUDneed.Find("blackimageoverlay"))
+					var/obj/screen/full_1_tile_overlay/S = M.HUDneed["flash"]
+					qdel(S)
 				M.failed_last_breath = FALSE //So mobs that died of oxyloss don't revive and have perpetual out of breath.
 				M.regenerate_icons()
 				M.updatehealth()
+				M.update_canmove()
 				M.UpdateDamageIcon()
 				M.sleep_update()
 				M.updateicon()
