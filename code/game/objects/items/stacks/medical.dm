@@ -172,7 +172,7 @@
 			H.update_bandaging(1)
 
 		var/mob/living/human/H_user = user
-		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_LOW))
+		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
 			if (affecting && affecting.open == FALSE)
 				if (affecting.is_bandaged() && affecting.is_disinfected())
 					affecting.wounds.Cut()
@@ -238,7 +238,7 @@
 			use(used)
 
 		var/mob/living/human/H_user = user
-		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_LOW))
+		if (istype(H_user) && H_user.getStatCoeff("medical") >= GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
 			if (affecting)
 				if (affecting.is_salved() && affecting.is_disinfected())
 					affecting.wounds.Cut()
