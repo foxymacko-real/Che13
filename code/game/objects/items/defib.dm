@@ -33,35 +33,22 @@
 					M.ckey = M.lastKnownCkey
 				user.visible_message("<font size=3>[user] Defibrilates [M]!</font>")
 				uses--
-				M.stat = CONSCIOUS
-				M.restore_blood() //defibs dont restore blood but this is so healing is easier
-				M.regenerate_icons()
-				M.updatehealth()
-				M.UpdateDamageIcon()
+				M.revive()
+				sleep(1)
+				M.add_chemical_effect(CE_PULSE, 1)
 				M.eye_blurry = max(M.eye_blurry - 5, FALSE)
-				M.drowsyness = max(M.drowsyness - 10, FALSE)
-				M.AdjustParalysis(-1)
-				M.AdjustStunned(-1)
-				M.setOxyLoss(0)
-				M.adjustToxLoss(-5)
-				M.reagents.add_reagent("adrenaline", 2)
-				M.add_chemical_effect(CE_PAINKILLER, 5)
+				M.AdjustParalysis(15)
+				M.AdjustStunned(15)
+				M.Weaken(5)
+				M.drowsyness = max(M.drowsyness, 20)
+				M.adjustBruteLoss(25)
+				M.adjustFireLoss(25)
+				M.adjustToxLoss(5)
 				M.tod = null
+				M.ExtinguishMob()
+				M.fire_stacks = 0
 				M.timeofdeath = FALSE
-				M.blinded = FALSE
-				M.eye_blind = FALSE
-				M.eye_blurry = FALSE
-				M.ear_deaf = FALSE
-				M.ear_damage = FALSE
 				M.sleeping = 0 //Short nap
-				M.inducedSSD = FALSE
-				M.canmove = TRUE
-				if (M.HUDneed.Find("health"))
-					var/obj/screen/health/S = M.HUDneed["health"]
-					S.icon_state = "healthdoll_BASE_ALIVE"
-				if (M.HUDneed.Find("blackimageoverlay"))
-					var/obj/screen/full_1_tile_overlay/S = M.HUDneed["flash"]
-					qdel(S)
 				M.failed_last_breath = FALSE //So mobs that died of oxyloss don't revive and have perpetual out of breath.
 				M.regenerate_icons()
 				M.updatehealth()

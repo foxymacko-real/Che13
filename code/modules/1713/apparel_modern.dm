@@ -1917,6 +1917,10 @@
 			cold_protection = UPPER_TORSO|LOWER_TORSO|LEGS
 			update_clothing_icon()
 
+/obj/item/clothing/under/russian/dpr
+	name = "DPR combat uniform"
+	desc = "The standard DPR combat uniform."
+
 /obj/item/clothing/under/russiandesert
 	name = "EMR desert pattern uniform"
 	desc = "The standard Russian Federation Army camo uniform."

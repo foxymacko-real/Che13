@@ -379,11 +379,11 @@
 	magazine_type = /obj/item/ammo_magazine/skorpion
 	good_mags = list(/obj/item/ammo_magazine/skorpion)
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.4, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
+		list(name = "semi auto",	burst=1, burst_delay=0.4, recoil=0, move_delay=1, dispersion = list(0.3, 0.2, 0.3, 0.2, 0.3)),
 		list(name = "full auto",	burst=1, burst_delay=0.8, recoil=0, move_delay=3, dispersion = list(1.2, 1.3, 1.4, 1.5, 1.6)),
 		)
 	sel_mode = 1
-	effectiveness_mod = 0.95
+	effectiveness_mod = 1
 	one_handed = TRUE
 
 /obj/item/weapon/gun/projectile/submachinegun/greasegun
@@ -587,7 +587,7 @@
 
 /obj/item/weapon/gun/projectile/submachinegun/ak47
 	name = "AKM"
-	desc = "Iconic Soviet assault rifle, chambered in 7.62x39mm."
+	desc = "Modernized Iconic Soviet assault rifle, chambered in 7.62x39mm."
 	icon_state = "ak47"
 	icon = 'icons/obj/guns/assault_rifles.dmi'
 	item_state = "ak47"
@@ -600,7 +600,7 @@
 	equiptimer = 15
 	slot_flags = SLOT_SHOULDER
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.2, recoil=0, move_delay=1, dispersion = list(0.1, 0.2, 0.1, 0, 0.1)),
+		list(name = "semi auto",	burst=1, burst_delay=0.2, recoil=0, move_delay=1, dispersion = list(0.1, 0.2, 0.1, 0.2, 0.1)),
 		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=4, dispersion = list(1.2, 1.2, 1.3, 1.4, 1.8)),
 		)
 	stat = "rifle"
@@ -658,6 +658,19 @@
 	icon_state = "ak47gold"
 	item_state = "ak47gold"
 	base_icon = "ak47gold"
+
+/obj/item/weapon/gun/projectile/submachinegun/ak47/old
+	name = "AK-47"
+	desc = "Early version of the AKM, chambered in 7.62x39mm."
+	weight = 3.65
+	equiptimer = 17
+	firemodes = list(
+		list(name = "semi auto",	burst=1, burst_delay=0.2, recoil=0, move_delay=2, dispersion = list(0.2, 0.3, 0.4, 0.4, 0.3)),
+		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=5, dispersion = list(1.2, 1.2, 1.3, 1.4, 1.8)),
+		)
+	stat = "rifle"
+	effectiveness_mod = 0.96
+	sel_mode = 1
 
 /obj/item/weapon/gun/projectile/submachinegun/ak47/chinese
 	name = "Type 56 Assault Rifle"

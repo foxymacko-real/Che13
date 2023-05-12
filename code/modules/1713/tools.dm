@@ -200,7 +200,7 @@
 	force = 45
 	usespeed = 0.8
 	path = /obj/item/weapon/foldable_shovel/trench/etool
-
+	var/turn = FALSE
 /obj/item/weapon/material/shovel/trench/foldable/secondary_attack_self(mob/living/human/user)
 	if (secondary_action)
 		if (do_after(user, 10, src))

@@ -76,7 +76,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/blugoslavian
 	name = "Blugoslavian MRE: General Combat Rations"
 	desc = "A sealed package of everything you need to keep up the fight!."
-	nutriment_desc = list("canned meat" = 2, "canned vegetables" = 2, "tea", 2)
+	nutriment_desc = list("potatoes" = 2, "fish" = 2, "tea", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/blugoslavian/officer
 	name = "Blugoslavian Officer MRE: Pizza with Coffee"
@@ -86,7 +86,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/redmenian
 	name = "Redmenian MRE: General Combat Rations"
 	desc = "A sealed package of everything you need to keep up the fight!."
-	nutriment_desc = list("canned meat" = 2, "canned vegetables" = 2, "tea", 2)
+	nutriment_desc = list("potatoes" = 2, "fish" = 2, "tea", 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/redmenian/officer
 	name = "Redmenian Officer MRE: Sweetroll with Coffee"
