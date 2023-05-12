@@ -1569,22 +1569,27 @@ obj/structure/vending/hezammo
 	desc = "Ammunition and explosives."
 	icon_state = "ammo_crates"
 	products = list(
-		/obj/item/weapon/grenade/smokebomb/m18smoke = 15,
-		/obj/item/weapon/grenade/coldwar/m67 = 15,
-		/obj/item/weapon/grenade/antitank/n74 = 10,
-		/obj/item/weapon/grenade/antitank/n75 = 10,
+		/obj/item/weapon/grenade/smokebomb = 15,
+		/obj/item/weapon/grenade/coldwar/rgd5 = 15,
+		/obj/item/weapon/grenade/antitank/rpg40 = 10,
+		/obj/item/weapon/grenade/antitank/rpg43 = 10,
 		/obj/item/weapon/plastique/c4 = 6,
 		/obj/item/ammo_magazine/ak74/box = 12,
-		/obj/item/ammo_magazine/ak74 = 20,
-		/obj/item/ammo_magazine/m14 = 20,
-		/obj/item/ammo_magazine/m249 = 15,
-		/obj/item/ammo_magazine/b762 = 15,
-		/obj/item/ammo_magazine/m9beretta = 30,
+		/obj/item/ammo_magazine/ak47 = 12,
+		/obj/item/ammo_magazine/ak74 = 30,
+		/obj/item/ammo_magazine/mosin = 75,
+		/obj/item/ammo_magazine/sks = 75,
+		/obj/item/ammo_magazine/svd = 25,
+		/obj/item/ammo_magazine/makarov = 30,
+		/obj/item/ammo_magazine/tt30 = 30,
+		/obj/item/ammo_magazine/rpd = 12,
+		/obj/item/ammo_magazine/rpk74 = 15,
+		/obj/item/ammo_magazine/rpk74/drum = 6,
 		/obj/item/weapon/attachment/bayonet = 20,
 		/obj/item/weapon/gun/launcher/rocket/single_shot/m72law = 4,
 	)
 
-/obj/structure/vending/ukr/equipment
+/obj/structure/vending/dpr/equipment
 	name = "DPR Equipment Crate"
 	desc = "A rack of clothing and gear."
 	icon_state = "apparel_russia"
@@ -1612,7 +1617,7 @@ obj/structure/vending/hezammo
 		/obj/item/weapon/reagent_containers/food/snacks/MRE/generic/russian/modern = 50,
 	)
 
-/obj/structure/vending/ukr/guns
+/obj/structure/vending/dpr/guns
 	name = "DPR Guns"
 	desc = "Guns guns guns."
 	icon_state = "modern_british"
