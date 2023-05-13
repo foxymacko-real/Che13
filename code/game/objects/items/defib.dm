@@ -1,3 +1,7 @@
+/obj/item/defib/civilian
+	name = "defibrillator"
+	icon_state = "defibt"
+
 /obj/item/defib //TODO IMPLEMENT ROTTING STAGE CHECK SO OLD PEOPLE CANT BE REVIVED (check human_life.dm)
 	var/uses = 5
 	name = "Military Defibrillator"
@@ -33,6 +37,14 @@
 					M.ckey = M.lastKnownCkey
 				user.visible_message("<font size=3>[user] Defibrilates [M]!</font>")
 				uses--
+				var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
+				s.set_up(5, TRUE, loc)
+				s.start()
+				if (M.stat == DEAD)
+					dead_mob_list -= src
+					living_mob_list += src
+					M.tod = null
+					M.timeofdeath = FALSE
 				M.revive()
 				sleep(1)
 				M.add_chemical_effect(CE_PULSE, 1)
@@ -44,7 +56,6 @@
 				M.adjustBruteLoss(25)
 				M.adjustFireLoss(25)
 				M.adjustToxLoss(5)
-				M.tod = null
 				M.ExtinguishMob()
 				M.fire_stacks = 0
 				M.timeofdeath = FALSE

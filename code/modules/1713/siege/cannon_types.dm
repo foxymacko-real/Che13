@@ -7,7 +7,7 @@
 	spritemod = FALSE
 	maxsway = 25
 	firedelay = 20
-	maxrange = 85
+	maxrange = 120
 	w_class = ITEM_SIZE_GARGANTUAN
 
 /obj/structure/cannon/modern/naval
@@ -372,7 +372,7 @@
 	spritemod = FALSE //if true, uses 32x64
 	explosion = TRUE
 	reagent_payload = "none"
-	maxrange = 40
+	maxrange = 60
 	maxsway = 7
 	firedelay = 12
 	w_class = ITEM_SIZE_HUGE
@@ -473,7 +473,7 @@
 	bound_width = 32
 	maxsway = 10
 	firedelay = 12
-	maxrange = 60
+	maxrange = 70
 	max_loaded = 9
 	w_class = ITEM_SIZE_GARGANTUAN
 	see_amount_loaded = TRUE
