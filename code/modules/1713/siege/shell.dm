@@ -431,9 +431,10 @@
 	icon_state = "shellrack0"
 	w_class = 10.0
 	var/obj/item/weapon/storage/internal/storage
-	density = FALSE
-	opacity = FALSE
-
+	density = TRUE
+	opacity = TRUE
+	anchored = TRUE
+	var/liquidstorage = 0
 /obj/structure/shellrack/New()
 	..()
 	storage = new/obj/item/weapon/storage/internal(src)
@@ -469,6 +470,21 @@
 	..()
 	if (storage)
 		icon_state = "shellrack[storage.contents.len]"
+
+/obj/structure/shellrack/bullet_act(var/obj/item/projectile/proj)
+	if (storage.contents.len < 1)
+		return
+	else if (liquidstorage == 1)
+		if (prob(5))
+			explosion(loc,0,1,3,1)
+	else if (storage.contents.len > 1)
+		if (prob(25))
+			explosion(loc,1,1,3,2)
+			qdel(src)
+	else if (storage.contents.len > 10)
+		if (prob(35))
+			explosion(loc,2,1,3,3)
+			qdel(src)
 
 /obj/structure/shellrack/full57/New()
 	..()
