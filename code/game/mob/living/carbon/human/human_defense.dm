@@ -363,7 +363,7 @@ bullet_act
 							qdel(P)
 							return
 
-		
+
 
 		var/KD_check = FALSE
 
@@ -396,8 +396,8 @@ bullet_act
 					if (slammed_into.density)
 						spawn (1)
 							visible_message("<span class = 'danger'>[src] flies back from the force of the blast and slams into \the [slammed_into]!</span>")
-						Weaken(3)
-						adjustBruteLoss(rand(20,30))
+						Weaken(2)
+						adjustBruteLoss(rand(10,20))
 						if (client)
 							shake_camera(src, rand(2,3), rand(2,3))
 						playsound(get_turf(src), 'sound/effects/gore/fallsmash.ogg', 100, TRUE)
