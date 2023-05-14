@@ -430,9 +430,10 @@
 	name = "shell rack"
 	icon_state = "shellrack0"
 	w_class = 10.0
+	desc = "shell rack for storing heavy munition"
 	var/obj/item/weapon/storage/internal/storage
 	density = TRUE
-	opacity = TRUE
+	opacity = FALSE
 	anchored = TRUE
 	var/liquidstorage = 0
 /obj/structure/shellrack/New()
@@ -471,21 +472,123 @@
 	if (storage)
 		icon_state = "shellrack[storage.contents.len]"
 
+//wet storage
+/obj/structure/shellrack/wet
+	icon = 'icons/obj/structures.dmi'
+	name = "wet storage shell rack"
+	desc = "shell rack that is surrounded by some kind of a liquid, less likely to detonate from explosions or shells"
+	icon_state = "shellrackwet0"
+	w_class = 10.5
+	density = TRUE
+	opacity = FALSE
+	anchored = TRUE
+	liquidstorage = 1
+
+/obj/structure/shellrack/wet/update_icon()
+	..()
+	if (storage)
+		icon_state = "shellrackwet[storage.contents.len]"
+
+//boom
 /obj/structure/shellrack/bullet_act(var/obj/item/projectile/proj)
 	if (storage.contents.len < 1)
 		return
 	else if (liquidstorage == 1)
 		if (prob(5))
 			explosion(loc,0,1,3,1)
-	else if (storage.contents.len > 1)
+		else
+			return
+	else if (storage.contents.len < 5)
 		if (prob(25))
 			explosion(loc,1,1,3,2)
 			qdel(src)
-	else if (storage.contents.len > 10)
+		else
+			return
+	else if (storage.contents.len > 5)
 		if (prob(35))
 			explosion(loc,2,1,3,3)
 			qdel(src)
+		else
+			return
+	if (istype(proj, /obj/item/projectile/shell))
+		var/obj/item/projectile/shell/S = proj
+		if (S.atype == "HE")
+			if (liquidstorage == 1)
+				if (prob(35))
+					visible_message("<span class = 'warning'>\The [src] is hit a shell and explodes!</span>")
+					explosion(loc, 1, 3, 2, 0)
+					qdel(src)
+				else
+					return
+			else
+				if (prob(65))
+					visible_message("<span class = 'warning'>\The [src] is hit a shell and explodes!</span>")
+					explosion(loc, 2, 3, 2, 0)
+					qdel(src)
+				else
+					return
+	else
+		if (liquidstorage == 1)
+			if (prob(36))
+				visible_message("<span class = 'warning'>\The [src] is hit a shell and explodes!</span>")
+				explosion(loc, 1, 2, 2, 0)
+				qdel(src)
+		else
+			if (prob(66))
+				visible_message("<span class = 'warning'>\The [src] is hit a shell and explodes!</span>")
+				explosion(loc, 1, 2, 2, 0)
+				qdel(src)
+			else
+				return
+	return TRUE
+/obj/structure/shellrack/ex_act()
+	if (storage.contents.len < 1)
+		return
+	else if (liquidstorage == 1)
+		if (prob(2))
+			explosion(loc,0,1,3,1)
+		else
+			return
+	else if (storage.contents.len < 5)
+		if (prob(15))
+			explosion(loc,1,1,3,2)
+			qdel(src)
+		else
+			return
+	else if (storage.contents.len > 5)
+		if (prob(25))
+			explosion(loc,2,1,3,3)
+			qdel(src)
+		else
+			return
 
+//Wet ammo
+
+/obj/structure/shellrack/wet/full75/New()
+	..()
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+	new /obj/item/cannon_ball/shell/tank/HE75(storage)
+
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+	new /obj/item/cannon_ball/shell/tank/AP75(storage)
+
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR75(storage)
+	update_icon()
+
+//normal
 /obj/structure/shellrack/full57/New()
 	..()
 	new /obj/item/cannon_ball/shell/tank/HE57(storage)
