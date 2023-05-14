@@ -82,7 +82,7 @@ var/global/redirect_all_players = null
 			if (findtext(message, "byond://"))
 				src << "<b>Advertising other servers is not allowed.</b>"
 				log_admin("[key_name(client)] has attempted to advertise in OOC: [message]")
-				message_admins("[key_name_admin(client)] has attempted to advertise in OOC: [message]")
+				message_admins("[key_name_admin(client)] has attempted to advertise in OOC: [message]", key_name_admin(client))
 				return
 	for (var/new_player in new_player_mob_list)
 		if (new_player:client) // sanity check
@@ -191,7 +191,7 @@ var/global/redirect_all_players = null
 		new_player_panel_proc()
 
 	if (href_list["observe"])
-		if (map.ID == MAP_CAMPAIGN && !client.holder)
+		if ((map.ID == MAP_CAMPAIGN) && !client.holder)
 			WWalert(src,"You cannot observe during this round.","Error")
 			return TRUE
 
@@ -258,7 +258,7 @@ var/global/redirect_all_players = null
 				if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more seconds to respawn. Do you want to bypass this?", "Admin Respawn", "No", list("Yes", "No"))) == "Yes")
 					var/msg = "[key_name(src)] bypassed a [wait] second wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					LateChoices()
 					return TRUE
 			WWalert(src, "Because you died in combat, you must wait [wait] more seconds to respawn.", "Error")
@@ -290,7 +290,7 @@ var/global/redirect_all_players = null
 				if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more minutes to respawn. Do you want to bypass this? You can still join as a reinforcement.", "Admin Respawn", "No", list("Yes", "No"))) == "Yes")
 					var/msg = "[key_name(src)] bypassed a [wait] minute wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					if (map && map.ID != MAP_TRIBES && map.ID != MAP_THREE_TRIBES)
 						LateChoices()
 					else
@@ -332,14 +332,14 @@ var/global/redirect_all_players = null
 				if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more minutes to respawn. Do you want to bypass this? You can still join as a reinforcement.", "Admin Respawn", "No", list("Yes", "No"))) == "Yes" && map.ID != MAP_PIONEERS_WASTELAND_2)
 					var/msg = "[key_name(src)] bypassed a [wait] minute wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					close_spawn_windows()
 					AttemptLateSpawn(pick(map.availablefactions))
 					return TRUE
 				else if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more minutes to respawn. Do you want to bypass this? You can still join as a reinforcement.", "Admin Respawn", "No", list("Yes", "No"))) == "Yes")
 					var/msg = "[key_name(src)] bypassed a [wait] minute wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					LateChoices()
 					return TRUE
 			WWalert(src, "Because you died, you must wait [wait] more minutes to respawn.", "Error")
@@ -379,7 +379,7 @@ var/global/redirect_all_players = null
 				if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more minutes to respawn. Do you want to bypass this? You can still join as a reinforcement.", "Admin Respawn", "No", list("Yes", "No"))) == "Yes")
 					var/msg = "[key_name(src)] bypassed a [wait] minute wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					close_spawn_windows()
 					AttemptLateSpawn("Nomad")
 					return TRUE
@@ -437,7 +437,8 @@ var/global/redirect_all_players = null
 					factjob = "BAF"
 
 		if (factjob)
-			LateChoicesCampaign(factjob)
+			if (map.ID == MAP_CAMPAIGN)
+				LateChoicesCampaign(factjob)
 		else
 			if (config.discordurl)
 				WWalert(src, "This round is part of an event. You need to be part of one of the two factions to participate. Visit the discord for more information: [config.discordurl]")
@@ -482,7 +483,7 @@ var/global/redirect_all_players = null
 				if ((WWinput(src, "If you were a normal player, you would have to wait [wait] more minutes to respawn. Do you want to bypass this? You can still join as a reinforcement.", "Admin Respawn", "No", list("Yes", "No"))) == "Yes")
 					var/msg = "[key_name(src)] bypassed a [wait] minute wait to respawn."
 					log_admin(msg)
-					message_admins(msg)
+					message_admins(msg, client.ckey)
 					LateChoices()
 					return TRUE
 			WWalert(src, "Because you died in combat, you must wait [wait] more minutes to respawn.", "Error")
@@ -492,7 +493,7 @@ var/global/redirect_all_players = null
 
 	if (href_list["SelectedJob"])
 		if (map.ID == MAP_CAMPAIGN)
-			if (!findtext(href_list["SelectedJob"], "Private") && !findtext(href_list["SelectedJob"], "Machinegunner") && !findtext(href_list["SelectedJob"], "Des. Marksman"))
+			if (!findtext(href_list["SelectedJob"], "Private") && !findtext(href_list["SelectedJob"], "Machinegunner") && !findtext(href_list["SelectedJob"], "Des. Marksman") && !findtext(href_list["SelectedJob"], "RPR Fighter"))
 				if ((input(src, "This is a specialist role. You should have decided with your faction on which roles you should pick. If you haven't done so, its probably better if you join as a Private instead. Are you sure you want to join in as a [href_list["SelectedJob"]]?") in list("Yes", "No")) == "No")
 					return
 			if(findtext(href_list["SelectedJob"],"BAF"))
@@ -597,7 +598,7 @@ var/global/redirect_all_players = null
 			WWalert(usr,"There is an administrative lock on entering the game!", "Error")
 			return
 
-		if (map && map.has_occupied_base(job_flag) && map.ID != MAP_WACO && map.ID != MAP_CAPITOL_HILL && map.ID != MAP_CAMP && map.ID != MAP_HILL_203 && map.ID != MAP_CALOOCAN && map.ID != MAP_YELTSIN && map.ID != MAP_HOTEL && map.ID != MAP_OASIS)
+		if (map && map.has_occupied_base(job_flag) && map.ID != MAP_WACO && map.ID != MAP_CAPITOL_HILL && map.ID != MAP_CAMP && map.ID != MAP_HILL_203 && map.ID != MAP_CALOOCAN && map.ID != MAP_YELTSIN && map.ID != MAP_HOTEL && map.ID != MAP_OASIS && map.ID != MAP_SYRIA && map.ID != MAP_BANK_ROBBERY && map.ID != MAP_DRUG_BUST && map.ID != MAP_GROZNY)
 			WWalert(usr,"The enemy is currently occupying your base! You can't be deployed right now.", "Error")
 			return
 
@@ -1070,6 +1071,8 @@ var/global/redirect_all_players = null
 			dat += "[alive_civilians.len] Policemen and Federal Agents "
 		else if (map && istype(map, /obj/map_metadata/long_march))
 			dat += "[alive_civilians.len] Chinese Red Army "
+		else if (map && istype(map, /obj/map_metadata/holdmadrid))
+			dat += "[alive_civilians.len] Republican "
 		else
 			dat += "[alive_civilians.len] Civilians "
 	if (GREEK in map.faction_organization)
@@ -1302,6 +1305,11 @@ var/global/redirect_all_players = null
 						temp_name = "Imperials"
 					else if (temp_name == "Civilian")
 						temp_name = "Stormcloaks"
+				else if (map && map.ID == "SYRIA")
+					if (temp_name == "American")
+						temp_name = "Free Syrian Army"
+					else if (temp_name == "Arab")
+						temp_name = "Syrian Arab Republic"
 				else if (map && map.ID == "CAPITOL_HILL")
 					if (temp_name == "American")
 						temp_name = "American Government"
@@ -1357,6 +1365,11 @@ var/global/redirect_all_players = null
 						temp_name = "Red"
 					if (temp_name == "Pirates")
 						temp_name = "Blue"
+				else if (map && map.ID == "MAP_HOLDMADRID")
+					if (temp_name == "Civilian")
+						temp_name = "Republican"
+					if (temp_name == "Spanish")
+						temp_name = "Spanish"
 				var/side_name = "<b><h1><big>[temp_name]</big></h1></b>&&[job.base_type_flag()]&&"
 				if (side_name)
 					dat += "<br>[side_name]"

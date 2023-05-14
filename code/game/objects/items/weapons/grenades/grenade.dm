@@ -701,7 +701,7 @@
 	var/fragment_type = /obj/item/projectile/bullet/pellet/fragment
 	var/num_fragments = 37  //total number of fragments produced by the grenade
 	var/fragment_damage = 15
-	var/damage_step = 2	  //projectiles lose a fragment each time they travel this distance. Can be a non-integer.
+	var/damage_step = 1	  //projectiles lose a fragment each time they travel this distance. Can be a non-integer.
 	var/big_bomb = FALSE
 	secondary_action = TRUE
 	var/explosion_size = 2

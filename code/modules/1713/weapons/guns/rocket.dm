@@ -129,7 +129,7 @@
 	return null
 
 /obj/item/weapon/gun/launcher/rocket/handle_post_fire(mob/user, atom/target)
-	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].")
+	message_admins("[key_name_admin(user)] fired a rocket from a rocket launcher ([src.name]) at [target].", key_name_admin(user))
 	log_game("[key_name_admin(user)] used a rocket launcher ([src.name]) at [target].")
 	update_icon()
 	..()
@@ -513,8 +513,7 @@
 ////////////////////////////////////////AMMO///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 // Rocket items
-/obj/item/ammo_casing
-	value = 45
+
 /obj/item/ammo_casing/rocket
 	name = "RPG rocket"
 	desc = "A high explosive warhead and propeller designed to be fired from a rocket launcher."
@@ -538,19 +537,6 @@
 	projectile_type = /obj/item/missile
 	caliber = "rpb54"
 
-/obj/item/ammo_casing/rocket/piat
-	name = "SrB. HE/AT MK1"
-	desc = "A High-explosive Anti-tank warhead designed to disable enemy vehicles and destroy fortifications."
-	icon_state = "piat"
-	projectile_type = /obj/item/missile/explosive/piat
-	caliber = "piat"
-
-/obj/item/ammo_casing/rocket/piathe
-	name = "SrB. HE/AT MK3"
-	desc = "A Modernized High-explosive Anti-tank warhead designed to disable enemy vehicles and destroy fortifications."
-	icon_state = "piathe"
-	projectile_type = /obj/item/missile/explosive/piat44
-	caliber = "piat"
 
 /obj/item/ammo_casing/rocket/panzerfaust
 	name = "panzerfaust rocket"
@@ -581,6 +567,19 @@
 	desc = "A fragmentation warhead and propeller designed to be fired from a RPG-7 launcher."
 	icon_state = "og7v"
 	projectile_type = /obj/item/missile/fragmentation
+
+/obj/item/ammo_casing/rocket/piat
+	name = "SrB. HEAT MK I"
+	desc = "A High-Explosive Anti-Tank warhead designed to disable enemy vehicles and destroy fortifications."
+	icon_state = "piat"
+	projectile_type = /obj/item/missile/explosive/piat
+	caliber = "piat"
+
+/obj/item/ammo_casing/rocket/piathe
+	name = "SrB. HEAT MK III"
+	desc = "A modernized High-Explosive Anti-Tank warhead designed to disable enemy vehicles and destroy fortifications."
+	icon_state = "piathe"
+	projectile_type = /obj/item/missile/explosive/piat44
 
 /obj/item/ammo_casing/rocket/nuclear
 	icon = 'icons/obj/cannon_ball.dmi'
@@ -733,7 +732,7 @@
 		return
 
 /obj/item/missile/explosive/piat44
-	heavy_armor_penetration = 45
+	heavy_armor_penetration = 50
 	icon_state = "missile"
 	throw_impact(atom/hit_atom)
 		if(primed)
