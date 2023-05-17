@@ -22,10 +22,13 @@
 		if (M.getBrainLoss() > 5) //no reviving people with a damaged brain or reviving headshotted people
 			user << "[M] brain is too damaged."
 			return
-		if(M.getBruteLoss() > 210)
+		if (M.rotting_stage > 1) //no reviving rotted corpses
+			user << "[M] is too rotted to be revived."
+			return
+		if(M.getBruteLoss() > 250)
 			user << "[M] is too damaged to revive."
 			return
-		if(M.adjustFireLoss() > 210)
+		if(M.adjustFireLoss() > 250)
 			user << "[M] is too burned to revive."
 			return
 		if (M.stat == DEAD)
