@@ -92,6 +92,19 @@
 		)
 	ammo_type = /obj/item/ammo_casing/a127
 
+/obj/item/weapon/gun/projectile/automatic/stationary/modern/dshk/ww2
+	name = "DShK 1938"
+	desc = "Soviet Heavy DShK machinegun, can also be as anti vehicle gun against some lightly armored vehicles. Uses 12.7x108mm rounds."
+	icon_state = "dshk_ww2"
+	base_icon = "dshk_ww2"
+	caliber = "a127"
+	magazine_type = /obj/item/ammo_magazine/ammo127
+	good_mags = list(/obj/item/ammo_magazine/ammo127)
+	firemodes = list(
+		list(name = "full auto", burst=3, burst_delay=1.3, fire_delay=1.3, dispersion=list(0.9, 1.1, 1.2, 1.1, 1.2), accuracy=list(2))
+		)
+	ammo_type = /obj/item/ammo_casing/a127
+
 /obj/item/weapon/gun/projectile/automatic/stationary/modern/nsvt
 	name = "NSVT machine gun"
 	desc = "Modern Soviet Heavy NSVT machinegun, can also be as anti vehicle gun against some lightly armored vehicles. Uses 12.7x108mm rounds."

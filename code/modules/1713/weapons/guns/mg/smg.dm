@@ -748,7 +748,7 @@
 		)
 	effectiveness_mod = 1.07
 	sel_mode = 1
-	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL|ATTACH_ADV_SCOPE|ATTACH_UNDER
 	accuracy_list = list(
 
 		// small body parts: head, hand, feet
@@ -1021,7 +1021,7 @@
 		)
 	effectiveness_mod = 1.09
 	sel_mode = 1
-	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL|ATTACH_ADV_SCOPE|ATTACH_UNDER
 	stat = "rifle"
 	accuracy_list = list(
 
@@ -1354,7 +1354,7 @@
 		list(name = "semi auto",	burst=1, burst_delay=0.6, move_delay=2, dispersion = list(0.1, 0, 0, 0.1, 0.2)),
 		list(name = "full auto",	burst=1, burst_delay=1.2, move_delay=4, dispersion = list(1, 1.3, 1.5, 1.8, 1.9)),
 		)
-	effectiveness_mod = 1.07
+	effectiveness_mod = 1.01
 	sel_mode = 1
 	accuracy_list = list(
 
@@ -1412,7 +1412,7 @@
 /obj/item/weapon/gun/projectile/submachinegun/m14/sniper/m21
 	name = "M21 SWS"
 	desc = "An American sniper rifle, chambered in 7.62x51mm."
-	effectiveness_mod = 1.12
+	effectiveness_mod = 1.10
 	sel_mode = 0
 	firemodes = list(
 		list(name = "semi auto",	burst=1, burst_delay=0.6, move_delay=2, dispersion = list(0.2, 0.4, 0.4, 0.5, 0.6)),

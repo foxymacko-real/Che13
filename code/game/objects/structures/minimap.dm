@@ -109,8 +109,8 @@
 //////////////////////////////////////////
 
 /obj/item/weapon/map
-	desc = "A portable map of the area."
 	name = "folding map"
+	desc = "A portable map of the area."
 	icon = 'icons/obj/decals.dmi'
 	icon_state = "portable_areamap"
 	item_state = "map"
