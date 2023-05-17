@@ -460,6 +460,7 @@
 	item_state = "nsvth"
 	base_icon = "nsvth"
 	caliber = "a127"
+	fire_sound = 'sound/weapons/guns/fire/dshk.ogg'
 	magazine_type = /obj/item/ammo_magazine/ammo127
 	good_mags = list(/obj/item/ammo_magazine/ammo127)
 	weight = 12.5

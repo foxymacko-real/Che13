@@ -2,7 +2,7 @@
 	name = "defibrillator"
 	icon_state = "defibt"
 
-/obj/item/defib //TODO IMPLEMENT ROTTING STAGE CHECK SO OLD PEOPLE CANT BE REVIVED (check human_life.dm)
+/obj/item/defib //ROTTING IMPLEMENTED (check human_life.dm)
 	var/uses = 5
 	name = "Military Defibrillator"
 	desc = "A Field Defibrillator, perfect for reviving people. You have 5 uses left."
@@ -22,7 +22,7 @@
 		if (M.getBrainLoss() > 5) //no reviving people with a damaged brain or reviving headshotted people
 			user << "[M] brain is too damaged."
 			return
-		if (M.rotting_stage > 1) //no reviving rotted corpses
+		if (M.rotting_stage > 0) //no reviving rotted corpses
 			user << "[M] is too rotted to be revived."
 			return
 		if(M.getBruteLoss() > 250)

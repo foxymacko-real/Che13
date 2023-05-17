@@ -5,7 +5,7 @@
 	item_state = "grenade_launcher"
 	w_class = ITEM_SIZE_HUGE
 	force = 10
-	
+
 	fire_sound = 'sound/weapons/guns/fire/m79.ogg'
 	fire_sound_text = "a metallic thunk"
 	recoil = 0
@@ -217,7 +217,8 @@
 	if (!cover_opened)
 		return ..()
 	else if (chambered | cover_opened)
-		chambered.dir = src.loc.dir
+		if (ishuman(src.loc))
+			chambered.dir = src.loc.dir
 		chambered.det_time = 15
 		chambered.activate(null)
 	return chambered | cover_opened

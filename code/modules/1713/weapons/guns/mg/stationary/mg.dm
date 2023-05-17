@@ -85,6 +85,7 @@
 	icon_state = "dshk"
 	base_icon = "dshk"
 	caliber = "a127"
+	fire_sound = 'sound/weapons/guns/fire/dshk.ogg'
 	magazine_type = /obj/item/ammo_magazine/ammo127
 	good_mags = list(/obj/item/ammo_magazine/ammo127)
 	firemodes = list(
@@ -111,6 +112,7 @@
 	icon_state = "nsvt"
 	base_icon = "nsvt"
 	caliber = "a127"
+	fire_sound = 'sound/weapons/guns/fire/dshk.ogg'
 	magazine_type = /obj/item/ammo_magazine/ammo127
 	good_mags = list(/obj/item/ammo_magazine/ammo127)
 	firemodes = list(
