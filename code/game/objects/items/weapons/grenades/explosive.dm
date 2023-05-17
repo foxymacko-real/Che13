@@ -16,7 +16,7 @@
 	damage = 30
 
 /obj/item/projectile/bullet/pellet/fragment/airburst
-	damage = 20
+	damage = 10
 	icon = 'icons/effects/effects.dmi'
 	icon_state = "strafe"
 	range_step = 1
@@ -30,7 +30,7 @@
 	var/list/fragment_types = list(/obj/item/projectile/bullet/pellet/fragment/airburst = 1)
 	det_time = 30
 	var/explosion_size = 0
-	var/num_fragments = 13
+	var/num_fragments = 5
 	density = FALSE
 	opacity = FALSE
 	flammable = FALSE

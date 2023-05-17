@@ -1586,7 +1586,7 @@ obj/structure/vending/hezammo
 		/obj/item/ammo_magazine/rpk74 = 15,
 		/obj/item/ammo_magazine/rpk74/drum = 6,
 		/obj/item/weapon/attachment/bayonet = 20,
-		/obj/item/weapon/gun/launcher/rocket/single_shot/m72law = 4,
+		/obj/item/weapon/gun/launcher/rocket/single_shot/rpg22 = 4,
 	)
 
 /obj/structure/vending/dpr/equipment

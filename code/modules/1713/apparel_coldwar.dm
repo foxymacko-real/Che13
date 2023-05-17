@@ -1929,6 +1929,9 @@
 	flags_inv = BLOCKHAIR
 	body_parts_covered = HEAD
 	armor = list(melee = FALSE, arrow = FALSE, gun = FALSE, energy = 25, bomb = 10, bio = 100, rad = 80)
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT
 
 /obj/item/clothing/suit/nbc
 	value = 100
@@ -1940,6 +1943,9 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|FEET|HANDS
 	armor = list(melee = FALSE, arrow = FALSE, gun = FALSE, energy = 25, bomb = 10, bio = 100, rad = 80)
 	ripable = FALSE
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT
 
 /obj/item/clothing/head/nbc/olive
 	name = "olive drab NBC hood"
@@ -1972,6 +1978,9 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|FEET|HANDS|HEAD
 	armor = list(melee = FALSE, arrow = FALSE, gun = FALSE, energy = 5, bomb = 5, bio = 100, rad = 100)
 	ripable = FALSE
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT
 
 /obj/item/clothing/suit/nbcponcho
 	name = "NBC poncho"
@@ -1985,6 +1994,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|ARMS|HEAD|FEET|HANDS
 	armor = list(melee = 5, arrow = FALSE, gun = FALSE, energy = 5, bomb = 5, bio = 100, rad = 75)
 	ripable = FALSE
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
 
 /obj/item/clothing/suit/nbcponcho/white
 	name = "White NBC poncho"

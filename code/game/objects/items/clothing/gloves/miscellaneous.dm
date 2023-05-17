@@ -11,7 +11,6 @@
 	item_state = "bgloves"
 	siemens_coefficient = 0.50
 	permeability_coefficient = 0.05
-
 	cold_protection = HANDS
 	min_cold_protection_temperature = GLOVES_MIN_COLD_PROTECTION_TEMPERATURE
 	heat_protection = HANDS
@@ -147,6 +146,9 @@
 	germ_level = 0
 	fingerprint_chance = 10
 	armor = list(melee = 2, arrow = 1, gun = FALSE, energy = 25, bomb = 10, bio = 50, rad = 10)
+	gas_transfer_coefficient = 0.01
+	permeability_coefficient = 0.01
+	item_flags = BLOCK_GAS_SMOKE_EFFECT | AIRTIGHT
 
 /obj/item/clothing/gloves/sterile/nitrile
 	name = "nitrile gloves"

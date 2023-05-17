@@ -784,6 +784,8 @@
 	icon_state = "cleansuit"
 	item_state = "cleansuit"
 	worn_state = "cleansuit"
+	gas_transfer_coefficient = 0.06
+	permeability_coefficient = 0.06
 
 /obj/item/clothing/under/swat_new
 	name = "swat outfit"

@@ -119,6 +119,16 @@
 					done = TRUE
 	return
 
+/obj/structure/engine/internal/attackby(var/obj/item/I, var/mob/living/human/H)
+	if (broken && istype(I, /obj/item/weapon/weldingtool))
+		visible_message("[H] starts repairing \the [src]...")
+		if (do_after(H, 300, src))
+			visible_message("[H] sucessfully repairs \the [src].")
+			broken = FALSE
+			return
+	else
+		..()
+
 
 /obj/structure/engine/internal/running()
 	if (on)

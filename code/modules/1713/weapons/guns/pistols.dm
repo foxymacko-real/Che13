@@ -603,6 +603,14 @@ obj/item/weapon/gun/projectile/pistol/aps
 	effectiveness_mod = 1.02
 	bad_magazine_types = list(/obj/item/ammo_magazine/makarov)
 
+obj/item/weapon/gun/projectile/pistol/aps/update_icon()
+	..()
+	if (ammo_magazine)
+		icon_state = "aps"
+	else
+		icon_state = "aps_open"
+	return
+
 /obj/item/weapon/gun/projectile/pistol/m9beretta
 	name = "Beretta M9"
 	desc = "The standard issue pistol of US Armed Forces from 1985 to 2017. Chambered in 9mm Luger."
