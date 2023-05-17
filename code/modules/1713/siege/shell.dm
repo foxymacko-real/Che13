@@ -434,7 +434,7 @@
 	var/obj/item/weapon/storage/internal/storage
 	density = TRUE
 	opacity = FALSE
-	anchored = TRUE
+	anchored = FALSE
 	var/liquidstorage = 0
 /obj/structure/shellrack/New()
 	..()
