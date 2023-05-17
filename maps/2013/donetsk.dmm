@@ -229,7 +229,7 @@
 "eu" = (/obj/structure/table/modern/retable,/obj/item/ammo_magazine/aps,/obj/item/ammo_magazine/aps,/obj/item/ammo_magazine/aps,/obj/item/ammo_magazine/aps,/obj/item/weapon/gun/projectile/pistol/aps,/turf/floor/plating/steel,/area/caribbean)
 "ev" = (/obj/item/ammo_magazine/box/a9mmap,/obj/item/ammo_magazine/box/a9mm,/turf/floor/plating/steel,/area/caribbean)
 "ew" = (/obj/item/ammo_magazine/ammo127,/obj/item/ammo_magazine/ammo127,/obj/item/ammo_magazine/ammo127,/obj/item/ammo_magazine/ammo127,/turf/floor/plating/steel,/area/caribbean)
-"ex" = (/obj/item/weapon/gun/projectile/automatic/stationary/modern/dshk,/turf/floor/plating/steel,/area/caribbean)
+"ex" = (/obj/item/weapon/gun/projectile/automatic/stationary/modern/dshk/ww2{dir = 4},/turf/floor/plating/steel,/area/caribbean)
 "ey" = (/obj/item/weapon/foldable_shovel/trench/etool,/obj/item/weapon/foldable_shovel/trench/etool,/obj/item/weapon/foldable_shovel/trench/etool,/obj/item/weapon/foldable_shovel/trench/etool,/obj/item/weapon/foldable_shovel/trench/etool,/turf/floor/plating/steel,/area/caribbean)
 "ez" = (/obj/covers/cement_wall/vertical,/obj/item/weapon/fire_extinguisher,/turf/wall/cement,/area/caribbean)
 "eA" = (/obj/structure/table/modern/retable,/obj/item/weapon/can/filled,/obj/item/weapon/can/filled,/obj/item/weapon/can/filled,/obj/item/weapon/can/filled,/obj/item/weapon/can/filled,/obj/item/weapon/can/filled,/turf/floor/plating/steel,/area/caribbean)
