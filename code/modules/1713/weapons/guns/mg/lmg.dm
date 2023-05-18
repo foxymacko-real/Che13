@@ -68,7 +68,7 @@
 	full_auto = TRUE
 	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS
 	firemodes = list(
-		list(name = "full auto",	burst=1, burst_delay=0.8, move_delay=8, dispersion = list(0.7, 1.1, 1.1, 1.1, 1.2), recoil = 0),)
+		list(name = "full auto",	burst=1, burst_delay=0.8, move_delay=8, dispersion = list(0.6, 1.1, 1.0, 1.0, 1.1), recoil = 0),)
 
 	var/jammed_until = -1
 	var/jamcheck = 0
@@ -141,7 +141,7 @@
 	weight = 9.12
 	force = 20
 	throwforce = 30
-	effectiveness_mod = 1.05
+	effectiveness_mod = 1.06
 	bad_magazine_types = list(/obj/item/ammo_magazine/maxim)
 /obj/item/weapon/gun/projectile/automatic/bar
 	name = "M1918A2 BAR"

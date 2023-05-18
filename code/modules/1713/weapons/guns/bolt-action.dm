@@ -43,10 +43,10 @@
 
 		// small body parts: head, hand, feet
 		"small" = list(
-			SHORT_RANGE_STILL = 84,
+			SHORT_RANGE_STILL = 74,
 			SHORT_RANGE_MOVING = 44,
 
-			MEDIUM_RANGE_STILL = 77,
+			MEDIUM_RANGE_STILL = 72,
 			MEDIUM_RANGE_MOVING = 47,
 
 			LONG_RANGE_STILL = 63,
@@ -57,10 +57,10 @@
 
 		// medium body parts: limbs
 		"medium" = list(
-			SHORT_RANGE_STILL = 88,
-			SHORT_RANGE_MOVING = 44,
+			SHORT_RANGE_STILL = 78,
+			SHORT_RANGE_MOVING = 34,
 
-			MEDIUM_RANGE_STILL = 78,
+			MEDIUM_RANGE_STILL = 75,
 			MEDIUM_RANGE_MOVING = 39,
 
 			LONG_RANGE_STILL = 68,
@@ -71,10 +71,10 @@
 
 		// large body parts: chest, groin
 		"large" = list(
-			SHORT_RANGE_STILL = 98,
+			SHORT_RANGE_STILL = 88,
 			SHORT_RANGE_MOVING = 49,
 
-			MEDIUM_RANGE_STILL = 90,
+			MEDIUM_RANGE_STILL = 80,
 			MEDIUM_RANGE_MOVING = 50,
 
 			LONG_RANGE_STILL = 77,
