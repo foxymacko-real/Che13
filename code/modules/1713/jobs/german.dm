@@ -1965,12 +1965,14 @@
 	H.equip_to_slot_or_del(new /obj/item/clothing/under/ww2/german(H), slot_w_uniform)
 //head
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ww2/gerhelm(H), slot_head)
+//coat
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/coat/ww2/jumpsmockf(H), slot_wear_suit)
 //back
 	var/obj/item/clothing/under/uniform = H.w_uniform
 	var/randimpw = rand(1,4)
 	switch(randimpw)
 		if (1)
-			H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/boltaction/gewehr98/karabiner98k(H), slot_shoulder)
+			H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/semiautomatic/g41(H), slot_shoulder)
 			var/obj/item/clothing/accessory/storage/webbing/ww1/german/ww2/gewehr98/webbing = new /obj/item/clothing/accessory/storage/webbing/ww1/german/ww2/gewehr98(null)
 			uniform.attackby(webbing, H)
 		if (2)
@@ -1992,6 +1994,7 @@
 		H.equip_to_slot_or_del(new /obj/item/flashlight/militarylight/alt(H), slot_wear_id)
 	if (prob(30))
 		H.equip_to_slot_or_del(new /obj/item/weapon/radio/faction1(H), slot_back)
+
 	give_random_name(H)
 	H.add_note("Role", "You are a <b>[title]</b>, a paratrooper. Your job is to help any other units that need assistance.")
 	H.setStat("strength", STAT_MEDIUM_HIGH)

@@ -2292,6 +2292,17 @@ obj/item/clothing/accessory/storage/webbing/ww1/ww2/stormgroup/Scout
 	armor = list(melee = 10, arrow = 0, gun = FALSE, energy = 15, bomb = 5, bio = 30, rad = 25)
 	value = 65
 
+/obj/item/clothing/suit/storage/coat/ww2/jumpsmockf
+	name = "Fallschirmjager Jump Smock"
+	desc = "A german Jump smock, worn by the fallschirmjager."
+	icon_state = "fallsmock"
+	item_state = "fallsmock"
+	worn_state = "fallsmock"
+	body_parts_covered = UPPER_TORSO||ARMS
+	cold_protection = UPPER_TORSO|ARM_LEFT|ARM_RIGHT
+	armor = list(melee = 15, arrow = 1, gun = FALSE, energy = 15, bomb = 5, bio = 30, rad = 25)
+	value = 95
+
 /obj/item/clothing/suit/storage/coat/ww2/german/winter
 	icon_state = "gerparka_winter"
 	item_state = "gerparka_winter"
