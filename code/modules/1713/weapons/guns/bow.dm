@@ -24,7 +24,7 @@
 	gun_type = GUN_TYPE_BOW
 	attachment_slots = null
 	accuracy_increase_mod = 3.00
-	accuracy_decrease_mod = 7.00
+	accuracy_decrease_mod = 4.00
 	KD_chance = KD_CHANCE_HIGH
 	stat = "bows"
 	move_delay = 5

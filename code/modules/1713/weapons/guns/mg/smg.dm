@@ -60,7 +60,7 @@
 
 	accuracy_increase_mod = 1.00
 	accuracy_decrease_mod = 1.50
-	KD_chance = KD_CHANCE_HIGH+3
+	KD_chance = KD_CHANCE_HIGH+1
 	stat = "machinegun"
 	w_class = ITEM_SIZE_NORMAL
 	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS
@@ -103,7 +103,7 @@
 	load_delay = 8
 	equiptimer = 15
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.8, move_delay=2, dispersion = list(0.2, 0.3, 0.3, 0.4, 0.5)),
+		list(name = "semi auto",	burst=1, burst_delay=1, move_delay=2, dispersion = list(0.2, 0.3, 0.3, 0.4, 0.5)),
 		list(name = "full auto",	burst=1, burst_delay=1.5, move_delay=4, dispersion = list(1.2, 1.4, 1.4, 1.4, 1.7)),
 		)
 
@@ -157,7 +157,7 @@
 	weight = 3.4
 	fire_sound = 'sound/weapons/guns/fire/shotgun.ogg'
 	firemodes = list(
-		list(name = "semi auto",    burst=1, burst_delay=0.7, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.5, 0.6)),
+		list(name = "semi auto",    burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.5, 0.6)),
 		list(name = "full auto",    burst=1, burst_delay=1.2, recoil=0, move_delay=4, dispersion = list(1.1, 1.2, 1.3, 1.3, 1.5)),
 		)
 
@@ -186,7 +186,7 @@
 	attachment_slots = ATTACH_BARREL
 	fire_sound = 'sound/weapons/guns/fire/shotgun.ogg'
 	firemodes = list(
-		list(name = "semi auto",    burst=1, burst_delay=0.7, recoil=0, move_delay=2, dispersion = list(0.2, 0.4, 0.4, 0.5, 0.6)),
+		list(name = "semi auto",    burst=1, burst_delay=1, recoil=0, move_delay=2, dispersion = list(0.2, 0.4, 0.4, 0.5, 0.6)),
 		)
 
 	sel_mode = 1
@@ -271,7 +271,7 @@
 	magazine_type = /obj/item/ammo_magazine/mp40/mp5
 	good_mags = list(/obj/item/ammo_magazine/mp40/mp5)
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.08, recoil=0, move_delay=0.5, dispersion = list(0.1, 0.2, 0.1, 0.2, 0)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=0.5, dispersion = list(0.1, 0.2, 0.1, 0.2, 0)),
 		list(name = "full auto",	burst=1, burst_delay=1, recoil=0, move_delay=3, dispersion = list(0.7, 1.2, 1.2, 1.3, 1.5)),
 		)
 	sel_mode = 1
@@ -291,8 +291,8 @@
 	full_auto = TRUE
 	equiptimer = 12
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.3, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
-		list(name = "full auto",	burst=1, burst_delay=0.4, recoil=0, move_delay=3, dispersion = list(0.8, 1.3, 1.3, 1.4, 1.6)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
+		list(name = "full auto",	burst=1, burst_delay=1, recoil=0, move_delay=3, dispersion = list(0.8, 1.3, 1.3, 1.4, 1.6)),
 		)
 	sel_mode = 1
 	effectiveness_mod = 0.95
@@ -316,8 +316,8 @@
 	magazine_type = /obj/item/ammo_magazine/uzi
 	good_mags = list(/obj/item/ammo_magazine/uzi)
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.4, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
-		list(name = "full auto",	burst=1, burst_delay=0.9, recoil=0, move_delay=3, dispersion = list(1.3, 1.4, 1.5, 1.6, 1.7)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
+		list(name = "full auto",	burst=1, burst_delay=1, recoil=0, move_delay=3, dispersion = list(1.3, 1.4, 1.5, 1.6, 1.7)),
 		)
 	sel_mode = 1
 	effectiveness_mod = 1.05
@@ -336,8 +336,8 @@
 	magazine_type = /obj/item/ammo_magazine/mac10
 	good_mags = list(/obj/item/ammo_magazine/mac10)
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.3, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
-		list(name = "full auto",	burst=1, burst_delay=0.5, recoil=0, move_delay=3, dispersion = list(1.5, 1.6, 1.7, 1.8, 1.9)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
+		list(name = "full auto",	burst=1, burst_delay=1, recoil=0, move_delay=3, dispersion = list(1.5, 1.6, 1.7, 1.8, 1.9)),
 		)
 	sel_mode = 1
 	effectiveness_mod = 0.9
@@ -358,8 +358,8 @@
 	equiptimer = 8
 	slot_flags = SLOT_SHOULDER | SLOT_BELT
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.2, move_delay=1, dispersion = list(0.6, 0.6, 0.7, 0.8, 0.9)),
-		list(name = "full auto",	burst=1, burst_delay=0.3, move_delay=4, dispersion = list(1.6, 1.7, 1.8, 1.9, 2.0)),
+		list(name = "semi auto",	burst=1, burst_delay=1, move_delay=1, dispersion = list(0.6, 0.6, 0.7, 0.8, 0.9)),
+		list(name = "full auto",	burst=1, burst_delay=1, move_delay=4, dispersion = list(1.6, 1.7, 1.8, 1.9, 2.0)),
 		)
 	effectiveness_mod = 0.8
 	sel_mode = 1
@@ -379,8 +379,8 @@
 	magazine_type = /obj/item/ammo_magazine/skorpion
 	good_mags = list(/obj/item/ammo_magazine/skorpion)
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.4, recoil=0, move_delay=1, dispersion = list(0.3, 0.2, 0.3, 0.2, 0.3)),
-		list(name = "full auto",	burst=1, burst_delay=0.8, recoil=0, move_delay=3, dispersion = list(1.2, 1.3, 1.4, 1.5, 1.6)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.3, 0.2, 0.3, 0.2, 0.3)),
+		list(name = "full auto",	burst=1, burst_delay=1, recoil=0, move_delay=3, dispersion = list(1.2, 1.3, 1.4, 1.5, 1.6)),
 		)
 	sel_mode = 1
 	effectiveness_mod = 1
@@ -518,7 +518,7 @@
 	weight = 3.63
 	equiptimer = 14
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.5, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.2, 0.4, 0.4, 0.4, 0.5)),
 		list(name = "full auto",	burst=1, burst_delay=1.2, recoil=0, move_delay=3, dispersion = list(0.7, 1.2, 1.2, 1.3, 1.5)),
 		)
 
@@ -564,7 +564,7 @@
 	equiptimer = 15
 	effectiveness_mod = 0.84
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.5, recoil=0, move_delay=1, dispersion = list(0.3, 0.4, 0.5, 0.5, 0.6)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.3, 0.4, 0.5, 0.5, 0.6)),
 		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=4, dispersion = list(0.8, 1.3, 1.4, 1.5, 1.6)),
 		)
 
@@ -600,7 +600,7 @@
 	equiptimer = 15
 	slot_flags = SLOT_SHOULDER
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.2, recoil=0, move_delay=1, dispersion = list(0.1, 0.2, 0.1, 0.2, 0.1)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.1, 0.2, 0.1, 0.2, 0.1)),
 		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=4, dispersion = list(1.2, 1.2, 1.3, 1.4, 1.8)),
 		)
 	stat = "rifle"
@@ -665,7 +665,7 @@
 	weight = 3.65
 	equiptimer = 17
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.2, recoil=0, move_delay=2, dispersion = list(0.2, 0.3, 0.4, 0.4, 0.3)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=2, dispersion = list(0.2, 0.3, 0.4, 0.4, 0.3)),
 		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=5, dispersion = list(1.2, 1.2, 1.3, 1.4, 1.8)),
 		)
 	stat = "rifle"
@@ -743,7 +743,7 @@
 	slot_flags = SLOT_SHOULDER
 	stat = "rifle"
 	firemodes = list(
-		list(name = "semi auto",	burst=1, burst_delay=0.7, recoil=0, move_delay=1, dispersion = list(0.1, 0, 0.2, 0, 0.1)),
+		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.1, 0, 0.2, 0, 0.1)),
 		list(name = "full auto",	burst=1, burst_delay=1.2, recoil=0, move_delay=4, dispersion = list(1.1, 1.2, 1.3, 1.3, 1.5)),
 		)
 	effectiveness_mod = 1.07
@@ -797,6 +797,11 @@
 	..()
 	var/obj/item/weapon/attachment/scope/adjustable/advanced/pso1/SP = new/obj/item/weapon/attachment/scope/adjustable/advanced/pso1(src)
 	SP.attached(null,src,TRUE)
+
+/obj/item/weapon/gun/projectile/submachinegun/ak74/grenade_launcher/New()
+	..()
+	var/obj/item/weapon/gun/launcher/grenade/underslung/gp25/GL = new/obj/item/weapon/gun/launcher/grenade/underslung/gp25(src)
+	GL.attached(null,src,TRUE)
 
 /obj/item/weapon/gun/projectile/submachinegun/ak74/aks74
 	name = "AKS-74"

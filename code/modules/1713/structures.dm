@@ -1659,8 +1659,10 @@
 	icon_state = "medical_divider_half"
 	density = FALSE
 	flammable = TRUE
+	anchored = TRUE
 
 /obj/structure/medical_divider/full
 	icon_state = "medical_divider_full"
 	density = TRUE
 	flammable = TRUE
+	anchored = TRUE

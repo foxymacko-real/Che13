@@ -263,6 +263,10 @@ Current Defines (_defines/attachment.dm)
 	attachment_type = ATTACH_BARREL
 	force = 1
 
+/obj/item/weapon/attachment/bayonet/attachspw //use this when making someone spawn with a gun attached to their rifle
+	icon_state = "bayonet_ongun"
+	item_state = "knife"
+
 /obj/item/weapon/attachment/bayonet/flag/attack_self(mob/user)
 	return
 

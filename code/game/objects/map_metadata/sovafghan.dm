@@ -57,7 +57,7 @@
 	..()
 	if (J.is_afghan)
 		. = TRUE
-		if (clients.len <= 25)
+		if (clients.len <= 20)
 			if (J.title == "Industrial Worker" || J.title == "Mine Worker" || J.title == "Waiter" || J.title == "Cook" || J.title == "Civilian" || J.title == "Villager")
 				. = FALSE
 	else
@@ -322,9 +322,9 @@
 
 /obj/map_metadata/sovafghan/update_win_condition()
 	if (processes.ticker.playtime_elapsed > 4800)
-		if (sov_points < 100 && muj_points < 100)
+		if (sov_points < 200 && muj_points < 200)
 			return TRUE
-		if (sov_points >= 100 && sov_points > muj_points)
+		if (sov_points >= 200 && sov_points > muj_points)
 			if (win_condition_spam_check)
 				return FALSE
 			ticker.finished = TRUE
@@ -333,7 +333,7 @@
 			show_global_battle_report(null)
 			win_condition_spam_check = TRUE
 			return FALSE
-		if (muj_points >= 100 && muj_points > sov_points)
+		if (muj_points >= 200 && muj_points > sov_points)
 			if (win_condition_spam_check)
 				return FALSE
 			ticker.finished = TRUE

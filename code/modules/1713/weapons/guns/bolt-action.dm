@@ -29,11 +29,11 @@
 	gun_type = GUN_TYPE_RIFLE
 	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_SCOPE|ATTACH_BARREL
 	accuracy_increase_mod = 2.00
-	accuracy_decrease_mod = 6.00
+	accuracy_decrease_mod = 3.00
 	KD_chance = KD_CHANCE_HIGH
 	stat = "rifle"
-	move_delay = 2
-	fire_delay = 2
+	move_delay = 3
+	fire_delay = 3
 	equiptimer = 15
 	gun_safety = TRUE
 	maxhealth = 20
@@ -318,7 +318,7 @@
 	slot_flags = null
 	caliber = "a50cal"
 	weight = 14.8
-	effectiveness_mod = 2.0
+	effectiveness_mod = 1.1
 	recoil = 3
 	handle_casings = HOLD_CASINGS
 	load_method = SINGLE_CASING
@@ -399,9 +399,9 @@
 	magazine_type = /obj/item/ammo_magazine/pzb_case
 	load_shell_sound = 'sound/weapons/guns/interact/clip_reload.ogg'
 	fire_sound = 'sound/weapons/guns/fire/ptrd.ogg'
-	accuracy_increase_mod = 2.00
-	move_delay = 4
-	fire_delay = 4
+	accuracy_increase_mod = 1.00
+	move_delay = 6
+	fire_delay = 6
 	equiptimer = 20
 	gun_safety = FALSE
 	load_delay = 20

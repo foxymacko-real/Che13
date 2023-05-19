@@ -162,11 +162,13 @@
 	else
 		H.equip_to_slot_or_del(new /obj/item/clothing/head/sov_ushanka_new(H), slot_head)
 //back
-	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74(H), slot_shoulder)
 	H.equip_to_slot_or_del(new /obj/item/weapon/storage/belt/smallpouches/green/sov_74(H), slot_belt)
 	H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/pistol/makarov(H), slot_l_hand)
 	if (time_of_day == "Night" || time_of_day == "Evening" || time_of_day == "Early Morning")
 		H.equip_to_slot_or_del(new /obj/item/flashlight/militarylight/alt(H), slot_wear_id)
+	else
+		H.equip_to_slot_or_del(new /obj/item/weapon/attachment/scope/adjustable/binoculars/binoculars(H), slot_wear_id)
+
 	var/obj/item/clothing/under/uniform = H.w_uniform
 	var/obj/item/clothing/accessory/holster/hip/holsterh = new /obj/item/clothing/accessory/holster/hip(null)
 	uniform.attackby(holsterh, H)
@@ -176,6 +178,14 @@
 	uniform.attackby(mag, H)
 	var/obj/item/ammo_magazine/ak74/mag2 = new /obj/item/ammo_magazine/ak74(null)
 	uniform.attackby(mag2, H)
+	//gun
+	if (prob(50))
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74/pso1(H), slot_shoulder)
+		H.equip_to_slot_or_del(new /obj/item/weapon/attachment/bayonet(H), slot_l_hand)
+	else
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74/grenade_launcher(H), slot_shoulder)
+		H.equip_to_slot_or_del(new /obj/item/weapon/grenade/frag/ugl/vog25(H), slot_r_store)
+		H.equip_to_slot_or_del(new /obj/item/weapon/grenade/frag/ugl/vog25(H), slot_r_hand)
 	if (map.ID == MAP_SOVAFGHAN)
 		H.equip_to_slot_or_del(new /obj/item/weapon/key/soviet(H), slot_l_store)
 //jacket

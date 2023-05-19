@@ -249,8 +249,8 @@
 	name = "Ammo can (12.7x108mm)"
 	icon_state = "b127"
 	mag_type = MAGAZINE
+	w_class = ITEM_SIZE_NORMAL
 	caliber = "a127"
-	w_class = 2
 	ammo_type = /obj/item/ammo_casing/a127
 	max_ammo = 50
 	multiple_sprites = TRUE

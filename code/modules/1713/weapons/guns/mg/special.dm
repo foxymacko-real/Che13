@@ -58,7 +58,7 @@
 	)
 
 	accuracy_increase_mod = 1.00
-	accuracy_decrease_mod = 1.50
+	accuracy_decrease_mod = 2.50
 	KD_chance = KD_CHANCE_HIGH+5
 	stat = "machinegun"
 	w_class = ITEM_SIZE_NORMAL

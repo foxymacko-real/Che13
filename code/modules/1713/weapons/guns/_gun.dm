@@ -66,8 +66,8 @@
 			VERY_LONG_RANGE_MOVING = 6)
 	)
 
-	var/accuracy_increase_mod = 1.00 //wtf does this do
-	var/accuracy_decrease_mod = 1.00 //wtf does this do
+	var/accuracy_increase_mod = 1.00 //if skill above 1 then more accuracy
+	var/accuracy_decrease_mod = 1.00 //if skill UNDER 1 then less accuracy
 	var/effectiveness_mod = 1.00 //accuracy, the higher this is the more likely you are to hit something, also affects sandbags, with very high eff mod it will fly over several sandbags and kill anything
 	var/KD_chance = 5
 	var/stat = "rifle"

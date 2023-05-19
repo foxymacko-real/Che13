@@ -51,7 +51,7 @@
 			VERY_LONG_RANGE_MOVING = 15),
 	)
 
-	accuracy_increase_mod = 1.00
+	accuracy_increase_mod = 2.00
 	accuracy_decrease_mod = 1.00
 	KD_chance = KD_CHANCE_HIGH
 	stat = "rifle"
