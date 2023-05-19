@@ -76,6 +76,12 @@ var/global/list/vehicle_walls = list( \
 /obj/structure/vehicleparts/frame/car/rf/truck
 	w_right = list("c_windoweddoor",TRUE,TRUE,0,4,TRUE,TRUE)
 	w_front = list("c_windshield",FALSE,TRUE,0,0.1,FALSE,FALSE)
+/obj/structure/vehicleparts/frame/car/lf/bmfront
+	w_left = list("c_door",TRUE,TRUE,10,15,TRUE,TRUE)
+	w_front = list("c_armoredfront",TRUE,TRUE,10,15,FALSE,FALSE)
+/obj/structure/vehicleparts/frame/car/rf/bmfront
+	w_right = list("c_door",TRUE,TRUE,10,15,TRUE,TRUE)
+	w_front = list("c_armoredfront",TRUE,TRUE,10,15,FALSE,FALSE)
 
 /obj/structure/vehicleparts/frame/car/lf/truck/armored
 	w_left = list("c_windoweddoor",TRUE,TRUE,10,25,TRUE,TRUE)
@@ -164,7 +170,7 @@ var/global/list/vehicle_walls = list( \
 	noroof = FALSE
 	w_left = list("c_wall",TRUE,TRUE,20,20,FALSE,FALSE)
 /obj/structure/vehicleparts/frame/car/left/metalreinforced/back
-	w_left = list("c_wall",TRUE,TRUE,20,20,FALSE,FALSE)
+	w_left = list("c_wall",TRUE,TRUE,20,20,TRUE,TRUE)
 	w_back = list("c_door",TRUE,TRUE,10,10,FALSE,FALSE)
 /obj/structure/vehicleparts/frame/car/right/metal
 	name = "steel frame"
@@ -184,7 +190,7 @@ var/global/list/vehicle_walls = list( \
 	noroof = FALSE
 	w_right = list("c_wall",TRUE,TRUE,20,20,FALSE,FALSE)
 /obj/structure/vehicleparts/frame/car/right/metalreinforced/back
-	w_right = list("c_wall",TRUE,TRUE,20,20,FALSE,FALSE)
+	w_right = list("c_wall",TRUE,TRUE,20,20,TRUE,TRUE)
 	w_back = list("c_door",TRUE,TRUE,10,10,FALSE,FALSE)
 
 /obj/structure/vehicleparts/frame/car/rb
