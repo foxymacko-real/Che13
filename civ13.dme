@@ -130,7 +130,6 @@
 #include "code\game\mob\hear_say.dm"
 #include "code\game\mob\inventory.dm"
 #include "code\game\mob\keyboard.dm"
-#include "code\game\mob\login.dm"
 #include "code\game\mob\logout.dm"
 #include "code\game\mob\mob.dm"
 #include "code\game\mob\mob_damage.dm"
@@ -1097,5 +1096,5 @@
 #include "code\processes\lighting\sources.dm"
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
-#include "maps\WIP\testing.dmm"
+#include "maps\WIP\sovafghan.dmm"
 // END_INCLUDE

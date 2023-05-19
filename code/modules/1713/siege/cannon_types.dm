@@ -1,7 +1,7 @@
 /obj/structure/cannon/modern
 	name = "field cannon"
-	desc = "A artillery cannon, usually used to support offensives via long range shelling."
 	icon = 'icons/obj/cannon.dmi'
+	desc = "A artillery cannon, usually used to support offensives via long range shelling."
 	icon_state = "modern_cannon"
 	ammotype = /obj/item/cannon_ball/shell
 	spritemod = FALSE
@@ -412,26 +412,26 @@
 		return
 	usr.face_atom(src)
 	visible_message("<span class = 'warning'>[usr] starts to get the [src] from the ground.</span>")
-	if (loaded)
-		loaded.loc = get_turf(src)
-		loaded = null
+	for (var/obj/item/cannon_ball/mortar_shell/I in loaded)
+		I.loc = get_turf(src)
+		loaded -= I
 		visible_message("<span class = 'warning'>[usr] unloads the [src].</span>")
 	if (do_after(usr, 25, get_turf(usr)))
 		qdel(src)
 		usr.put_in_any_hand_if_possible(new path, prioritize_active_hand = TRUE)
 		visible_message("<span class = 'warning'>[usr] retrieves the [src] from the ground.</span>")
 
-/obj/structure/cannon/mortar/foldable/attackby(obj/item/W as obj, mob/M as mob)
-	if (istype(W, ammotype))
-		if (loaded)
-			M << "<span class = 'warning'>There's already a [loaded] loaded.</span>"
+/obj/structure/cannon/mortar/foldable/attackby(obj/item/I as obj, mob/M as mob)
+	if (istype(I, ammotype))
+		if (loaded.len)
+			M << "<span class = 'warning'>There's already a [loaded[1]] loaded.</span>"
 			return
 		// load first and only slot
 		if (do_after(M, 45, src, can_move = TRUE))
 			if (M && (locate(M) in range(1,src)))
-				M.remove_from_mob(W)
-				W.loc = src
-				loaded = W
+				M.remove_from_mob(I)
+				I.loc = src
+				loaded += I
 
 /obj/structure/cannon/davycrockett
 	name = "M29 Davy Crockett"
