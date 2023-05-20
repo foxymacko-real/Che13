@@ -2296,3 +2296,12 @@
 	icon_state = "black_beanie"
 	item_state = "black_beanie"
 	cold_protection = HEAD
+
+/////////Margygal conflict
+
+/obj/item/clothing/under/margygal/govcomb
+	name = "margygal Army Uniform"
+	desc = "A grey camo shirt with faded green pants."
+	icon_state = "marg_combat"
+	item_state = "marg_combat"
+	worn_state = "marg_combat"
