@@ -396,6 +396,51 @@ obj/item/weapon/shield/attack_self(mob/user as mob)
 	w_class = ITEM_SIZE_LARGE
 	base_block_chance = 85
 	slowdown = 2.85
+
+/obj/item/weapon/shield/energy
+	name = "Energy shield"
+	desc = "A compact shield designed to protect you from bullets."
+	icon_state = "eshield"
+	item_state = "eshield"
+	material = "steel"
+	health = 200
+	w_class = ITEM_SIZE_LARGE
+	slot_flags = FALSE
+	base_block_chance = 95
+	slowdown = 1.50
+	var/folded = FALSE
+
+/obj/item/weapon/shield/energy/verb/fold()
+	set name = "Fold"
+	set category = null
+	set src in usr
+	if (folded)
+		folded = FALSE
+		item_state = "eshield"
+		update_icon()
+		icon_state = "eshield"
+		usr << "You unfold the [src]."
+		folds()
+		update_icon()
+	else
+		folded = TRUE
+		item_state = "eshield_fold"
+		icon_state = "eshield_fold"
+		update_icon()
+		usr << "You fold the [src]."
+		folds()
+		update_icon()
+
+/obj/item/weapon/shield/energy/proc/folds()
+	if (folded)
+		slot_flags = SLOT_SHOULDER|SLOT_BELT
+		base_block_chance = 5
+		slowdown = 0.1
+	else
+		slot_flags = FALSE
+		base_block_chance = 95
+		slowdown = 1.50
+
 //////////////////////////////////////SKYRIM////////////////////////////////////////
 /obj/item/weapon/shield/tes13
 	name = "iron shield"

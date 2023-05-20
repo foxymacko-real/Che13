@@ -23,6 +23,10 @@
 	not_movable = TRUE
 	not_disassemblable = TRUE
 
+/obj/structure/gatecontrol/blastcontrol/longrange
+	cooldown = 4
+	distance = 8
+
 /obj/structure/gatecontrol/blastcontrol/attack_hand(var/mob/user as mob)
 	if (cooldown <= world.time)
 		for (var/obj/structure/gate/blast/G in range(distance,src.loc))

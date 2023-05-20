@@ -1264,3 +1264,4 @@
 	spent_icon = "darts-0"
 	projectile_type = /obj/item/projectile/laser/repeating
 	leaves_residue = FALSE
+

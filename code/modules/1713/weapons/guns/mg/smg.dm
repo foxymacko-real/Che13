@@ -2117,3 +2117,71 @@
 	else
 		slot_flags = SLOT_SHOULDER
 		effectiveness_mod = 1.09
+
+//bx
+/obj/item/weapon/gun/projectile/submachinegun/bax2
+	name = "BAX-2"
+	desc = "A lightweight 9mm rifle."
+	icon = 'icons/obj/guns/assault_rifles.dmi'
+	icon_state = "b2"
+	item_state = "b2"
+	base_icon = "b2"
+	caliber = "a9x19"
+	fire_sound = 'sound/weapons/guns/fire/fnfal.ogg'
+	magazine_type = /obj/item/ammo_magazine/bax2
+	good_mags = list(/obj/item/ammo_magazine/bax2)
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL
+	weight = 1.2
+	equiptimer = 10
+	slot_flags = SLOT_SHOULDER
+	firemodes = list(
+		list(name = "semi auto",	burst=1, burst_delay=0.9, move_delay=1, dispersion = list(0.1, 0.2, 0.1, 0.1, 0.2)),
+		list(name = "burst",	burst=4, burst_delay=1.1, move_delay=3, dispersion = list(1, 1.1, 1.1, 1.1, 1.1)),
+		)
+	effectiveness_mod = 1.07
+	sel_mode = 1
+
+/obj/item/weapon/gun/projectile/submachinegun/bax7
+	name = "BAX-7"
+	desc = "A 5.56x45mm assault rifle,very deadly."
+	icon = 'icons/obj/guns/assault_rifles.dmi'
+	icon_state = "b7"
+	item_state = "b7"
+	base_icon = "b7"
+	caliber = "a556x45"
+	fire_sound = 'sound/weapons/guns/fire/assault_rifle.ogg'
+	magazine_type = /obj/item/ammo_magazine/bax7
+	good_mags = list(/obj/item/ammo_magazine/bax7)
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL|ATTACH_UNDER
+	weight = 2.2
+	equiptimer = 14
+	slot_flags = SLOT_SHOULDER
+	firemodes = list(
+		list(name = "semi auto",	burst=1, burst_delay=1.1, move_delay=2, dispersion = list(0.3, 0.3, 0.5, 0.5, 0.5)),
+		list(name = "full auto",	burst=1, burst_delay=1.2, move_delay=4, dispersion = list(1, 1.1, 1.5, 1.5, 1.5)),
+		)
+	effectiveness_mod = 1.05
+	sel_mode = 1
+
+/obj/item/weapon/gun/projectile/submachinegun/bax10
+	name = "BAX-10"
+	desc = "A 5.70x20mm ACRASA assault rifle,hurts like hell."
+	icon = 'icons/obj/guns/assault_rifles.dmi'
+	icon_state = "b10"
+	item_state = "b10"
+	base_icon = "b10"
+	caliber = "acrasa"
+	fire_sound = 'sound/weapons/guns/fire/dshk.ogg'
+	magazine_type = /obj/item/ammo_magazine/bax10
+	good_mags = list(/obj/item/ammo_magazine/bax10)
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL|ATTACH_UNDER
+	weight = 9.5
+	heavy = TRUE
+	equiptimer = 19
+	slot_flags = SLOT_SHOULDER
+	firemodes = list(
+		list(name = "semi auto",	burst=1, burst_delay=1.1, move_delay=2, dispersion = list(0.5, 0.5, 0.5, 0.5, 0.5)),
+		list(name = "full auto",	burst=1, burst_delay=1.2, move_delay=4, dispersion = list(1, 1.1, 1.5, 1.5, 1.5)),
+		)
+	effectiveness_mod = 1.04
+	sel_mode = 1

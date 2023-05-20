@@ -186,6 +186,23 @@
 		/obj/item/weapon/grenade/smokebomb
 		)
 
+/obj/item/weapon/gun/launcher/grenade/underslung/generico
+	name = "G-1 'Generico' grenade launcher"
+	release_force = 2
+	throw_distance = 50
+	desc = "Not much more than a tube and a firing mechanism, this grenade launcher is designed to be fitted to a rifle."
+	whitelisted_grenades = list(
+		/obj/item/weapon/grenade/frag/ugl/vog25,
+		/obj/item/weapon/grenade/frag/ugl/shell40mm,
+		/obj/item/weapon/grenade/smokebomb/ugl/shell40mm,
+		/obj/item/weapon/grenade/smokebomb/ugl/vog25
+		)
+	blacklisted_grenades = list(
+		/obj/item/weapon/grenade,
+		/obj/item/weapon/grenade/frag,
+		/obj/item/weapon/grenade/smokebomb
+		)
+
 //Grenade Launcher
 /obj/item/weapon/gun/launcher/grenade/standalone
 	name = "Standalone Grenade Launcher"
