@@ -497,7 +497,7 @@ var/const/debug_snacks = FALSE //if you want to see new food creating logs set i
 	nutriment_desc = list("nutriment" = 2, "sugar" = 2, "cocoa" = 2)
 	New()
 		..()
-		reagents.add_reagent("pervitin", 1)
+		reagents.add_reagent("methamphetamine", 1)
 
 /obj/item/weapon/reagent_containers/food/snacks/egg
 	name = "egg"

@@ -506,7 +506,7 @@
 "jL" = (/obj/structure/window/barrier/sandbag{dir = 8; icon_state = "sandbag"},/obj/structure/closet/crate/ww2/g43,/turf/floor/plating/cobblestone/vertical,/area/caribbean/german)
 "jM" = (/obj/structure/lamp/lamp_big/alwayson,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/obj/item/wood_ash,/turf/floor/plating/concrete,/area/caribbean/german/inside)
 "jN" = (/obj/item/weapon/paper/crumpled,/turf/floor/plating/concrete,/area/caribbean/german/inside)
-"jO" = (/obj/structure/shelf,/obj/item/clothing/head/ww2/german_fieldcap,/turf/floor/wood,/area/caribbean/german/inside)
+"jO" = (/obj/structure/shelf,/obj/item/clothing/head/ww2/german_fieldcap,/obj/item/clothing/suit/storage/coat/ww2/jumpsmockf,/turf/floor/wood,/area/caribbean/german/inside)
 "jP" = (/obj/structure/table/wood,/obj/item/weapon/material/kitchen/utensil/knife/butcher,/turf/floor/wood,/area/caribbean/german/inside)
 "jQ" = (/obj/structure/table/wood,/obj/item/weapon/gun/projectile/pistol/mauser,/obj/item/weapon/gun/projectile/pistol/mauser,/obj/item/weapon/gun/projectile/pistol/mauser,/obj/structure/window/barrier/sandbag,/turf/floor/wood,/area/caribbean/german/inside)
 "jR" = (/obj/structure/table/wood,/obj/item/ammo_magazine/vickers,/obj/item/ammo_magazine/vickers,/obj/item/ammo_magazine/vickers,/turf/floor/plating/cobblestone/vertical,/area/caribbean/german)
@@ -1824,12 +1824,13 @@
 "Jd" = (/obj/structure/closet/crate/ww2/mortar_shells,/turf/floor/plating/road,/area/caribbean/russian/land)
 "Je" = (/obj/structure/window/barrier/sandbag{icon_state = "sandbag"; dir = 1},/turf/floor/plating/cobblestone/vertical/dark,/area/caribbean/german/objective)
 "Jf" = (/obj/structure/table/wood,/obj/item/ammo_magazine/mp40/box,/obj/item/ammo_magazine/mp40/box,/obj/item/ammo_magazine/mp40/erma,/obj/item/ammo_magazine/mp40/erma,/obj/item/weapon/gun/projectile/submachinegun/ermaemp,/turf/floor/wood/fancywood,/area/caribbean/german/inside)
+"Jg" = (/obj/effect/landmark{icon_state = "x2"; name = "Paradrop"},/turf/floor/plating/cobblestone/vertical,/area/caribbean/german)
 
 (1,1,1) = {"
 aaaSbGbHbGbHbGbHbTbTbTbTbHaycbbIdraqaamxmxararararaqaaarawawawawawawawaBaMgxararararararararcCnanananananananacCnacCnanananananananacCarararararararaHaIaaarawawawawawawawaraaaqararararmxmxaaaqlebIaPamamaQbIamamamamamamambIamamamamamamfGbIaa
 aaaSambHambHambHcfamamambHamamaXdraqaamxarararararaqaaarawawawawawawawaBaMgxararararararararcCnanananananananacCnacCnanananananananajgegararararararaHaIaaarawawawawawawawaraaaqarararararmxaaaqlebIaYaZambhbIbEamambFamamaWbIbEamamamamamhfbIdg
 aaaSchcichcjchcGbHbHchhpbHamrSixdraqaaararararararaqaaarawbJawawbJawawaBaMgxararararararararcCnananananananaHRHOnaHSHTnananananananajgegararararararaHaIaaarawbJawawbJawawaraaaqararararararaaaqlebIbIbIbKbIHUambFamambMbNambIambObPbQbObOfGbIaa
-aaaSambSambSambHbSamamambSamamHAaaaqaaararararararaqaaarawawawawawawawaBaMgxararararararararcCHGnanananananaHRHTcCHRHTnananananananajgegararararararaHaIaaarawawawawawawawaraaaqararararararaaaqlebIaRbSamambIamamamamamamambKamamamamamamfGbIdg
+aaaSambSambSambHbSamamambSamamHAaaaqaaJgarararararaqaaarawawawawawawawaBaMgxararararararararcCHGnanananananaHRHTcCHRHTnananananananajgegararararararaHaIaaarawawawawawawawaraaaqarararararJgaaaqlebIaRbSamambIamamamamamamambKamamamamamamfGbIdg
 aaaSamamamamamchamamamamamamamdJdraqaaararararararaqaaararararawarararaBaMgxararararararararjgHHnanananananaHRHMHGIpHTnananananananajgegararararararaHaIaaararararawararararaaaqararararararaaaqlebVaRamamambKamamamaZamapapbIambObXbZcabOfGbIaa
 aaaSamaZamaZambHixchHUbIulBuBvbIdraqaaararararararaqaaaaaaaaarararaaaacgaMgxararararararararjgHInananananananaJeJeJenanananananananaHJegararararararaHaIaaaaaaaaarararaaaaaaaaaqararararararaaaqlebIaRamamaVbIHUbKbIbIbIbIbIbIamamamamamamfGcdaa
 aaaSchBwchDbchDcayambSamamamrSixdraqaaarararararararaqaqaqaaaaaaaaaaaqIQIRegararararararararcCHKnanananananananananananananananananaHLarararararararaHbcaqaqaqaaaaaaaaaaaqaqaqarararararararaaaqledEamamamaVakamamamclamapapbIambOcacmcobOfGbIdg

@@ -1723,9 +1723,9 @@ obj/item/clothing/accessory/storage/webbing/ww1/ww2/stormgroup/Scout
 		..()
 		new/obj/item/ammo_magazine/fg42(hold)
 		new/obj/item/ammo_magazine/fg42(hold)
+		new/obj/item/ammo_magazine/fg42(hold)
 		new/obj/item/ammo_magazine/fg42/small(hold)
-		new/obj/item/ammo_magazine/fg42/small(hold)
-		new/obj/item/ammo_magazine/fg42/small(hold)
+		new/obj/item/weapon/grenade/modern/stg1915(hold)
 
 /obj/item/clothing/accessory/storage/webbing/ww1/german/ww2/g43
 	New()
@@ -1965,6 +1965,13 @@ obj/item/clothing/accessory/storage/webbing/ww1/ww2/stormgroup/Scout
 	icon_state = "ssuni_camo"
 	item_state = "ssuni_camo"
 	worn_state = "ssuni_camo"
+
+/obj/item/clothing/under/ww2/german_falls
+	name = "german Fallschirmjager uniform"
+	desc = "A german Fallschirmjager uniform."
+	icon_state = "fallsuni_camo"
+	item_state = "fallsuni_camo"
+	worn_state = "fallsuni_camo"
 
 /obj/item/weapon/storage/ammo_can
 	name = "ammunition can"

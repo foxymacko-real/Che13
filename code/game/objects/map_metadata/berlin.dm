@@ -36,6 +36,8 @@ obj/map_metadata/berlin/job_enabled_specialcheck(var/datum/job/J)
 		. = TRUE
 	else if (istype(J, /datum/job/german/volksturm_berlin))
 		. = TRUE
+	else if (istype(J, /datum/job/german/paratrooper))
+		. = TRUE
 	else
 		. = FALSE
 

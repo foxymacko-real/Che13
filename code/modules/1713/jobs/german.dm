@@ -1962,11 +1962,12 @@
 //shoes
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/jackboots(H), slot_shoes)
 //clothes
-	H.equip_to_slot_or_del(new /obj/item/clothing/under/ww2/german(H), slot_w_uniform)
+	H.equip_to_slot_or_del(new /obj/item/clothing/under/ww2/german_falls(H), slot_w_uniform)
 //head
 	H.equip_to_slot_or_del(new /obj/item/clothing/head/helmet/ww2/gerhelm(H), slot_head)
 //coat
-	H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/coat/ww2/jumpsmockf(H), slot_wear_suit)
+	if (prob(50))
+		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/coat/ww2/jumpsmockf(H), slot_wear_suit)
 //back
 	var/obj/item/clothing/under/uniform = H.w_uniform
 	var/randimpw = rand(1,4)
@@ -1994,7 +1995,16 @@
 		H.equip_to_slot_or_del(new /obj/item/flashlight/militarylight/alt(H), slot_wear_id)
 	if (prob(30))
 		H.equip_to_slot_or_del(new /obj/item/weapon/radio/faction1(H), slot_back)
-
+/////ITEMS
+	if (prob(50))
+		H.equip_to_slot_or_del(new /obj/item/weapon/pill_pack/pervitin(H), slot_l_store)
+	else if (prob(30))
+		H.equip_to_slot_or_del(new /obj/item/weapon/grenade/smokebomb(H), slot_l_store)
+////ITEMS2
+	if (prob(50))
+		H.equip_to_slot_or_del(new /obj/item/weapon/attachment/bayonet(H), slot_r_store)
+	else if (prob(30))
+		H.equip_to_slot_or_del(new /obj/item/weapon/gun_cleaning_kit(H), slot_r_store)
 	give_random_name(H)
 	H.add_note("Role", "You are a <b>[title]</b>, a paratrooper. Your job is to help any other units that need assistance.")
 	H.setStat("strength", STAT_MEDIUM_HIGH)
