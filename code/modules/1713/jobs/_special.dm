@@ -121,6 +121,7 @@
 /datum/job/var/is_ardennes = FALSE
 /datum/job/var/is_ffa = FALSE
 /datum/job/var/is_syria = FALSE
+/datum/job/var/is_marg = FALSE
 
 /datum/job/var/can_get_coordinates = FALSE
 /datum/job/var/is_event = FALSE
