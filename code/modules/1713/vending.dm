@@ -1635,3 +1635,16 @@ obj/structure/vending/hezammo
 		/obj/item/weapon/gun/projectile/pistol/tt30 = 10,
 		/obj/item/weapon/attachment/bayonet = 20,
 	)
+
+///////margygal
+
+/obj/structure/vending/margygal_reb
+	name = "Margygal Rebel rack"
+	desc = "A rack of war equipment."
+	icon_state = "equipment_russia"
+	products = list(
+		/obj/item/weapon/gun/projectile/boltaction/mosin = 15,
+		/obj/item/ammo_magazine/mosin = 50,
+		/obj/item/ammo_magazine/mosinbox = 10,
+		/obj/item/weapon/attachment/bayonet = 5,
+	)

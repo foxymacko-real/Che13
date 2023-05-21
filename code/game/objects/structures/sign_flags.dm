@@ -826,6 +826,16 @@
 	desc = "A flag."
 	icon_state = "f_white"
 
+/obj/structure/sign/flag/margygal
+	name = "Margygal Goverment Forces flag"
+	desc = "The flag of the Margygal Goverment forces."
+	icon_state = "flag_margygal"
+
+/obj/structure/sign/flag/margygal/rebel
+	name = "Margygal Rebel flag"
+	desc = "The flag of the Margygal Rebel Union."
+	icon_state = "flag_margreb"
+
 /obj/structure/sign/logo/red
 	name = "Rednikov Industries Logo"
 	desc = "A sign with the logo of Rednikov Industries"

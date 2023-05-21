@@ -342,6 +342,7 @@
 	magazine_type = /obj/item/ammo_magazine/stg
 	good_mags = list(/obj/item/ammo_magazine/stg, /obj/item/ammo_magazine/vgclip)
 	weight = 4.6
+	attachment_slots = ATTACH_IRONSIGHTS|ATTACH_BARREL
 	firemodes = list(
 		list(name = "single shot",burst=1, move_delay=2, fire_delay=5)
 		)
