@@ -478,6 +478,7 @@
 #include "code\game\objects\map_metadata\little_creek_tdm.dm"
 #include "code\game\objects\map_metadata\long_march.dm"
 #include "code\game\objects\map_metadata\magistral.dm"
+#include "code\game\objects\map_metadata\margygal.dm"
 #include "code\game\objects\map_metadata\missionary_ridge.dm"
 #include "code\game\objects\map_metadata\moscow194.dm"
 #include "code\game\objects\map_metadata\nanjing.dm"
@@ -756,6 +757,7 @@
 #include "code\modules\1713\jobs\helpers.dm"
 #include "code\modules\1713\jobs\indians.dm"
 #include "code\modules\1713\jobs\japanese.dm"
+#include "code\modules\1713\jobs\marg.dm"
 #include "code\modules\1713\jobs\medieval.dm"
 #include "code\modules\1713\jobs\modern.dm"
 #include "code\modules\1713\jobs\nomads.dm"
@@ -1098,5 +1100,4 @@
 #include "interface\interface.dm"
 #include "interface\skin.dmf"
 #include "maps\2013\Margygal.dmm"
-#include "maps\WIP\testing.dmm"
 // END_INCLUDE

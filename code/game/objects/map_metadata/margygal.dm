@@ -9,20 +9,20 @@
 	no_hardcore = FALSE
 
 	faction_organization = list(
-		CIVILIAN,
+		PIRATES,
 		AMERICAN)
 
 	roundend_condition_sides = list(
-		list(CIVILIAN) = /area/caribbean/british/land/inside/objective,
+		list(PIRATES) = /area/caribbean/british/land/inside/objective,
 		list(AMERICAN) = /area/caribbean/arab
 		)
-	age = "1993"
+	age = "2091"
 	ordinal_age = 7
-	faction_distribution_coeffs = list(AMERICAN = 0.3, CIVILIAN = 0.7)
+	faction_distribution_coeffs = list(AMERICAN = 0.3, PIRATES = 0.7)
 	battle_name = "Margygal Insurgency."
 	mission_start_message = ""
-	faction1 = CIVILIAN
-	faction2 = RUSSIAN
+	faction1 = PIRATES
+	faction2 = AMERICAN
 	grace_wall_timer = 6000
 	valid_weather_types = list(WEATHER_NONE, WEATHER_WET)
 	songs = list(
@@ -30,7 +30,7 @@
 	artillery_count = 0
 	valid_artillery = list()
 	scores = list(
-		"Russian Army" = 0,
+		"Margygal" = 0,
 		"Militia" = 0,
 	)
 
@@ -44,25 +44,25 @@
 /obj/map_metadata/margygal/roundend_condition_def2name(define)
 	..()
 	switch (define)
-		if (CIVILIAN)
+		if (PIRATES)
 			return "Militia"
 		if (AMERICAN)
-			return "margygal Army"
+			return "Margygal"
 /obj/map_metadata/margygal/roundend_condition_def2army(define)
 	..()
 	switch (define)
-		if (CIVILIAN)
+		if (PIRATES)
 			return "Militias"
 		if (AMERICAN)
-			return "margygal Army"
+			return "Margygal"
 
 /obj/map_metadata/margygal/army2name(army)
 	..()
 	switch (army)
 		if ("Militias")
 			return "Militia"
-		if ("Russian Army")
-			return "margygal Army"
+		if ("Margygal")
+			return "Margygal"
 
 /obj/map_metadata/margygal/cross_message(faction)
 	if (faction == AMERICAN)
@@ -78,9 +78,9 @@
 
 /obj/map_metadata/margygal/proc/points_check()
 	if (processes.ticker.playtime_elapsed > 4800)
-	world << "<big><b>Current Points:</big></b>"
-	world << "<big>Militia: [scores["Militia"]]</big>"
-	world << "<big>Russian Army: [scores["Russian Army"]]</big>"
+		world << "<big><b>Current Points:</big></b>"
+		world << "<big>Militia: [scores["Militia"]]</big>"
+		world << "<big>Margygal: [scores["Margygal"]]</big>"
 
 /obj/map_metadata/margygal/check_caribbean_block(var/mob/living/human/H, var/turf/T)
 	if (!istype(H) || !istype(T))
