@@ -905,8 +905,7 @@
 	desc = "Cointains armor that will increase your odds of surviving a firefight."
 	icon_state = "apparel_british"
 	products = list(
-		/obj/item/clothing/accessory/armor/modern/lightplate = 10,
-		/obj/item/clothing/accessory/armor/modern/lightplate/black = 10,
+		/obj/item/clothing/accessory/armor/modern/plate/lightplate = 10,
 		/obj/item/clothing/accessory/armor/coldwar/flakjacket/b1 = 5,
 		/obj/item/clothing/accessory/armor/nomads/civiliankevlar = 25,
 		/obj/item/clothing/accessory/armor/coldwar/pasgt/blizzard = 25,
@@ -926,8 +925,7 @@
 		/obj/item/clothing/head/helmet/modern/sovietfacehelmet = 5,
 	)
 	prices = list(
-		/obj/item/clothing/accessory/armor/modern/lightplate = 155,
-		/obj/item/clothing/accessory/armor/modern/lightplate/black = 155,
+		/obj/item/clothing/accessory/armor/modern/plate/lightplate = 155,
 		/obj/item/clothing/accessory/armor/coldwar/flakjacket/b1 = 145,
 		/obj/item/clothing/accessory/armor/nomads/civiliankevlar = 180,
 		/obj/item/clothing/accessory/armor/coldwar/pasgt/blizzard = 200,

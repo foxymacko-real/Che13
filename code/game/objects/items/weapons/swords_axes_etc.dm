@@ -354,6 +354,7 @@
 	item_state = "telebaton_0"
 	slot_flags = SLOT_BELT
 	var/on = 0
+	w_class = ITEM_SIZE_SMALL
 	flags = FALSE
 
 
@@ -363,13 +364,15 @@
 		user.visible_message("<span class='warning'>With a flick of their wrist, [user] extends their telescopic baton.</span>",\
 		"<span class='warning'>You extend the baton.</span>",\
 		"You hear an ominous click.")
-		force = 15//quite robust
+		force = 19//quite robust
+		w_class = ITEM_SIZE_LARGE
 		attack_verb = list("smacked", "struck", "slapped")
 	else
 		user.visible_message("<span class='notice'>\The [user] collapses their telescopic baton.</span>",\
 		"<span class='notice'>You collapse the baton.</span>",\
 		"You hear a click.")
 		force = 3//not so robust now
+		w_class = ITEM_SIZE_SMALL
 		attack_verb = list("hit", "punched")
 
 	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)

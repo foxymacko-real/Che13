@@ -1552,6 +1552,18 @@
 	restricts_view = 1
 	health = 90
 
+/obj/item/clothing/head/helmet/tactical/marg
+	name = "Margygal Combat helmet"
+	desc = "A standard bulletproof helmet."
+	icon_state = "tacticalhelmet"
+	item_state = "tacticalhelmet"
+	worn_state = "tacticalhelmet"
+	body_parts_covered = HEAD
+	armor = list(melee = 75, arrow = 95, gun = 63, energy = 22, bomb = 60, bio = 20, rad = 25)
+	flags_inv = BLOCKHAIR
+	restricts_view = 1
+	health = 90
+
 /obj/item/clothing/under/trackpants
 	name = "track pants"
 	desc = "A shirt with tracksuit pants."

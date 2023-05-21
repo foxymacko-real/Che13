@@ -1643,8 +1643,18 @@ obj/structure/vending/hezammo
 	desc = "A rack of war equipment."
 	icon_state = "equipment_russia"
 	products = list(
-		/obj/item/weapon/gun/projectile/boltaction/mosin = 15,
-		/obj/item/ammo_magazine/mosin = 50,
-		/obj/item/ammo_magazine/mosinbox = 10,
+		/obj/item/weapon/gun/projectile/submachinegun/sten/stv = 1,
+		/obj/item/ammo_magazine/sten2 = 5,
+		/obj/item/weapon/gun/projectile/boltaction/singleshot/makeshiftbolt = 2,
+		/obj/item/ammo_magazine/mosinbox = 1,
 		/obj/item/weapon/attachment/bayonet = 5,
+		/obj/item/weapon/reagent_containers/food/drinks/bottle/canteen/full = 2,
+		/obj/item/weapon/reagent_containers/food/snacks/MRE/generic/russian = 2,
+		/obj/item/weapon/reagent_containers/syringe/adrenaline = 2,
+		/obj/item/weapon/reagent_containers/syringe/combat = 2,
+		/obj/item/stack/medical/bruise_pack/gauze = 2,
+		/obj/item/weapon/gun/launcher/rocket/single_shot/rpg22 = 1,
+		/obj/item/weapon/gun_cleaning_kit = 1,
+		/obj/item/weapon/gun/projectile/automatic/rpd = 1,
+		/obj/item/ammo_magazine/rpd = 3,
 	)
