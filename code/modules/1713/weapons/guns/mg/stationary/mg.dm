@@ -120,6 +120,20 @@
 		)
 	ammo_type = /obj/item/ammo_casing/a127
 
+/obj/item/weapon/gun/projectile/automatic/stationary/modern/hmg9mm
+	name = "9mm stationary machine gun"
+	desc = "Modern Machine gun which uses 9mm rounds, not very powerfull but accurate."
+	icon_state = "9mmshk"
+	base_icon = "9mmshk"
+	caliber = "a9x19"
+	fire_sound = 'sound/weapons/guns/fire/9mm.ogg'
+	magazine_type = /obj/item/ammo_magazine/bax2
+	good_mags = list(/obj/item/ammo_magazine/bax2, /obj/item/ammo_magazine/sten2, /obj/item/ammo_magazine/mp40)
+	firemodes = list(
+		list(name = "full auto", burst=4, burst_delay=1.1, fire_delay=1.1, dispersion=list(0.2, 0.2, 0.2, 0.3, 0.5), accuracy=list(2))
+		)
+	ammo_type = /obj/item/ammo_casing/a9x19
+
 /obj/item/weapon/gun/projectile/automatic/stationary/modern/foldable
 	anchored = TRUE
 	var/path

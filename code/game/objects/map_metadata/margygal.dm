@@ -96,3 +96,22 @@
 		else
 			return !faction1_can_cross_blocks()
 	return FALSE
+
+
+/obj/item/weapon/key/margygal
+	code = 232145
+	name = "Margygal Goverment Key"
+
+/obj/structure/simple_door/key_door/custom/jail/steeljail/margygal
+	unique_door_name = "Margygal Goverment locked"
+	locked = TRUE
+	custom_code = 232145
+
+/obj/structure/simple_door/key_door/custom/jail/steeljail/margygal/open
+	starts_open = TRUE
+	locked = FALSE
+	custom_code = 232145
+	New()
+		..()
+		icon_state = "cellopen"
+		density = FALSE

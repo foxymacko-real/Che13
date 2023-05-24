@@ -12,7 +12,7 @@
 		CIVILIAN)
 
 	roundend_condition_sides = list(
-		list(RUSSIAN) = /area/caribbean/british,
+		list(GERMAN) = /area/caribbean/british,
 		list(CIVILIAN) = /area/caribbean/russian/land/inside/command,
 		)
 	age = "1942"
