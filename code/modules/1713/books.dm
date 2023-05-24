@@ -193,3 +193,65 @@
 				</body>
 			</html>
 			"}
+
+/obj/item/weapon/book/manual/milguide
+	name = "Basic military Organization guide"
+	icon_state = "book_m"
+	author = "Cmil13"
+	title = "Military guide to organization"
+
+	dat = {"<html>
+				<head>
+				<style>
+				h1 {font-size: 18px; margin: 15px FALSEpx 5px;}
+				h2 {font-size: 15px; margin: 15px FALSEpx 5px;}
+				h3 {font-size: 13px; margin: 15px FALSEpx 5px;}
+				li {margin: 2px FALSEpx 2px 15px;}
+				ul {margin: 5px; padding: FALSEpx;}
+				ol {margin: 5px; padding: FALSEpx 15px;}
+				body {font-size: 13px; font-family: Verdana;}
+				</style>
+				</head>
+				<body>
+
+				<h1>Squads</h1>
+
+				regardless of how many people are in a squad, there should always be organization
+				one person should always cover when someone else is advancing, no flanks should be left unguarded
+				good way to implement this organization is by making people battle buddies or fireteams
+
+				<h2>basic orders</h3>
+
+				every squad should have atleast a single radioman or a squad leader who communicates with command on a regular basis
+				and reports in their status when asked to
+				he the squad leader or radio man should also relay the orders to his squad and coordinate them
+
+				<h2>The squad itself</h3>
+
+				a squad should look like this for effective communications and attacking capabilities
+				- Squad leader (binooculars, whistle)
+				- Radioman (squad leader can act as one, if you have walkie talkies this role is not needed)
+				- Machine gunner (dangerous, but needs to be protected)
+				- Assistant MG (either a designated role by command or by the squad, his job is to protect the MG)
+				- Combat Medic (very important to make sure the push can go on without too many losses)
+				- Riflemen (important)
+
+				<h2>ORGANIZATION</h3>
+
+				a squad leader should know how to organize his squad here are some basic tips
+				- Round up your soliders into a line, Count them and remember their names
+				- remember to point to help the solider acquire his orders more quickly, pointing at the mine infront of him might also save his life and potentially save you from injury
+				- Proceed carefully, rushing to a place WILL get you killed
+				- Use smoke grenades, if you deploy one and see that its getting fired in by a MG dont go in, rather order 2 soliders to make a flank with a grenade
+				- as a squad leader you are armed with a fast firing gun, use it to supress positions if the Machinegun is killed or incapable of firing
+				- remember to issue a halt order once in a while to do a check up and reorganize
+
+				<h3>WHEN ALL IS LOST</h3>
+
+				when your squad falls apart and there is one or two people left, its a good idea to either hold and get new manpower or to get the FUCK out of there
+				if you choose to retreat, do so tactically, look out for both your front and back, enemy partisans and enemy frontline troops CANT wait to destroy you!
+				when you get to a secure place, rearm, resupply, if you are non injuried you should get back into the combat, hopefully with more people
+
+				</body>
+			</html>
+			"}
