@@ -2130,7 +2130,7 @@
 	fire_sound = 'sound/weapons/guns/fire/fnfal.ogg'
 	magazine_type = /obj/item/ammo_magazine/bax2
 	good_mags = list(/obj/item/ammo_magazine/bax2)
-	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL
+	attachment_slots = ATTACH_SILENCER|ATTACH_IRONSIGHTS|ATTACH_BARREL|ATTACH_SCOPE
 	weight = 1.2
 	equiptimer = 10
 	slot_flags = SLOT_SHOULDER
