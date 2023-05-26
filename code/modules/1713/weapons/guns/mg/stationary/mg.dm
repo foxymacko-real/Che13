@@ -547,3 +547,92 @@
 		qdel(src)
 		usr.put_in_any_hand_if_possible(new path, prioritize_active_hand = TRUE)
 		visible_message("<span class = 'warning'>[usr] retrieves the [src] from the ground.</span>")
+
+////////////recoiless guns///////////
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl
+	name = "Recoiless gun"
+	desc = "Man Portable Recoiless Gun system capable of taking out Armored targets from far away."
+	icon_state = "recoilgun"
+	base_icon = "recoilgun"
+	caliber = "rcl"
+	fire_sound = 'sound/weapons/guns/fire/rpg7.ogg'
+	load_method = SINGLE_CASING
+	handle_casings = REMOVE_CASINGS
+	magazine_type = /obj/item/ammo_magazine/mosin
+	firemodes = list(
+		list(name = "single shot", burst=1, fire_delay=15, accuracy=list(2)),
+		)
+	ammo_type = /obj/item/ammo_casing/rocket/rcl
+	is_hmg = TRUE
+	full_auto = FALSE
+	anchored = FALSE
+
+	var/recgun_ammo = /obj/item/ammo_casing/rocket/rcl
+	var/recgun_rockets = 1
+	var/list/rockets = new/list()
+	var/release_force = 0
+	var/throw_distance = 25
+	recoil = 0
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/update_icon()
+	if (rockets.len == 1)
+		icon_state = base_icon
+		item_state = base_icon
+	else
+		icon_state = "[base_icon]_empty"
+		item_state = "[base_icon]_empty"
+	update_icon()
+	return
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/attackby(obj/item/I as obj, mob/user as mob)
+	if (istype(I, recgun_ammo))
+		if (rockets.len < recgun_rockets && do_after(user, load_delay, src, can_move = TRUE))
+			user.remove_from_mob(I)
+			I.loc = src
+			rockets += I
+			user.visible_message("[user] loads a rocket in the [src].","You load a rocket into the [src]")
+			update_icon()
+		else
+			usr << "The [src] cannot hold more rockets."
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/handle_click_empty(mob/user)
+	if (rockets.len <= 0)
+		if (user)
+			user.visible_message("*click click*", "<span class='danger'>*click*</span>")
+		else
+			visible_message("*click click*")
+		playsound(loc, 'sound/weapons/empty.ogg', 100, TRUE)
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/consume_next_projectile()
+	if (rockets.len)
+		var/obj/item/ammo_casing/rocket/I = rockets[1]
+		var/obj/item/missile/M = new I.projectile_type(src)
+		playsound(get_turf(src), 'sound/weapons/guns/fire/rpg7.ogg', 100, TRUE)
+		if (ishuman(src.loc))
+			M.dir = src.loc.dir
+		M.primed = 1
+		rockets -= I
+		return M
+	return null
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/handle_post_fire(mob/user, atom/target)
+	message_admins("[key_name_admin(user)] fired a recoiless gun at [target].", key_name_admin(user))
+	log_game("[key_name_admin(user)] used a recoiless gun at [target].")
+	update_icon()
+	spawn(1)
+		new/obj/effect/effect/smoke/chem(src)
+	..()
+
+/obj/item/weapon/gun/projectile/automatic/stationary/rcl/process_projectile(obj/item/projectile, mob/user, atom/target, var/target_zone, var/params=null, var/pointblank=0, var/reflex=0)
+	projectile.loc = get_turf(user)
+	projectile.throw_at(target, throw_distance, release_force, user)
+	projectile.dir = get_dir(src.loc, target.loc)
+	if (ishuman(user) && istype(projectile, /obj/item/missile))
+		var/obj/item/missile/MS = projectile
+		MS.firer = user
+	if (istype(projectile, /obj/item/missile))
+		var/obj/item/missile/M = projectile
+		M.startingturf = get_turf(user)
+	update_icon(projectile)
+	return TRUE

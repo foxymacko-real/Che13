@@ -609,6 +609,22 @@
 	icon_state = "atgmHE"
 	projectile_type = /obj/item/missile/explosive/atgm_he
 
+//rcl
+
+/obj/item/ammo_casing/rocket/rcl
+	name = "RCL HEAT rocket"
+	desc = "A High-Explosive (HEAT) rocket warhead and propeller designed to be fired from a RCL system."
+	icon_state = "rcl"
+	projectile_type = /obj/item/missile/explosive/rcl
+	caliber = "rcl"
+
+/obj/item/ammo_casing/rocket/rcl/frag
+	name = "RCL FRAG rocket"
+	desc = "A Fragmentation Warhead and propeller designed to be fired from a RCL system."
+	icon_state = "rcl_frag"
+	projectile_type = /obj/item/missile/fragmentation/rcl/frag
+	caliber = "rcl"
+
 // Missile projectiles
 
 /obj/item/missile
@@ -794,7 +810,7 @@
 
 /obj/item/missile/explosive/atgm
 	icon_state = "atgm_missile"
-	heavy_armor_penetration = 200
+	heavy_armor_penetration = 100
 	throw_impact(atom/hit_atom)
 		if(primed)
 			explosion(hit_atom, 0, 0, 2, 2)
@@ -818,5 +834,22 @@
 
 /obj/item/missile/explosive/atgm/apcr
 	icon_state = "atgm_missile"
-	heavy_armor_penetration = 300
+	heavy_armor_penetration = 150
 
+//rcl
+
+/obj/item/missile/explosive/rcl
+	icon_state = "missile"
+	heavy_armor_penetration = 50
+	throw_impact(atom/hit_atom)
+		if(primed)
+			explosion(hit_atom, 1, 1, 1, 1)
+			handle_vehicle_hit(hit_atom,firer)
+			qdel(src)
+		else
+			..()
+		return
+
+/obj/item/missile/fragmentation/rcl/frag
+	icon_state = "missile"
+	heavy_armor_penetration = 30
