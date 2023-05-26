@@ -485,6 +485,18 @@
 		..()
 		icon_state = "brick[rand(1,2)]"
 
+/obj/structure/barricade/lowdebris
+	name = "debris"
+	desc = "A bunch of rubble and debris."
+	icon = 'icons/obj/structures.dmi'
+	icon_state = "brick rubble"
+	material = "stone"
+	health = 250
+	maxhealth = 250
+	material_name = "stone"
+	protection_chance = 50
+	anchored = TRUE
+
 /obj/structure/barricade/stone_h
 	name = "stone wall"
 	desc = "A wall of stone blocks."

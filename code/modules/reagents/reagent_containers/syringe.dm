@@ -429,16 +429,15 @@
 	desc = "A single-use injector made to pump you full of muscle stimulating drugs, making you more aware and fast."
 	icon_state = "single_use5"
 	w_class = ITEM_SIZE_TINY
-	volume = 37
-	amount_per_transfer_from_this = 37
+	volume = 40
+	amount_per_transfer_from_this = 40
 	single_use = TRUE
 
 /obj/item/weapon/reagent_containers/syringe/speed/New()
 	..()
 	reagents.add_reagent("coffee", 20)
-	reagents.add_reagent("pervitin", 1)
-	reagents.add_reagent("crack", 1)
-	reagents.add_reagent("dragonpowder", 5)
+	reagents.add_reagent("crack", 5)
+	reagents.add_reagent("dragon_powder", 5)
 	reagents.add_reagent("methylphenidate", 5)
 	reagents.add_reagent("plentiful_stamina", 5)
 	mode = SYRINGE_INJECT
