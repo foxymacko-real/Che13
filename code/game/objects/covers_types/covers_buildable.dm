@@ -251,6 +251,30 @@
 	hardness = 92
 	buildstack = /obj/item/weapon/clay/advclaybricks/fired
 
+/obj/covers/brick_wall/ex_act(severity)
+	switch(severity)
+		if (1.0)
+			if (prob(50))
+				new /obj/structure/barricade/lowdebris(get_turf(src))
+				Destroy(src)
+			else
+				Destroy(src)
+				return
+		if (2.0)
+			if (health <= initial(health)/2)
+				new /obj/structure/barricade/brickdebris(get_turf(src))
+				Destroy(src)
+			else
+				health -= initial(health)/10
+				try_destroy()
+				return
+		if (3.0)
+			health -= initial(health)/10
+			try_destroy()
+			return
+		else
+	return
+
 /obj/covers/brick_wall/attackby(var/obj/item/weapon/material/kitchen/utensil/I, var/mob/living/human/U)
 	if (istype(I,/obj/item/weapon/material/kitchen/utensil/spoon) || istype(I,/obj/item/weapon/material/kitchen/utensil/fork) || istype(I,/obj/item/weapon/material/kitchen/utensil/chopsticks))
 		if (I.shiv < 10)
@@ -284,6 +308,30 @@
 	hardness = 95
 	adjusts = TRUE
 	buildstack = /obj/item/weapon/clay/advclaybricks/fired/cement //For now, until proper crafting materials are done
+
+/obj/covers/cement_wall/ex_act(severity)
+	switch(severity)
+		if (1.0)
+			if (prob(50))
+				new /obj/structure/barricade/debris(get_turf(src))
+				Destroy(src)
+			else
+				Destroy(src)
+				return
+		if (2.0)
+			if (health <= initial(health)/2)
+				new /obj/structure/barricade/debris(get_turf(src))
+				Destroy(src)
+			else
+				health -= initial(health)/10
+				try_destroy()
+				return
+		if (3.0)
+			health -= initial(health)/10
+			try_destroy()
+			return
+		else
+	return
 
 /obj/covers/tiled_wall/attackby(var/obj/item/weapon/material/kitchen/utensil/I, var/mob/living/human/U)
 	if (istype(I,/obj/item/weapon/material/kitchen/utensil/spoon) || istype(I,/obj/item/weapon/material/kitchen/utensil/fork) || istype(I,/obj/item/weapon/material/kitchen/utensil/chopsticks))

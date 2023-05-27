@@ -61,6 +61,30 @@
 
 /* Wood Walls*/
 
+/obj/covers/wood_wall/ex_act(severity)
+	switch(severity)
+		if (1.0)
+			if (prob(50))
+				new /obj/structure/barricade/wood_pole/wreck(get_turf(src))
+				Destroy(src)
+			else
+				Destroy(src)
+				return
+		if (2.0)
+			if (health <= initial(health)/2)
+				new /obj/structure/barricade/wood_pole/wreck(get_turf(src))
+				Destroy(src)
+			else
+				health -= initial(health)/10
+				try_destroy()
+				return
+		if (3.0)
+			health -= initial(health)/10
+			try_destroy()
+			return
+		else
+	return
+
 /obj/covers/wood_wall
 	name = "soft wood wall"
 	desc = "A wood wall."

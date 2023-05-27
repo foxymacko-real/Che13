@@ -20,6 +20,15 @@
 	icon = 'icons/obj/structures.dmi'
 	icon_state = "wood_pole_good"
 
+/obj/structure/barricade/wood_pole/wreck
+	name = "wrecked wood"
+	desc = "some wrecked wood."
+	protection_chance = 45
+	density = TRUE
+	opacity = FALSE
+	health = 40
+	maxhealth = 40
+
 /obj/structure/grille/fence
 	name = "fence"
 	desc = "An old wooden fence."

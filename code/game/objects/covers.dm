@@ -71,26 +71,18 @@
 /obj/covers/ex_act(severity)
 	switch(severity)
 		if (1.0)
-			if (prob(50))
-				new /obj/structure/barricade/debris(get_turf(src))
-				Destroy(src)
-			else
-				Destroy(src)
-				return
+			Destroy(src)
+			return
 		if (2.0)
-			if (health <= initial(health)/2)
-				new /obj/structure/barricade/debris(get_turf(src))
-				Destroy(src)
-			else
-				health -= initial(health)/10
-				try_destroy()
-				return
+			health -= initial(health)/10
+			try_destroy()
+			return
 		if (3.0)
 			health -= initial(health)/10
 			try_destroy()
 			return
 		else
-	return
+			return
 
 /obj/covers/New()
 	..()
