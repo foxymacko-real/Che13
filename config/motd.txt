@@ -5,4 +5,31 @@ The current map is <b>{server_map}</b>.
 This server is running {server_version}, and you are running {client_version}.
 <h2>RULES: dont be a asshole, be nice, dont grief, most of original CIV13 rules apply here</h2>
 
+
+Rules
+1-This server is intended to be a Medium/High-Roleplay (MRP/HRP) server, good communication along with other associated skills are necessary! Character has to be maintained at all times and actions are to be realistic (or at least the closest to reality). Low-Roleplay (LRP) (i.e. using memes ICly, “netspeak”, powergaming, unrealistic actions, disregarding the setting of the game) is discouraged and may be punishable, especially during HRP gamemodes.
+(using memes ICLY in modern eras is okay homever, you are allowed to scream "PICKLE RIIICK!!" while you mow down 5 armed enemies)
+2- English is the language of the server and players must speak it in all communication channels (IC and OOC), at all times. A good understanding of English is therefore also required.
+3-It is against the rules to speak about Out-Of-Character (OOC) topics Inside-Character (IC) and vice-versa on purpose. Failing to do so will be considered metagaming and may be punishable.
+4-Do not abuse mentorhelp/adminhelp:
+ use mentorhelp for gameplay questions
+ use adminhelp for gameplay issues
+If there are no admins online, you may ping admins or mentors on the Discord server for assistance.
+5-Once a round ends (i.e. the Epoch vote finishes), griefing and random killing is tolerated. This is called “End of Round Grief” (EORG) and it’s allowed ONLY when the round has ended.
+6- try to not be toxic in OOC/DCHAT/LOOC
+7-Ban evading is cringe and if you do it i will ban you again until you stop coming back
+8-Every user must have common sense to identify and apply the rules to their behavior correctly so as to avoid breaking the rules and to discern wrong-doers from players who follow the rules.
+9-Sharing and/or using exploits/bugs of any kind as well as sharing any kind of information that could lead to griefing is prohibited. This includes also abusing incomplete game mechanics, using unintended features to gain an unfair advantage for yourself or your team. You will be warned first and, if you persist, a permanent ban from the server will be applied.
+shortened version of what you may not do:
+ERP
+metagame
+racism and discriminate against minorities
+exploit bugs and glitches, if a admin tells you to stop you WILL stop
+spamming
+bypassing the ingame language barrier
+TDM:
+officers can execute soliders for deserting/not following orders homever its not encouraged
+wearing the enemy uniform is allowed, if you get full autoed/shot by your ally its a you issue
+
+<h2>DISCORD: https://discord.gg/6x9aCfc6Mr</h2>
 </i>
