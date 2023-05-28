@@ -619,9 +619,9 @@
 /obj/item/weapon/gun/projectile/automatic/stationary/rcl/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a recoiless gun at [target].", key_name_admin(user))
 	log_game("[key_name_admin(user)] used a recoiless gun at [target].")
-	update_icon()
 	spawn(1)
 		new/obj/effect/effect/smoke/chem(src)
+	update_icon()
 	..()
 
 /obj/item/weapon/gun/projectile/automatic/stationary/rcl/process_projectile(obj/item/projectile, mob/user, atom/target, var/target_zone, var/params=null, var/pointblank=0, var/reflex=0)
