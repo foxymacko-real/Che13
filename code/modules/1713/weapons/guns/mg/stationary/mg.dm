@@ -619,8 +619,10 @@
 /obj/item/weapon/gun/projectile/automatic/stationary/rcl/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a recoiless gun at [target].", key_name_admin(user))
 	log_game("[key_name_admin(user)] used a recoiless gun at [target].")
-	spawn(1)
-		new/obj/effect/effect/smoke/chem(src)
+	spawn (1)
+		new/obj/effect/effect/smoke/chem(get_step(src, dir))
+	spawn (3)
+		new/obj/effect/effect/smoke/chem(get_step(src, dir))
 	update_icon()
 	..()
 
