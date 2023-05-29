@@ -97,7 +97,7 @@
 		armor_penetration *= 3
 		return
 	else if (btype == "HP")
-		damage *= 1.3
+		damage *= 1.1
 		penetrating = 0
 		armor_penetration /= 3
 		return
