@@ -609,6 +609,8 @@
 		var/obj/item/ammo_casing/rocket/I = rockets[1]
 		var/obj/item/missile/M = new I.projectile_type(src)
 		playsound(get_turf(src), 'sound/weapons/guns/fire/rpg7.ogg', 100, TRUE)
+		spawn (1)
+			new/obj/effect/effect/smoke/chem(get_step(src, dir))
 		if (ishuman(src.loc))
 			M.dir = src.loc.dir
 		M.primed = 1
@@ -619,10 +621,6 @@
 /obj/item/weapon/gun/projectile/automatic/stationary/rcl/handle_post_fire(mob/user, atom/target)
 	message_admins("[key_name_admin(user)] fired a recoiless gun at [target].", key_name_admin(user))
 	log_game("[key_name_admin(user)] used a recoiless gun at [target].")
-	spawn (1)
-		new/obj/effect/effect/smoke/chem(get_step(src, dir))
-	spawn (3)
-		new/obj/effect/effect/smoke/chem(get_step(src, dir))
 	update_icon()
 	..()
 
