@@ -7,6 +7,7 @@
 	no_winner = "The operation is still underway."
 	gamemode = "Kills."
 	no_hardcore = FALSE
+	has_hunger = TRUE
 
 	faction_organization = list(
 		PIRATES,

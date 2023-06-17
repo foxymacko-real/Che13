@@ -847,6 +847,9 @@
 /obj/item/clothing/head/ww2/us_sailor_hat/redmenia
 	name = "Redmenian sailor hat"
 	desc = "A hat worn by sailors of the Imperial Redmenian Navy."
+/obj/item/clothing/head/ww2/us_sailor_hat/marg
+	name = "margygal goverment pilotka"
+	desc = "A flat pilotka."
 
 /* Vietcong Clothes*/
 
