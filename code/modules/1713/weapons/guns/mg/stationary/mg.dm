@@ -92,6 +92,7 @@
 		list(name = "full auto", burst=3, burst_delay=1.2, fire_delay=1.2, dispersion=list(0.8, 0.9, 1.0, 1.1, 1.2), accuracy=list(2))
 		)
 	ammo_type = /obj/item/ammo_casing/a127
+	effectiveness_mod = 0.95
 
 /obj/item/weapon/gun/projectile/automatic/stationary/modern/dshk/ww2
 	name = "DShK 1938"
@@ -119,6 +120,7 @@
 		list(name = "full auto", burst=4, burst_delay=1.1, fire_delay=1.1, dispersion=list(0.3, 0.4, 0.7, 0.9, 1.2), accuracy=list(2))
 		)
 	ammo_type = /obj/item/ammo_casing/a127
+	effectiveness_mod = 0.99
 
 /obj/item/weapon/gun/projectile/automatic/stationary/modern/hmg9mm
 	name = "9mm stationary machine gun"
