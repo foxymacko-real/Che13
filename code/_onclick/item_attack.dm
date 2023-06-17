@@ -44,13 +44,13 @@ avoid code duplication. This includes items that may sometimes act as a standard
 /obj/item/proc/attack_self(mob/user, icon_x, icon_y) // called when the item is in the active hand, and clicked; alternately, there is an 'activate held object' verb or you can hit Z.
 	return FALSE //procedure prototype; if not defined in the child object, it returns FALSE, as it does not resolve the action to complete
 
-/atom/proc/attackby(obj/item/W, mob/user, icon_x, icon_y) 
+/atom/proc/attackby(obj/item/W, mob/user, icon_x, icon_y)
 	return FALSE //procedure prototype; if not defined in the child object, it returns FALSE, as it does not resolve the action to complete
 
-/atom/proc/attack_turf(turf/attacked, mob/user, icon_x, icon_y) 
+/atom/proc/attack_turf(turf/attacked, mob/user, icon_x, icon_y)
 	return FALSE //procedure prototype; if not defined in the child object, it returns FALSE, as it does not resolve the action to complete
 
-/atom/proc/attack_obj(obj/attacked, mob/user, icon_x, icon_y) 
+/atom/proc/attack_obj(obj/attacked, mob/user, icon_x, icon_y)
 	return FALSE //procedure prototype; if not defined in the child object, it returns FALSE, as it does not resolve the action to complete
 
 /atom/movable/attackby(obj/item/W, mob/user, icon_x, icon_y)
@@ -64,7 +64,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	if (can_operate(src) && do_surgery(src,user,I)) //Surgery
 		if (I.can_do_surgery(src,user))
 			return TRUE
-		else 
+		else
 			return FALSE
 	var/tgt = user.targeted_organ
 	if (user.targeted_organ == "random")
@@ -102,7 +102,7 @@ avoid code duplication. This includes items that may sometimes act as a standard
 	if (!no_attack_log)
 		user.attack_log += "\[[time_stamp()]\]<font color='red'> Attacked [M.name] ([M.ckey])([M.stat]) with [name] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(damtype)])</font>"
 		M.attack_log += "\[[time_stamp()]\]<font color='orange'> Attacked by [user.name] ([user.ckey]) with [name] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(damtype)])</font>"
-		msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(damtype)])" )
+		msg_admin_attack("[key_name(user)] attacked [key_name(M)] with [name] (INTENT: [uppertext(user.a_intent)]) (DAMTYE: [uppertext(damtype)])", key_name(user), key_name(M))
 	user.setClickCooldown(cooldownw)
 	user.do_attack_animation(M)
 	var/hit_zone = M.resolve_item_attack(src, user, target_zone)

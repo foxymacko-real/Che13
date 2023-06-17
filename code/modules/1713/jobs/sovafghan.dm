@@ -12,7 +12,7 @@
 	is_soviet = TRUE
 	is_coldwar = TRUE
 	can_get_coordinates = TRUE
-	additional_languages = list("Arabic" = 100)
+	additional_languages = list("Dari" = 90)
 
 	min_positions = 1
 	max_positions = 1
@@ -71,7 +71,7 @@
 	is_soviet = TRUE
 	is_coldwar = TRUE
 	can_get_coordinates = TRUE
-	additional_languages = list("Arabic" = 100)
+	additional_languages = list("Dari" = 80)
 
 	min_positions = 1
 	max_positions = 2
@@ -142,7 +142,7 @@
 	is_soviet = TRUE
 	is_coldwar = TRUE
 	can_get_coordinates = TRUE
-	additional_languages = list("Arabic" = 60)
+	additional_languages = list("Dari" = 50, "Pashto" = 30)
 
 	min_positions = 2
 	max_positions = 8
@@ -178,7 +178,9 @@
 	uniform.attackby(mag, H)
 	var/obj/item/ammo_magazine/ak74/mag2 = new /obj/item/ammo_magazine/ak74(null)
 	uniform.attackby(mag2, H)
-	//gun
+	if (map.ID == MAP_SOVAFGHAN)
+		H.equip_to_slot_or_del(new /obj/item/weapon/key/soviet(H), slot_l_store)
+//gun
 	if (prob(50))
 		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74/pso1(H), slot_shoulder)
 		H.equip_to_slot_or_del(new /obj/item/weapon/attachment/bayonet(H), slot_l_hand)
@@ -186,8 +188,6 @@
 		H.equip_to_slot_or_del(new /obj/item/weapon/gun/projectile/submachinegun/ak74/grenade_launcher(H), slot_shoulder)
 		H.equip_to_slot_or_del(new /obj/item/weapon/grenade/frag/ugl/vog25(H), slot_r_store)
 		H.equip_to_slot_or_del(new /obj/item/weapon/grenade/frag/ugl/vog25(H), slot_r_hand)
-	if (map.ID == MAP_SOVAFGHAN)
-		H.equip_to_slot_or_del(new /obj/item/weapon/key/soviet(H), slot_l_store)
 //jacket
 	if (prob(15))
 		H.equip_to_slot_or_del(new /obj/item/clothing/suit/storage/jacket/afghanka(H), slot_wear_suit)
@@ -279,7 +279,7 @@
 	is_soviet = TRUE
 	is_radioman = TRUE
 	is_coldwar = TRUE
-	additional_languages = list("Arabic" = 70)
+	additional_languages = list("Dari" = 60, "Pashto" = 20)
 
 	min_positions = 1
 	max_positions = 8
@@ -346,7 +346,7 @@
 	uses_squads = TRUE
 	is_soviet = TRUE
 	is_coldwar = TRUE
-	additional_languages = list("Arabic" = 30)
+	additional_languages = list("Dari" = 10, "Pashto" = 10)
 
 	min_positions = 1
 	max_positions = 100
@@ -441,7 +441,7 @@
 	is_afghan = TRUE
 	is_soviet = TRUE
 	is_coldwar = TRUE
-	additional_languages = list("Arabic" = 30)
+	additional_languages = list("Dari" = 10)
 
 	min_positions = 1
 	max_positions = 6
@@ -730,8 +730,8 @@
 	whitelisted = TRUE
 	is_afghan = TRUE
 	is_dra = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 100, "English" = 100)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 100, "Russian" = 100, "English" = 100)
 	is_coldwar = TRUE
 
 	min_positions = 1
@@ -795,8 +795,8 @@
 	is_coldwar = TRUE
 
 	can_get_coordinates = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 90)
+	default_language = "Dari"
+	additional_languages = list("Russian" = 90, "Pashto" = 100)
 
 	min_positions = 1
 	max_positions = 1
@@ -874,8 +874,8 @@
 	is_coldwar = TRUE
 
 	can_get_coordinates = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 70)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 80, "Russian" = 70)
 
 	min_positions = 1
 	max_positions = 4
@@ -946,8 +946,8 @@
 	is_coldwar = TRUE
 
 	uses_squads = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 30)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 50, "Russian" = 20)
 
 	min_positions = 10
 	max_positions = 40
@@ -1018,8 +1018,8 @@
 	spawn_location = "JoinLateDoc"
 	is_afghan = TRUE
 	is_coldwar = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 90, "English" = 70)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 100, "Russian" = 80, "English" = 80)
 
 	min_positions = 1
 	max_positions = 4
@@ -1139,7 +1139,7 @@
 
 	return TRUE */
 
-/datum/job/civilian/afghan/facworker
+/*/datum/job/civilian/afghan/facworker
 	title = "Industrial Worker"
 
 	spawn_location = "JoinLateCivFW"
@@ -1316,7 +1316,7 @@
 	H.setStat("pistol", STAT_LOW)
 	H.setStat("bows", STAT_LOW)
 	H.setStat("medical", STAT_LOW)
-	return TRUE
+	return TRUE*/
 
 /datum/job/civilian/afghan/waiter
 	title = "Waiter"
@@ -1325,8 +1325,8 @@
 	spawn_location = "JoinLateCivWaiter"
 	is_afghan = TRUE
 	is_coldwar = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 40)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 100)
 
 
 	min_positions = 1
@@ -1394,8 +1394,8 @@
 	spawn_location = "JoinLateCivCook"
 	is_afghan = TRUE
 	is_coldwar = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 20)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 100)
 
 
 	min_positions = 1
@@ -1458,8 +1458,8 @@
 	spawn_location = "JoinLateCiv"
 	is_afghan = TRUE
 	is_coldwar = TRUE
-	default_language = "Arabic"
-	additional_languages = list("Russian" = 20)
+	default_language = "Dari"
+	additional_languages = list("Pashto" = 60)
 
 
 	min_positions = 1
@@ -1568,7 +1568,7 @@
 	is_afghan = TRUE
 	is_coldwar = TRUE
 	can_be_female = TRUE
-	default_language = "Arabic"
+	default_language = "Pashto"
 
 	min_positions = 1
 	max_positions = 25
@@ -1672,7 +1672,8 @@
 	is_afghan = TRUE
 	is_muj = TRUE
 	is_coldwar = TRUE
-	additional_languages = list("Russian" = 40, "English"= 40)
+	default_language = "Pashto"
+	additional_languages = list("Dari" = 100, "Russian" = 60, "English"= 60)
 
 	min_positions = 1
 	max_positions = 6
@@ -1768,6 +1769,8 @@
 	is_muj = TRUE
 	is_coldwar = TRUE
 	is_medic = TRUE
+	default_language = "Pashto"
+	additional_languages = list("Dari" = 100, "Russian" = 60, "English"= 60)
 
 	min_positions = 1
 	max_positions = 4
@@ -1824,6 +1827,8 @@
 	is_muj = TRUE
 	is_coldwar = TRUE
 	uses_squads = TRUE
+	default_language = "Pashto"
+	additional_languages = list("Dari" = 40, "Russian" = 5)
 
 	min_positions = 10
 	max_positions = 250
