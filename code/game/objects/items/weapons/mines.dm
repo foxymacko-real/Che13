@@ -17,7 +17,7 @@
 	flags = CONDUCT
 	var/triggered = FALSE
 	var/triggertype = "explosive" //Calls that proc
-	
+
 	// failsafe to stop a horrible mine bug - kachnov
 	var/nextCanExplode = -1
 
@@ -200,7 +200,7 @@
 		P.shot_from = name
 		P.launch_fragment(TT)
 
-		spawn(9)
+		spawn(3)
 			if (src)
 				qdel(src)
 
@@ -396,6 +396,98 @@
 			P.shot_from = name
 			P.launch_fragment(TT)
 
-			spawn(9)
+			spawn(1)
 				if (src)
 					qdel(src)
+
+/obj/item/mine/uxo
+	name = "unexploded ordnance"
+	desc = "Doesnt look safe"
+	icon = 'icons/obj/grenade.dmi'
+	icon_state = "uxo"
+	force = 10.0
+	w_class = ITEM_SIZE_LARGE
+	anchored = TRUE
+	layer = TURF_LAYER + 0.01
+	var/origin = /obj/item/cannon_ball/shell
+
+//Disarming
+/obj/item/mine/uxo/attackby(obj/item/W as obj, mob/user as mob)
+	if (anchored)
+		if (ishuman(user))
+			var/mob/living/human/H = user
+			if (istype(W, /obj/item/weapon/wirecutters))
+				user.visible_message("<span class = 'notice'>\The [user] starts to disarm the \the [src] with the [W].</span>")
+				if (!do_after(user,60))
+					user.visible_message("<span class = 'notice'>\The [user] decides not to disarm the \the [src].</span>")
+					return
+				if (prob(min(95*H.getStatCoeff("dexterity"),100)))
+					user.visible_message("<span class = 'notice'>\The [user] finishes disarming the \the [src]!</span>")
+					if (origin)
+						new origin(get_turf(user))
+					qdel(src)
+					return
+				else
+					Bumped(user)
+			else if (istype(W, /obj/item/weapon/material/kitchen/utensil/knife) || istype(W, /obj/item/weapon/attachment/bayonet))
+				user.visible_message("<span class = 'notice'>\The [user] starts to disarm the \the [src] with the [W].</span>")
+				if (!do_after(user,80))
+					user.visible_message("<span class = 'notice'>\The [user] decides not to disarm the \the [src].</span>")
+					return
+				if (prob(min(65*H.getStatCoeff("dexterity"),90)))
+					user.visible_message("<span class = 'notice'>\The [user] finishes disarming the \the [src]!</span>")
+					if (origin)
+						new origin(get_turf(user))
+					qdel(src)
+					return
+				else
+					Bumped(user)
+			else
+				Bumped(user)
+		else
+			Bumped(user)
+
+/obj/item/mine/uxo/attack_hand(mob/user as mob)
+	if (anchored)
+		if (ishuman(user))
+			var/mob/living/human/H = user
+			user.visible_message("<span class = 'notice'>\The [user] starts to dig around the \the [src] with their bare hands!</span>")
+			if (!do_after(user,100))
+				user.visible_message("<span class = 'notice'>\The [user] decides not to dig up the \the [src].</span>")
+				return
+			if (prob(min(30*H.getStatCoeff("dexterity"),65)))
+				user.visible_message("<span class = 'notice'>\The [user] finishes digging up the \the [src], disarming it!</span>")
+				if (origin)
+					new origin(get_turf(user))
+				qdel(src)
+				return
+			else
+				Bumped(user)
+		else
+			Bumped(user)
+	else
+		..()
+
+/obj/item/mine/uxo/trigger(atom/movable/AM)
+	if (prob(50))
+		if (world.time < nextCanExplode)
+			return
+		if (istype(AM, /mob/living))
+			for (var/mob/O in viewers(7, loc))
+				O << "<font color='red'>[AM] accidently triggered the [src]!</font>"
+			triggered = TRUE
+			visible_message("<span class = 'red'><b>Click!</b></span>")
+			explosion(get_turf(src),2,2,3)
+			if (src)
+				qdel(src)
+
+/obj/item/mine/uxo/light
+	name = "unexploded light ordnance"
+	desc = "Doesnt look safe"
+	icon = 'icons/obj/grenade.dmi'
+	icon_state = "uxol"
+	force = 10.0
+	w_class = ITEM_SIZE_LARGE
+	anchored = TRUE
+	layer = TURF_LAYER + 0.01
+	origin = /obj/item/cannon_ball/mortar_shell
