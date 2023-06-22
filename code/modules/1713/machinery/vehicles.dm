@@ -893,7 +893,14 @@
 
 /obj/item/tank_systems/ecms/proc/explode_mines()
 	if (src)
-		for (var/obj/item/mine/M in range(5, src))
+		for (var/obj/item/mine/at/armed/M in range(5, src))
+			if (M.anchored)
+				M.trigger(src)
+				for (var/mob/O in viewers(7, loc))
+					O << "<font color='red'>\The [src] explodes the [M]!</font>"
+		sleep(6 SECONDS)
+		explode_mines()
+		for (var/obj/item/mine/ap/armed/M in range(5, src))
 			if (M.anchored)
 				M.trigger(src)
 				for (var/mob/O in viewers(7, loc))
