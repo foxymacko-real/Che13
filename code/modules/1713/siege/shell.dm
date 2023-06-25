@@ -34,10 +34,29 @@
 	value = 30
 	atype = "HE"
 
-/obj/item/cannon_ball/rocket/ex_act()
+/obj/item/cannon_ball/rocket/ex_act(severity)
 	var/turf/t = get_turf(src)
-	explosion(t,0,1,1,2)
-	qdel(src)
+	switch(severity)
+		if (1.0)
+			explosion(t,0,1,1,2)
+			qdel(src)
+			return
+		if (2.0)
+			if (prob(20))
+				explosion(t,0,1,1,2)
+				qdel(src)
+				return
+			else
+				return
+		if (3.0)
+			if (prob(5))
+				explosion(t,0,1,1,2)
+				qdel(src)
+				return
+			else
+				return
+		else
+			return
 
 /obj/item/cannon_ball/rocket/bullet_act(var/obj/item/projectile/proj, def_zone)
 	var/turf/t = get_turf(src)
@@ -74,16 +93,35 @@
 	heavy_armor_penetration = 8
 	atype = "HE"
 
-/obj/item/cannon_ball/shell/ex_act()
+/obj/item/cannon_ball/shell/ex_act(severity)
 	var/turf/t = get_turf(src)
-	explosion(t,0,1,2,5)
-	qdel(src)
+	switch(severity)
+		if (1.0)
+			explosion(t,0,1,2,3)
+			qdel(src)
+			return
+		if (2.0)
+			if (prob(20))
+				explosion(t,0,1,2,3)
+				qdel(src)
+				return
+			else
+				return
+		if (3.0)
+			if (prob(5))
+				explosion(t,0,1,2,3)
+				qdel(src)
+				return
+			else
+				return
+		else
+			return
 
 /obj/item/cannon_ball/shell/bullet_act(var/obj/item/projectile/proj, def_zone)
 	var/turf/t = get_turf(src)
-	if (prob(20))
+	if (prob(10))
 		playsound(t, 'sound/effects/smoke.ogg', 20, TRUE, -3)
-		explosion(t,0,1,2,5)
+		explosion(t,0,1,2,3)
 		visible_message("<span class = 'warning'>\The [src] explodes!</span>")
 		spawn(5)
 			qdel(src)
@@ -93,7 +131,7 @@
 /obj/item/cannon_ball/shell/fire_act(temperature)
 	var/turf/t = get_turf(src)
 	if (temperature > T0C+500)
-		explosion(t,1,1,2,5)
+		explosion(t,1,1,2,3)
 		visible_message("<span class = 'warning'>\The [src] cooks off and explodes!</span>")
 		qdel(src)
 	return ..()
@@ -293,10 +331,29 @@
 	value = 20
 	damage = 100
 
-/obj/item/cannon_ball/mortar_shell/ex_act()
+/obj/item/cannon_ball/mortar_shell/ex_act(severity)
 	var/turf/t = get_turf(src)
-	explosion(t,0,1,1,1)
-	qdel(src)
+	switch(severity)
+		if (1.0)
+			explosion(t,0,1,1,1)
+			qdel(src)
+			return
+		if (2.0)
+			if (prob(20))
+				explosion(t,0,1,1,1)
+				qdel(src)
+				return
+			else
+				return
+		if (3.0)
+			if (prob(5))
+				explosion(t,0,1,1,1)
+				qdel(src)
+				return
+			else
+				return
+		else
+			return
 
 /obj/item/cannon_ball/mortar_shell/bullet_act(var/obj/item/projectile/proj, def_zone)
 	var/turf/t = get_turf(src)
@@ -494,18 +551,18 @@
 	if (storage.contents.len < 1)
 		return
 	else if (liquidstorage == 1)
-		if (prob(5))
+		if (prob(3))
 			explosion(loc,0,1,3,1)
 		else
 			return
 	else if (storage.contents.len < 5)
-		if (prob(25))
+		if (prob(6))
 			explosion(loc,1,1,3,2)
 			qdel(src)
 		else
 			return
 	else if (storage.contents.len > 5)
-		if (prob(35))
+		if (prob(9))
 			explosion(loc,2,1,3,3)
 			qdel(src)
 		else

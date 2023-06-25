@@ -594,7 +594,7 @@ obj/item/projectile/bullet/rifle/a556x45
 		explosion(T, 0, 0, 2, 1)
 
 /obj/item/projectile/bullet/rifle/a127
-	damage = DAMAGE_OH_GOD + 45
+	damage = DAMAGE_OH_GOD + 15
 	penetrating = 20
 	armor_penetration = 55
 	heavy_armor_penetration = 25
@@ -606,7 +606,7 @@ obj/item/projectile/bullet/rifle/a556x45
 	heavy_armor_penetration = 50
 
 /obj/item/projectile/bullet/rifle/a792x94
-	damage = DAMAGE_OH_GOD + 85
+	damage = DAMAGE_OH_GOD + 55
 	penetrating = 20
 	armor_penetration = 60
 	heavy_armor_penetration = 45

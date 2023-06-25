@@ -523,6 +523,7 @@
 		)
 
 	sel_mode = 1
+	effectiveness_mod = 1
 
 /obj/item/weapon/gun/projectile/submachinegun/ppsh/chinese
 	name = "Type 50"
@@ -548,6 +549,7 @@
 		)
 
 	sel_mode = 1
+	effectiveness_mod = 1.05
 
 /obj/item/weapon/gun/projectile/submachinegun/ppd
 	name = "PPD-40"
@@ -562,7 +564,7 @@
 	good_mags = list(/obj/item/ammo_magazine/c762x25_ppsh, /obj/item/ammo_magazine/c762x25_pps)
 	weight = 3.7
 	equiptimer = 15
-	effectiveness_mod = 0.84
+	effectiveness_mod = 0.94
 	firemodes = list(
 		list(name = "semi auto",	burst=1, burst_delay=1, recoil=0, move_delay=1, dispersion = list(0.3, 0.4, 0.5, 0.5, 0.6)),
 		list(name = "full auto",	burst=1, burst_delay=1.3, recoil=0, move_delay=4, dispersion = list(0.8, 1.3, 1.4, 1.5, 1.6)),
