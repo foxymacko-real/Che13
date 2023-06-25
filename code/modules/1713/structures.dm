@@ -1556,8 +1556,21 @@
 	anchored = TRUE
 	flammable = TRUE
 	not_movable = FALSE
-	not_disassemblable = TRUE
+	not_disassemblable = FALSE
 	mouse_opacity = FALSE
+
+/obj/item/weapon/foldable/camnet
+	name = "camo net kit"
+	desc = "A collapsed camo net which can be deployed to make you blend in more with the enviroment, also can't be removed after being deployed."
+	icon_state = "cnet"
+	item_state = "ammo_can"
+	force = 10
+	throwforce = 10
+	weight = 2.5
+	w_class = ITEM_SIZE_NORMAL
+	slot_flags = SLOT_BACK
+	path = /obj/structure/camonet
+	value = 25
 
 
 ///////////////////////CARGO CONTAINERS///////////////////////////

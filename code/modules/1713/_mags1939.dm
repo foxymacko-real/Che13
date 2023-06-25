@@ -174,12 +174,14 @@
 	max_ammo = 20
 	weight = 0.28
 	multiple_sprites = TRUE
+	w_class = 3.5
 
 /obj/item/ammo_magazine/fg42/small
 	name = "FG 42 small magazine (7.92x57mm)"
 	icon_state = "fg42_small"
 	max_ammo = 10
 	weight = 0.2
+	w_class = ITEM_SIZE_NORMAL
 
 /obj/item/ammo_magazine/mg34
 	name = "MG34 magazine (7.92x57mm)"
