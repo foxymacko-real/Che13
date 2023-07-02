@@ -77,6 +77,7 @@
 /obj/structure/cannon/modern/tank/autoloader
 	name = "tank cannon with autoloader"
 	desc = "a barebones cannon made to be carried by vehicles."
+	autoloader = TRUE
 
 /obj/structure/cannon/modern/tank/voyage
 	spritemod = TRUE

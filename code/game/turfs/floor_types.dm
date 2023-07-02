@@ -9,16 +9,12 @@
 	stepsound = "wood"
 
 /turf/floor/wood/ship
-	name = "floor"
 	icon_state = "wood_ship"
-	stepsound = "wood"
 
 /turf/floor/wood/fancywood
-	name = "floor"
 	icon_state = "fancywood"
 
 /turf/floor/wood/alt
-	icon = 'icons/turf/flooring/wood.dmi'
 	icon_state = "woodalt"
 /turf/floor/wood/alt/two
 	icon_state = "woodalt2"
@@ -40,27 +36,7 @@
 	icon_state = "woodalt10"
 /turf/floor/wood/alt/eleven
 	icon_state = "woodalt11"
-	icon_state = "woodalt"
-/turf/floor/wood/alt/two
-	icon_state = "woodalt2"
-/turf/floor/wood/alt/three
-	icon_state = "woodalt3"
-/turf/floor/wood/alt/four
-	icon_state = "woodalt4"
-/turf/floor/wood/alt/five
-	icon_state = "woodalt5"
-/turf/floor/wood/alt/six
-	icon_state = "woodalt6"
-/turf/floor/wood/alt/seven
-	icon_state = "woodalt7"
-/turf/floor/wood/alt/eight
-	icon_state = "woodalt8"
-/turf/floor/wood/alt/nine
-	icon_state = "woodalt9"
-/turf/floor/wood/alt/ten
-	icon_state = "woodalt10"
-/turf/floor/wood/alt/eleven
-	icon_state = "woodalt11"
+
 
 /turf/floor/blackslateroof
 	name = "roof"
@@ -343,23 +319,24 @@
 /turf/floor/beach/water/proc/check_sinking(atom/movable/A)
 	if(iscovered())
 		return
-	if (!istype(A, /mob) && !istype(A, /obj/structure/vehicle) && !istype(A, /obj/structure/fishing_cage) && !istype(A, /obj/covers) && !istype(A, /obj/structure/barricade) && !istype(A, /obj/effect/sailing_effect))
-		spawn(60)
-			var/turf/TF = A.loc
-			if (istype(TF,/turf/floor/beach/water/deep) && !TF.iscovered())
-				qdel(A)
-	if(istype(A, /mob/living))
-		var/mob/living/ML = A
-		if (ishuman(ML))
-			var/mob/living/human/H = ML
-			if (H.driver_vehicle)
-				return
-			if (istype(H.wear_suit, /obj/item/clothing/suit/lifejacket))
-				return
-		if (ML && ML.stat == DEAD)
+	if (A)
+		if (!istype(A, /mob) && !istype(A, /obj/structure/vehicle) && !istype(A, /obj/structure/fishing_cage) && !istype(A, /obj/covers) && !istype(A, /obj/structure/barricade) && !istype(A, /obj/effect/sailing_effect))
 			spawn(60)
-				if (A && A.loc == src)
+				var/turf/TF = A.loc
+				if (istype(TF,/turf/floor/beach/water/deep) && !TF.iscovered())
 					qdel(A)
+		if(istype(A, /mob/living))
+			var/mob/living/ML = A
+			if (ishuman(ML))
+				var/mob/living/human/H = ML
+				if (H.driver_vehicle)
+					return
+				if (istype(H.wear_suit, /obj/item/clothing/suit/lifejacket))
+					return
+			if (ML && ML.stat == DEAD)
+				spawn(60)
+					if (A && A.loc == src)
+						qdel(A)
 /turf/floor/beach/water/deep/jungle
 	name = "deep jungle river"
 	icon_state = "seashallow_jungle3"
