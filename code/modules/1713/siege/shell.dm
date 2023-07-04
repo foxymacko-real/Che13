@@ -831,3 +831,28 @@
 	new /obj/item/cannon_ball/rocket(storage)
 	new /obj/item/cannon_ball/rocket(storage)
 	update_icon()
+
+/obj/structure/shellrack/autoloader
+	name = "shell rack"
+	desc = "A rack for storage your explosive goods. This one designed to feed into an autoloader"
+	anchored = TRUE
+	not_movable = TRUE
+	not_disassemblable = TRUE
+
+/obj/structure/shellrack/autoloader/full204/New()
+	..()
+	new /obj/item/cannon_ball/shell/tank/HE204(storage)
+	new /obj/item/cannon_ball/shell/tank/HE204(storage)
+	new /obj/item/cannon_ball/shell/tank/HE204(storage)
+	new /obj/item/cannon_ball/shell/tank/HE204(storage)
+
+	new /obj/item/cannon_ball/shell/tank/AP204(storage)
+	new /obj/item/cannon_ball/shell/tank/AP204(storage)
+	new /obj/item/cannon_ball/shell/tank/AP204(storage)
+	new /obj/item/cannon_ball/shell/tank/AP204(storage)
+
+	new /obj/item/cannon_ball/shell/tank/APCR204(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR204(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR204(storage)
+	new /obj/item/cannon_ball/shell/tank/APCR204(storage)
+	update_icon()
