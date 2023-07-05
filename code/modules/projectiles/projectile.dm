@@ -78,7 +78,7 @@
 
 	var/useless = FALSE
 
-	var/can_hit_in_trench = 1
+	var/can_hit_in_trench = TRUE
 	var/turf/firer_loc = null
 	var/btype = "normal" //normal, AP (armor piercing) and HP (hollow point)
 	var/atype = "normal"
@@ -481,10 +481,10 @@
 			T.visible_message("<span class = 'warning'>The [name] hits the trench wall!</span>")
 			qdel(src)
 			return
-	if(can_hit_in_trench == 1)
+	if(can_hit_in_trench)
 		if(kill_count < (initial(kill_count) - 1))
 			if(!istype(T, /turf/floor/trench))
-				can_hit_in_trench = 0
+				can_hit_in_trench = FALSE
 			else
 				can_hit_in_trench = -1
 	if (T.density || (can_hit_in_trench == -1 && !istype(T, /turf/floor/trench)))
@@ -501,15 +501,7 @@
 					if (!found || found != NO.axis)
 						if (found != NO.axis)
 							var/penloc = NO.CheckPenLoc(src)
-							if (!NO.CheckPen(src,penloc))
-								passthrough = FALSE
-								damage /= 7
-								NO.bullet_act(src,penloc)
-								bumped = TRUE
-								loc = null
-								qdel(src)
-								return FALSE
-							else
+							if (NO.CheckPen(src,penloc))
 								NO.bullet_act(src,penloc)
 								passthrough = TRUE
 								damage /= 2
@@ -519,6 +511,14 @@
 								permutated += T
 								if (passthrough_message)
 									T.visible_message(passthrough_message)
+							else
+								passthrough = FALSE
+								damage /= 7
+								NO.bullet_act(src,penloc)
+								bumped = TRUE
+								loc = null
+								qdel(src)
+								return FALSE
 
 				var/hitchance = 33 // a light, for example. This was 66%, but that was unusually accurate, thanks BYOND
 				if (O == original)
@@ -580,7 +580,7 @@
 							if (!G.affecting.lying)
 								passthrough = FALSE
 						else
-							if (!istype(T, /turf/floor/trench) || get_dist(firer,T)<=2 || (istype(get_turf(firer),/turf/floor/trench) && istype(T, /turf/floor/trench) && get_dist(firer,T)<=5) || prob(15))
+							if (!istype(T, /turf/floor/trench) || get_dist(firer,T)<=2 || (istype(get_turf(firer),/turf/floor/trench) && istype(T, /turf/floor/trench) && get_dist(firer,T)<=5) || prob(25))
 								if (L && !L.lying && !L.prone)
 									L.pre_bullet_act(src)
 									attack_mob(L)
@@ -705,11 +705,11 @@
 				for (var/obj/structure/window/barrier/S in src_loc)
 					_untouchable += S
 			else
-				if (firer)
+				if (firer) //if the firer is near a barricade or if the projectile is this or that then ignore this and that.
 					for (var/obj/structure/barricade/B in src_loc)
 						if (get_dist(firer, B) == 1)
 							_untouchable += B
-					if ((src == /obj/item/projectile/bullet/autocannon) || (src == /obj/item/missile/explosive/atgm) || (src == /obj/item/projectile/bullet/rifle/a50cal))
+					if ((src == /obj/item/projectile/bullet/autocannon) || (src == /obj/item/missile/explosive/atgm) || (src == /obj/item/missile/explosive/rcl) || (src == /obj/item/missile/fragmentation/rcl/frag) || (src == /obj/item/projectile/bullet/rifle/a50cal))
 						for (var/obj/structure/vehicleparts/frame/F in src_loc)
 							if (get_dist(firer, F) <= 2)
 								_untouchable += F
