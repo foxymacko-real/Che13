@@ -23,7 +23,6 @@ var/list/seed_list_jungle
 	not_movable = TRUE
 	not_disassemblable = TRUE
 	var/seedtimer = 1
-	var/producetimer = 1
 	var/mob/living/human/stored_unit = null
 	var/edible = FALSE
 	var/leaves = 0
@@ -42,11 +41,6 @@ var/list/seed_list_jungle
 /obj/structure/wild/proc/seedtimer_proc()
 	spawn(6000)
 		seedtimer = 1
-		return
-
-/obj/structure/wild/proc/producetimer_proc()
-	spawn(6000)
-		producetimer = 1
 		return
 
 /obj/structure/wild/proc/generate_seed_list(var/biome)
@@ -266,7 +260,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = rand(10,15)
+		dropwood.amount = rand(7,12)
 		qdel(src)
 		return
 
@@ -339,7 +333,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 15
+		dropwood.amount = 12
 		if (leaves>0)
 			new/obj/item/stack/material/leaf(get_turf(src))
 			new/obj/item/stack/material/leaf(get_turf(src))
@@ -386,6 +380,7 @@ var/list/seed_list_jungle
 	..()
 	icon_state = "pine_[rand(1,3)]"
 	deadicon = 'icons/obj/flora/pinetrees_dead.dmi'
+	deadicon_state = icon_state
 	if (map.ID == MAP_HUNGERGAMES)
 		spawn(6000)
 			if(prob(75))
@@ -400,7 +395,6 @@ var/list/seed_list_jungle
 		return
 	else
 		icon = current_icon
-
 
 /obj/structure/wild/tree/live_tree/pine/change_season()
 	..()
@@ -496,7 +490,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 10
+		dropwood.amount = 8
 		qdel(src)
 		return
 
@@ -504,7 +498,7 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 9
+		dropwood.amount = 6
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
 		new/obj/item/stack/material/leaf/palm(get_turf(src))
@@ -874,13 +868,47 @@ var/list/seed_list_jungle
 	icon_state = "med_pine_dead"
 	deadicon_state = "med_pine_dead"
 
+/obj/structure/wild/jungle/cherry
+	name = "cherry blossom tree"
+	icon = 'icons/obj/flora/bigtrees.dmi'
+	icon_state = "cherry_blossom_1"
+	deadicon = 'icons/obj/flora/deadtrees.dmi'
+	deadicon_state = "tree_1"
+	edible = FALSE
+	leaves = 0
+	max_leaves = 0
+	branches = 2
+	max_branches = 2
+
+/obj/structure/wild/jungle/cherry/dead
+	name = "dead cherry blossom tree"
+	icon = 'icons/obj/flora/deadtrees.dmi'
+	icon_state = "tree_1"
+	deadicon = 'icons/obj/flora/deadtrees.dmi'
+	deadicon_state = "tree_1"
+	edible = FALSE
+	leaves = 0
+	max_leaves = 0
+	branches = 2
+	max_branches = 2
+
+/obj/structure/wild/jungle/cherry/New()
+	..()
+	icon_state = "cherry_blossom_[rand(1,4)]"
+	deadicon_state = "tree_[rand(1,5)]"
+
+/obj/structure/wild/jungle/cherry/dead/New()
+	..()
+	icon_state = "cherry_blossom_[rand(1,4)]"
+	deadicon_state = "tree_[rand(1,5)]"
+
 /obj/structure/wild/jungle/try_destroy()
 	if (health <= 0)
 		if (stored_unit)
 			release_stored()
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/wood(get_turf(src))
-		dropwood.amount = 15
+		dropwood.amount = 7
 		if (leaves>0)
 			new/obj/item/stack/material/leaf(get_turf(src))
 			new/obj/item/stack/material/leaf(get_turf(src))
@@ -1084,41 +1112,5 @@ var/list/seed_list_jungle
 	if (health <= 0)
 		visible_message("<span class='danger'>[src] is broken into pieces!</span>")
 		var/obj/item/stack/material/wood/dropwood = new /obj/item/stack/material/bamboo(get_turf(src))
-		dropwood.amount = 10
+		dropwood.amount = 7
 		qdel(src)
-
-////mint
-/obj/structure/wild/mint //it doesnt let you harvest the mint so sad TODO: FIX
-	name = "mint plant"
-	icon = 'icons/obj/flora/wildharvest.dmi'
-	icon_state = "mint1"
-	deadicon = 'icons/obj/flora/wild.dmi'
-	deadicon_state = "burnedbush1"
-	opacity = FALSE
-	density = FALSE
-	health = 20
-	maxhealth = 20
-
-/obj/structure/wild/mint/attackby(obj/item/W as obj, mob/user as mob)
-	user.setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	if(istype(W,/obj/item/weapon/material/kitchen/utensil/knife) && user.a_intent == I_HELP)
-		user.do_attack_animation(src)
-		if (producetimer == 1)
-			user << "You harvest some mint leaves."
-			var/obj/item/weapon/reagent_containers/food/snacks/grown/mint/n
-			new n(get_turf(user))
-			producetimer = 0
-			producetimer_proc()
-		else
-			user << "There is no mint to collect here."
-	else
-		..()
-
-/obj/structure/wild/mint/fire_act(temperature)
-	if (prob(65 * (temperature/500)))
-		visible_message("<span class = 'warning'>[src] is burned away.</span>")
-		qdel(src)
-
-/obj/structure/wild/mint/New()
-	..()
-	icon_state = "mint[rand(1,2)]"
