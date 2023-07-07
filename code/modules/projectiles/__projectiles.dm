@@ -594,7 +594,7 @@ obj/item/projectile/bullet/rifle/a556x45
 		explosion(T, 0, 0, 2, 1)
 
 /obj/item/projectile/bullet/rifle/a127
-	damage = DAMAGE_OH_GOD + 15
+	damage = DAMAGE_VERY_HIGH + 19
 	penetrating = 20
 	armor_penetration = 55
 	heavy_armor_penetration = 25
@@ -695,7 +695,6 @@ obj/item/projectile/bullet/rifle/a556x45
 
 /obj/item/projectile/bullet/shotgun/slug
 	name = "shotgun slug"
-	damage = DAMAGE_MEDIUM_HIGH
 	damage = DAMAGE_VERY_HIGH + 67
 	armor_penetration = 33
 
