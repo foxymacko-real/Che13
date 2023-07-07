@@ -14,7 +14,7 @@ good code,mid code, good staff, ok rules, and fun most likely.
 https://discord.gg/6x9aCfc6Mr
 
 ## Trello
-https://trello.com/invite/b/gZ0X2o9H/ATTI9e5938ab26a861f1cf68c165cf18ac5970F42FAC/chevilization13
+no trello yet
 
 ## Playing the game
 You will need a windows machine or a virtual machine running it from another OS.
