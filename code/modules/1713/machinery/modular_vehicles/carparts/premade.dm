@@ -119,7 +119,7 @@
 		reg_number = tempnum
 		license_plate_numbers += tempnum
 		return tempnum
-		
+
 //////////////////////////////////////////////////////////////////////////////////////////
 //////////////////////////////////////////////////////////////////////////////////////////
 //ASNO
@@ -150,7 +150,7 @@
 
 	"1,2" = list(/obj/structure/bed/chair/carseat/right,/obj/structure/vehicleparts/frame/car/quattroporte/rc),
 	"2,2" = list(/obj/structure/bed/chair/drivers/car,/obj/structure/vehicleparts/frame/car/quattroporte/lc),
-	
+
 	"1,3" = list(/obj/structure/bed/chair/carseat/right,/obj/structure/vehicleparts/frame/car/quattroporte/rb,/obj/structure/vehicleparts/movement/reversed),
 	"2,3" = list(/obj/structure/bed/chair/carseat/left,/obj/structure/vehicleparts/frame/car/quattroporte/lb,/obj/structure/vehicleparts/license_plate/eu/centered,/obj/structure/vehicleparts/movement/reversed),
 	)
@@ -285,7 +285,7 @@
 	"1,2" = list(/obj/structure/bed/chair/carseat/right,/obj/structure/vehicleparts/frame/car/kazoku/rc),
 	"2,2" = list(/obj/structure/bed/chair/drivers/car,/obj/structure/vehicleparts/frame/car/kazoku/lc),
 
-	
+
 	"1,3" = list(/obj/structure/bed/chair/carseat/right,/obj/structure/vehicleparts/frame/car/kazoku/rb,/obj/structure/vehicleparts/movement/reversed),
 	"2,3" = list(/obj/structure/bed/chair/carseat/left,/obj/structure/vehicleparts/frame/car/kazoku/lb,/obj/structure/vehicleparts/license_plate/eu/centered,/obj/structure/vehicleparts/movement/reversed),
 	)
@@ -585,7 +585,7 @@
 	"3,3" = list(/obj/structure/vehicleparts/frame/omw22_2/left),
 
 	"1,4" = list(/obj/structure/vehicleparts/movement/tracks/left/reversed,/obj/structure/vehicleparts/frame/omw22_2/rb, /obj/structure/engine/internal/diesel/premade/v12),
-	"2,4" = list(/obj/structure/vehicleparts/frame/omw22_2/back, /obj/structure/shellrack/full100),
+	"2,4" = list(/obj/structure/vehicleparts/frame/omw22_2/back, /obj/structure/shellrack/autoloader/full100),
 	"3,4" = list(/obj/structure/vehicleparts/movement/tracks/right/reversed,/obj/structure/vehicleparts/frame/omw22_2/lb,/obj/item/weapon/reagent_containers/glass/barrel/fueltank/tank/fueled)
 	)
 
