@@ -626,6 +626,8 @@ obj/item/projectile/bullet/rifle/a556x45
 	damage = DAMAGE_VERY_HIGH + 23
 	penetrating = 5
 	armor_penetration = 42
+/obj/item/projectile/bullet/autocannon
+	icon_state = "autocan"
 
 /obj/item/projectile/bullet/autocannon/a30mm_ap
 	damage = DAMAGE_VERY_HIGH + 15

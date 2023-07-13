@@ -89,7 +89,7 @@ turf/wall/generic_wall/New(var/newloc)
 	..(newloc,"stonebrick")
 /turf/wall/fortress
 	icon = 'icons/turf/walls.dmi'
-	icon_state = "fortress_brickwall"
+	icon_state = "vault"
 	flags = TURF_HAS_EDGES | SMOOTH_ONLY_WITH_ITSELF
 
 /turf/wall/stone/marble
@@ -116,3 +116,10 @@ turf/wall/generic_wall/New(var/newloc)
 	return FALSE
 /turf/wall/silvergold/New(var/newloc)
 	..(newloc,"silver","gold")
+
+/turf/wall/tiles
+	icon = 'icons/turf/walls.dmi'
+	icon_state = "tiles0"
+/turf/wall/tiles/New(var/newloc)
+	..(newloc,"concrete")
+
