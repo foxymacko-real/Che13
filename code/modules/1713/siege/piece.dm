@@ -319,7 +319,7 @@
 							return
 			else
 				var/list/loadable = list()
-				for (var/obj/structure/shellrack/autoloader/AL in range(1,src))
+				for (var/obj/structure/shellrack/autoloader/AL in range(2,src))
 					if (AL.storage.contents)
 						for (var/obj/item/cannon_ball/shell/tank/TS in AL.storage.contents)
 							if (istype(TS, ammotype))
