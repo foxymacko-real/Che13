@@ -246,3 +246,39 @@
 	attack_animation(user)
 	spawn(1) qdel(src)
 	return TRUE
+
+/obj/structure/proc/connect_cable(var/mob/user, var/obj/item/stack/cable_coil/W)
+	if (powersource)
+		user << "There's already a cable connected here! Split it further from \the [src]."
+		return
+	var/obj/item/stack/cable_coil/CC = W
+	powersource = CC.place_turf(get_turf(src), user, turn(get_dir(user,src),180))
+	if (!powersource)
+		return
+	powersource.connections += src
+	var/opdir1 = 0
+	var/opdir2 = 0
+	if (powersource.tiledir == "horizontal")
+		opdir1 = 4
+		opdir2 = 8
+	else if  (powersource.tiledir == "vertical")
+		opdir1 = 1
+		opdir2 = 2
+	powersource.update_icon()
+
+	if (opdir1 != 0 && opdir2 != 0)
+		for(var/obj/structure/cable/NCOO in get_turf(get_step(powersource,opdir1)))
+			if ((NCOO.tiledir == powersource.tiledir) && NCOO != powersource)
+				if (!(powersource in NCOO.connections) && !list_cmp(powersource.connections, NCOO.connections))
+					NCOO.connections += powersource
+				if (!(NCOO in powersource.connections) && !list_cmp(powersource.connections, NCOO.connections))
+					powersource.connections += NCOO
+				user << "You connect the two cables."
+
+		for(var/obj/structure/cable/NCOC in get_turf(get_step(powersource,opdir2)))
+			if ((NCOC.tiledir == powersource.tiledir) && NCOC != powersource)
+				if (!(powersource in NCOC.connections) && !list_cmp(powersource.connections, NCOC.connections))
+					NCOC.connections += powersource
+				if (!(NCOC in powersource.connections) && !list_cmp(powersource.connections, NCOC.connections))
+					powersource.connections += NCOC
+	user << SPAN_NOTICE("You connect the cable to \the [src].")

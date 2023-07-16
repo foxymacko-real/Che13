@@ -248,7 +248,7 @@
 	icon_state = "distill_empty_nocol"
 	not_movable = FALSE
 	not_disassemblable = TRUE
-	var/on = FALSE
+	var/active = FALSE
 	var/obj/item/weapon/reagent_containers/glass/beaker/collector = null
 /obj/structure/lab_distillery/New()
 	..()
@@ -266,7 +266,7 @@
 			icon_state = "distill_empty"
 		else
 			icon_state = "distill_empty_nocol"
-	if (on)
+	if (active)
 		icon_state = "distill_on"
 
 /obj/structure/lab_distillery/attack_hand(var/mob/living/human/H)
@@ -276,15 +276,16 @@
 	if (reagents.total_volume <= 0)
 		H << "The distiller is empty."
 		return
-	if (!collector && !on)
-		H << "You cannot turn the distiller on without a collector."
+	if (!collector && !active)
+		H << "You cannot turn the distiller active without a collector."
 		return
-	if (collector && !on)
-		H << "You turn the distiller on."
-		on = TRUE
+	if (collector && !active)
+		H << "You turn the distiller active."
+		active = TRUE
 		update_icon()
-		process_distillery()
+		process_machine()
 	..()
+
 /obj/structure/lab_distillery/attackby(var/obj/item/weapon/reagent_containers/B as obj, var/mob/living/human/H as mob)
 	if (istype(H) && H.getStatCoeff("medical") < GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
 		H << "<span class = 'danger'>These chemicals are too complex for you to understand.</span>"
@@ -317,11 +318,11 @@
 		usr << "There is no beaker to remove from \the [src]."
 		return
 
-	if (on)
+	if (active)
 		usr << "<span class = 'danger'>You cannot remove the beaker while the distiller is running!</span>"
 		return
 
-	if (collector && !on)
+	if (collector && !active)
 		visible_message("You remove \the [collector].","[usr] removes \the [collector] from \the [src].")
 		collector.loc = get_turf(src)
 		collector = null
@@ -329,8 +330,8 @@
 
 	return
 
-/obj/structure/lab_distillery/proc/process_distillery()
-	if (!on)
+/obj/structure/lab_distillery/proc/process_machine()
+	if (!active)
 		return
 	else
 		spawn(15 SECONDS)
@@ -346,7 +347,7 @@
 
 			collector.reagents.add_reagent(topick,voltotransf / chems_got_back_div)
 			reagents.remove_reagent(largest,voltotransf)
-			on = FALSE
+			active = FALSE
 			update_icon()
 			visible_message("\The [src] finishes distilling.")
 
@@ -362,7 +363,7 @@
 	anchored = FALSE
 	not_movable = FALSE
 	not_disassemblable = FALSE
-	var/on = FALSE
+	var/active = FALSE
 	powerneeded = 5
 	var/obj/item/weapon/reagent_containers/glass/beaker/collector = null
 
@@ -377,16 +378,15 @@
 	else
 		powered = TRUE
 		if (powersource.powered && ((powersource.powerflow-powersource.currentflow) >= powerneeded))
-			if (!on)
+			if (!active)
 				powersource.update_power(powerneeded,1)
-				on = TRUE
 				powersource.currentflow += powerneeded
 				powersource.lastupdate2 = world.time
 			return TRUE
 		else
-			if (on)
+			if (active)
 				powersource.update_power(powerneeded,1)
-				on = FALSE
+				active = FALSE
 				powersource.currentflow -= powerneeded
 				powersource.lastupdate2 = world.time
 			return FALSE
@@ -397,58 +397,40 @@
 		icon_state = "centrifuge_powered"
 	else
 		icon_state = "centrifuge"
-	if (on)
+	if (active)
 		icon_state = "centrifuge_on"
 
 /obj/structure/centrifuge/attack_hand(var/mob/living/human/H)
 	if (!anchored)
 		H << SPAN_NOTICE("Fix \the [src] in place with a wrench first.")
 		return
-	if (istype(H) && H.getStatCoeff("medical") < GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
+	else if (istype(H) && H.getStatCoeff("medical") < GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
 		H << SPAN_DANGER("These chemicals are too complex for you to understand.")
 		return
-	if (!check_power())
+	else if (!check_power())
 		H << SPAN_WARNING("\The [src] doesn't have any power!")
-	if (reagents.total_volume <= 0)
+		return
+	else if (reagents.total_volume <= 0)
 		H << SPAN_NOTICE("\The [src] is empty.")
 		return
-	if (!collector && !on)
-		H << SPAN_NOTICE("You cannot turn \the [src] on without a collector.")
+	else if (!collector && !active)
+		H << SPAN_NOTICE("You cannot turn \the [src] active without a collector.")
 		return
-	if (collector && !on)
-		H << SPAN_NOTICE("You turn \the [src] on.")
-		on = TRUE
+	else if (collector && !active)
+		H << SPAN_NOTICE("You turn \the [src] active.")
+		active = TRUE
 		update_icon()
-		process_centrifuge()
+		process_machine()
 	..()
 
 /obj/structure/centrifuge/attackby(obj/item/W as obj, var/mob/living/human/user as mob)
-	if (istype(W,/obj/item/weapon/wrench))
-		if (powersource)
-			user << SPAN_NOTICE("Remove the cables first.")
-			return
-		playsound(loc, 'sound/items/Ratchet.ogg', 100, TRUE)
-		user << (anchored ? SPAN_NOTICE("You unfasten \the [src] from the floor.") : SPAN_NOTICE("You secure \the [src] to the floor."))
-		anchored = !anchored
-		return
-
-	if (istype(W,/obj/item/weapon/hammer))
-		if (powersource)
-			user << SPAN_NOTICE("Remove the cables first.")
-			return
-		playsound(loc, 'sound/items/Ratchet.ogg', 100, TRUE)
-		if (do_after(user, 5 SECONDS, src))
-			user.visible_message( SPAN_NOTICE("\The [user] dismantles \the [src]."),  SPAN_NOTICE("You dismantle \the [src]."))
-			new /obj/item/stack/rods(get_turf(usr))
-			new /obj/item/stack/rods(get_turf(usr))
-			qdel(src)
-			return
+	..()
 
 	if (!anchored)
 		user << SPAN_NOTICE("Fix \the [src] in place with a wrench first.")
 		return
 
-	if (istype(W,/obj/item/weapon/reagent_containers))
+	else if (istype(W,/obj/item/weapon/reagent_containers))
 		if (istype(user) && user.getStatCoeff("medical") < GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
 			user << SPAN_DANGER("These chemicals are too complex for you to understand")
 			return
@@ -471,41 +453,9 @@
 				update_icon()
 				return
 	
-	if (istype(W, /obj/item/stack/cable_coil))
-		if (powersource)
-			user << "There's already a cable connected here! Split it further from \the [src]."
-			return
-		var/obj/item/stack/cable_coil/CC = W
-		powersource = CC.place_turf(get_turf(src), user, turn(get_dir(user,src),180))
-		if (!powersource)
-			return
-		powersource.connections += src
-		var/opdir1 = 0
-		var/opdir2 = 0
-		if (powersource.tiledir == "horizontal")
-			opdir1 = 4
-			opdir2 = 8
-		else if  (powersource.tiledir == "vertical")
-			opdir1 = 1
-			opdir2 = 2
-		powersource.update_icon()
-
-		if (opdir1 != 0 && opdir2 != 0)
-			for(var/obj/structure/cable/NCOO in get_turf(get_step(powersource,opdir1)))
-				if ((NCOO.tiledir == powersource.tiledir) && NCOO != powersource)
-					if (!(powersource in NCOO.connections) && !list_cmp(powersource.connections, NCOO.connections))
-						NCOO.connections += powersource
-					if (!(NCOO in powersource.connections) && !list_cmp(powersource.connections, NCOO.connections))
-						powersource.connections += NCOO
-					user << "You connect the two cables."
-
-			for(var/obj/structure/cable/NCOC in get_turf(get_step(powersource,opdir2)))
-				if ((NCOC.tiledir == powersource.tiledir) && NCOC != powersource)
-					if (!(powersource in NCOC.connections) && !list_cmp(powersource.connections, NCOC.connections))
-						NCOC.connections += powersource
-					if (!(NCOC in powersource.connections) && !list_cmp(powersource.connections, NCOC.connections))
-						powersource.connections += NCOC
-		user << "You connect the cable to \the [src]."
+	else if (istype(W, /obj/item/stack/cable_coil))
+		connect_cable(user,W)
+		return
 
 /obj/structure/centrifuge/verb/empty()
 	set category = null
@@ -516,18 +466,18 @@
 		usr << "There is no vial to remove from \the [src]."
 		return
 
-	if (on)
+	if (active)
 		usr << "<span class = 'danger'>You cannot remove the vial while \the [src] is running!</span>"
 		return
 
-	if (collector && !on)
+	if (collector && !active)
 		visible_message("You remove \the [collector].","[usr] removes \the [collector] from \the [src].")
 		collector.loc = get_turf(src)
 		collector = null
 		return
 	return
 
-/obj/structure/centrifuge/proc/process_centrifuge()
+/obj/structure/centrifuge/proc/process_machine()
 	if (!check_power())
 		visible_message(SPAN_WARNING("\The [src] abruptly stops it's cycle and powers down."))
 		return
@@ -543,15 +493,151 @@
 
 			switch (largest)
 				if ("blood")
-					topick = pick("plasma","redbloodcells","whitebloodcells")
+					topick = pick("blood_plasma", "red_blood_cells", "white_blood_cells")
 					chems_got_back_div = 5
+				if ("sodiumchloride")
+					topick = pick("sodium", "chlorine")
+					chems_got_back_div = 2
 
 			collector.reagents.add_reagent(topick,voltotransf / chems_got_back_div)
 			reagents.remove_reagent(largest,voltotransf)
-			on = FALSE
+			active = FALSE
 			update_icon()
 			visible_message("\The [src] stops it's cycle.")
 			playsound(loc, 'sound/machines/ping.ogg', 100, TRUE)
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/obj/structure/grinder
+	name = "grinder"
+	desc = "A professional grinder used to grind certain objects into a pulp."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "grinder"
+	density = TRUE
+	anchored = FALSE
+	not_movable = FALSE
+	not_disassemblable = FALSE
+	var/active = FALSE
+	powerneeded = 5
+	var/obj/item/stack/inserted = null
+
+/obj/structure/grinder/proc/check_power()
+	if (!powersource || !powerneeded)
+		powered = FALSE
+		return FALSE
+	else
+		powered = TRUE
+		if (powersource.powered && ((powersource.powerflow-powersource.currentflow) >= powerneeded))
+			if (!active)
+				powersource.update_power(powerneeded,1)
+				powersource.currentflow += powerneeded
+				powersource.lastupdate2 = world.time
+			return TRUE
+		else
+			if (active)
+				powersource.update_power(powerneeded,1)
+				active = FALSE
+				powersource.currentflow -= powerneeded
+				powersource.lastupdate2 = world.time
+			return FALSE
+
+/obj/structure/grinder/update_icon()
+	..()
+	if (powered)
+		icon_state = "grinder_powered"
+	else
+		icon_state = "grinder"
+	if (active)
+		icon_state = "grinder_on"
+
+/obj/structure/grinder/attack_hand(var/mob/living/human/H)
+	if (!anchored)
+		H << SPAN_NOTICE("Fix \the [src] in place with a wrench first.")
+		return
+	else if (!check_power())
+		H << SPAN_WARNING("\The [src] doesn't have any power!")
+		return
+	else if (!inserted && !active)
+		H << SPAN_NOTICE("\The [src] is empty.")
+		return
+	else if (inserted && !active)
+		H << SPAN_NOTICE("You turn \the [src] active.")
+		active = TRUE
+		update_icon()
+		process_machine()
+		return
+	..()
+
+/obj/structure/grinder/attackby(var/obj/item/W as obj, var/mob/living/human/user as mob)
+	..()
+
+	if (!anchored)
+		user << SPAN_NOTICE("Fix \the [src] in place with a wrench first.")
+		return
+
+	else if (istype(W, /obj/item/stack/cable_coil))
+		connect_cable(user,W)
+		return
+
+	if (istype(W, /obj/item/stack) && !inserted)
+		user << "You place \the [W] in \the [src] for grinding."
+		inserted =  W
+		user.drop_item()
+		W.loc = src
+		update_icon()
+		return
+
+/obj/structure/grinder/verb/empty()
+	set category = null
+	set name = "Remove Inserted"
+	set src in range(1, usr)
+
+	if (!inserted)
+		usr << "There is no object to remove from \the [src]."
+		return
+
+	if (active)
+		usr << SPAN_DANGER(">You cannot remove \the [inserted] while \the [src] is running!</span>")
+		return
+
+	if (inserted && !active)
+		visible_message("You remove \the [inserted].","[usr] removes \the [inserted] from \the [src].")
+		inserted.loc = get_turf(src)
+		inserted = null
+		return
+	return
+
+/obj/structure/grinder/proc/process_machine()
+	if (!check_power())
+		visible_message(SPAN_WARNING("\The [src] abruptly stops grinding and powers down."))
+		return
+	else
+		spawn(10 SECONDS)
+			playsound(loc, 'sound/machines/grinder.ogg', 100, TRUE)
+			spawn (5 SECONDS)
+				if (!check_power())
+					visible_message(SPAN_WARNING("\The [src] abruptly stops grinding and powers down."))
+
+				var/obj/item/stack/tospawn
+
+				if (istype(inserted, /obj/item/stack/material/wood))
+					tospawn = /obj/item/stack/material/wood
+					tospawn.amount = inserted.amount/5
+				else
+					active = FALSE
+					update_icon()
+					visible_message(SPAN_WARNING("\The [src] cannot grind this item."))
+					playsound(loc, 'sound/machines/buzz-sigh.ogg', 50, TRUE)
+					inserted.loc = get_turf(src)
+					inserted = null
+					return
+
+				new tospawn(src)
+				active = FALSE
+				qdel (inserted)
+				inserted = null
+				update_icon()
+				visible_message("\The [src] stops grinding.")
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -842,14 +928,14 @@
 	icon_state = "distillery"
 	not_movable = FALSE
 	not_disassemblable = TRUE
-	var/on = FALSE
+	var/active = FALSE
 	var/obj/item/weapon/reagent_containers/glass/collector = null
 /obj/structure/distillery/New()
 	..()
 	reagents = new /datum/reagents(80)
 /obj/structure/distillery/update_icon()
 	..()
-	if (on)
+	if (active)
 		icon_state = "distillery1"
 	else
 		icon_state = "distillery"
@@ -861,14 +947,14 @@
 	if (reagents.total_volume <= 0)
 		H << "The distiller is empty."
 		return
-	if (!collector && !on)
-		H << "You cannot turn the distiller on without a collector."
+	if (!collector && !active)
+		H << "You cannot turn the distiller active without a collector."
 		return
-	if (collector && !on)
-		H << "You turn the distiller on."
-		on = TRUE
+	if (collector && !active)
+		H << "You turn the distiller active."
+		active = TRUE
 		update_icon()
-		process_distillery()
+		process_machine()
 	..()
 /obj/structure/distillery/attackby(var/obj/item/weapon/reagent_containers/B as obj, var/mob/living/human/H as mob)
 	if (istype(H) && H.getStatCoeff("medical") < GET_MIN_STAT_COEFF(STAT_MEDIUM_HIGH))
@@ -903,11 +989,11 @@
 		usr << "There is nothing to remove from \the [src]."
 		return
 
-	if (on)
+	if (active)
 		usr << "<span class = 'danger'>You cannot remove the [collector] while the distiller is running!</span>"
 		return
 
-	if (collector && !on)
+	if (collector && !active)
 		visible_message("You remove \the [collector].","[usr] removes \the [collector] from \the [src].")
 		collector.loc = get_turf(src)
 		collector = null
@@ -915,8 +1001,8 @@
 
 	return
 
-/obj/structure/distillery/proc/process_distillery()
-	if (!on)
+/obj/structure/distillery/proc/process_machine()
+	if (!active)
 		return
 	else
 		spawn(150)
@@ -932,6 +1018,6 @@
 			collector.reagents.add_reagent("ethanol",voltotransf)
 
 
-			on = FALSE
+			active = FALSE
 			update_icon()
 			visible_message("\The [src] finishes distilling.")
