@@ -177,7 +177,7 @@
 	firedfrom = launcher
 
 	if (istype(firedfrom, /obj/item/weapon/gun/projectile/automatic/stationary))
-		if (prob(80))
+		if (prob(70))
 			def_zone = "chest"
 	else
 		def_zone = target_zone
