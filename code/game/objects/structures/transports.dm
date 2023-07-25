@@ -59,7 +59,7 @@
 /obj/structure/vehicle/proc/do_move(var/m_dir = null)
 	for (var/mob/living/ML in ontop)
 		ML.forceMove(get_step(src, m_dir))
-	for (var/obj/structure/O in ontop_o)
+	for (var/obj/O in ontop_o)
 		O.forceMove(get_step(src, m_dir))
 		O.dir = dir
 	forceMove(get_step(src, m_dir))
@@ -128,15 +128,16 @@
 
 /obj/structure/vehicle/proc/stopmovementloop()
 	moving = FALSE
+	axis.currentspeed = 0
 	return
 
 /obj/structure/vehicle/MouseDrop_T(atom/A, mob/living/human/user)
 	if (istype(A, /mob/living/human))
 		var/mob/living/human/M = A
 		if (M.anchored == FALSE && M.driver == FALSE && !(M in ontop) && ontop.len < mobcapacity)
-			visible_message("<div class='notice'>[M] starts getting on \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+			user.visible_message(SPAN_NOTICE("[M] starts getting on \the [src]..."), SPAN_NOTICE("You start getting on \the [src]..."))
 			if (do_after(M, 40, src))
-				visible_message("<div class='notice'>[M] sucessfully climbs into \the [src].</div>","<div class='notice'>You sucessfully climb into \the [src].</div>")
+				user.visible_message(SPAN_NOTICE("[M] sucessfully climbs onto \the [src]."), SPAN_NOTICE("You sucessfully climb onto \the [src]."))
 				M.plane = GAME_PLANE
 				M.forceMove(get_turf(src))
 				if (!driver)
@@ -155,21 +156,22 @@
 				update_overlay()
 				update_icon()
 				return
-	else if (istype(A, /obj) && storagecapacity >= 1)
+	else if (istype(A, /obj/structure) && storagecapacity >= 1)
 		if (src == A)
 			return
 		var/obj/structure/O = A
-		if (O.anchored == FALSE && !(O in ontop_o) && ontop_o.len < storagecapacity && O != src)
-			visible_message("<div class='notice'>[user] starts putting \the [O] on \the [src]...</div>","<div class='notice'>You start putting \the [O] on \the [src]...</div>")
+		if (O != src && ontop_o.len < storagecapacity && !(O.anchored) && !(O in ontop_o))
+			user.visible_message(SPAN_NOTICE("[user] starts putting \the [O] on \the [src]..."), SPAN_NOTICE("You start putting \the [O] on \the [src]..."))
 			if (do_after(user, 40, src) && ontop_o.len < storagecapacity)
-				visible_message("<div class='notice'>[user] sucessfully puts \the [O] on \the [src].</div>","<div class='notice'>You sucessfully put \the [O] on \the [src].</div>")
-				O.pixel_x = pixel_x+16
-				O.pixel_y = pixel_y+16
+				user.visible_message(SPAN_NOTICE("[user] sucessfully puts \the [O] on \the [src]."), SPAN_NOTICE("You sucessfully put \the [O] on \the [src]."))
+				O.loc = get_turf(src)
+				O.pixel_x = pixel_x + 16
+				O.pixel_y = pixel_y + 16
 				ontop_o += O
 				O.anchored = TRUE
+				O.density = FALSE
 				O.dir = dir
 				if (istype(O, /obj/structure/cannon))
-					O.icon = 'icons/obj/cannon.dmi'
 					O.x = x
 					O.y = y
 					O.pixel_x = pixel_x
@@ -180,9 +182,9 @@
 
 /obj/structure/vehicle/attack_hand(mob/living/human/user as mob)
 	if ((user in ontop))
-		visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+		user.visible_message(SPAN_NOTICE("[user] start leaving \the [src]..."), SPAN_NOTICE("You start getting off \the [src]..."))
 		if (do_after(user, 30, src))
-			visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
+			user.visible_message(SPAN_NOTICE("[user] sucessfully leaves \the [src]."), SPAN_NOTICE("You leave \the [src]."))
 			ontop -= user
 			user.pixel_x = 0
 			user.pixel_y = 0
@@ -205,12 +207,16 @@
 			update_icon()
 			return
 	else if (ontop_o.len > 0)
-		for (var/obj/structure/O in ontop_o)
-			O.anchored = FALSE
-			ontop_o -= O
-			O.pixel_x = 0
-			O.pixel_y = 0
-			visible_message("[user] takes \the [O] from \the [src].","You take \the [O] from \the [src].")
+		for (var/obj/O in ontop_o)
+			if (do_after(user, 15, src))
+				O.anchored = FALSE
+				if (initial(O.density))
+					O.density = TRUE
+				ontop_o -= O
+				O.pixel_x = 0
+				O.pixel_y = 0
+				user.visible_message(SPAN_NOTICE("[user] takes \the [O] from \the [src]."), SPAN_NOTICE("You take \the [O] from \the [src]."))
+				O.loc = get_turf(user)
 		return
 
 /obj/structure/vehicle/attackby(obj/item/weapon/W as obj, mob/living/human/user as mob)
@@ -227,9 +233,9 @@
 					playsound(loc, engine.ending_snd, 65, FALSE, 2)
 					return
 
-			visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+			user.visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start leaving \the [src]...</div>")
 			if (do_after(user, 30, src))
-				visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
+				user.visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
 				ontop -= user
 				user.pixel_x = 0
 				user.pixel_y = 0
@@ -292,9 +298,9 @@
 /obj/structure/vehicle/raft/attackby(obj/item/O as obj, mob/user as mob)
 	if (istype(O,/obj/item/weapon/hammer) && !not_disassemblable)
 		playsound(loc, 'sound/items/Screwdriver.ogg', 75, TRUE)
-		user << "<span class='notice'>You begin dismantling \the [src].</span>"
+		user << SPAN_NOTICE("You begin dismantling \the [src].")
 		if (do_after(user,25,src))
-			user << "<span class='notice'>You dismantle \the [src].</span>"//We lose some materials in the process. Some wood and rope is no longer useful as raw.
+			user << SPAN_NOTICE("You dismantle \the [src].") //We lose some materials in the process. Some wood and rope is no longer useful as raw.
 			var /obj/item/stack/material/wood/W = new /obj/item/stack/material/wood(get_turf(src))
 			new /obj/item/stack/material/rope(get_turf(src))
 			W.amount += 4 //adds 4 boards to the stack, making it 5
@@ -334,6 +340,7 @@
 	bound_height = 64
 	mobcapacity = 2
 	storagecapacity = 1
+	plane = GAME_PLANE
 	New()
 		..()
 		dwheel.origin = src
@@ -344,11 +351,76 @@
 	icon_state = "outrigger_frame3"
 	health = 130
 
-/obj/structure/vehicle/boat/rib
-	name = "rigidbody inflatable motor boat"
-	desc = "A 400cc, diesel-powered outrigger. Has a 125u fueltank."
-	icon_state = "rib"
-	health = 200
+/obj/structure/vehicle/boat/b400/New()
+	..()
+	engine = new/obj/structure/engine/internal/diesel
+	fueltank = new/obj/item/weapon/reagent_containers/glass/barrel/fueltank/small
+	spawn(1)
+		engine.enginesize = 400
+		engine.weight = 20*(engine.enginesize/1000)
+		engine.name = "400cc diesel engine"
+		engine.maxpower *= (engine.enginesize/1000)
+		engine.fuelefficiency *= (engine.enginesize/1000)
+		spawn(1)
+			engine.fueltank = fueltank
+			engine.connections += axis
+			dwheel.forceMove(src)
+
+/obj/structure/vehicle/boat/rhib
+	name = "rigid hull inflatable boat"
+	desc = "A 400cc, gasoline-powered Ridgid Inflatable Boat. Has a 180u fueltank."
+	icon_state = "rib_frame3"
+	health = 300
+	axis = new/obj/structure/vehicleparts/axis/boat
+
+/obj/structure/vehicle/boat/rhib/premade/New()
+	..()
+	engine = new/obj/structure/engine/internal/gasoline
+	fueltank = new/obj/item/weapon/reagent_containers/glass/barrel/fueltank/smalltank
+	spawn(1)
+		engine.enginesize = 400
+		engine.weight = 20*(engine.enginesize/1000)
+		engine.name = "400cc gasoline engine"
+		engine.maxpower *= (engine.enginesize/1000)
+		engine.fuelefficiency *= (engine.enginesize/1000)
+		fueltank.reagents.add_reagent("gasoline",180)
+		spawn(1)
+			engine.fueltank = fueltank
+			engine.connections += axis
+			dwheel.forceMove(src)
+
+/obj/structure/vehicle/boat/rhib/premade/arrival
+	name = "SINKING rigid hull inflatable boat"
+	desc = "Uh oh."
+
+/obj/structure/vehicle/boat/rhib/premade/arrival/New()
+	..()
+	delete_self()
+
+/obj/structure/vehicle/boat/rhib/premade/arrival/proc/delete_self()
+	spawn (120 SECONDS)
+		if (driver)
+			driver.pixel_x = 0
+			driver.pixel_y = 0
+			if (wheeled)
+				if (driver.l_hand == dwheel)
+					driver.remove_from_mob(dwheel)
+					dwheel.forceMove(src)
+					driver.l_hand = null
+				else if (driver.r_hand == dwheel)
+					driver.remove_from_mob(dwheel)
+					dwheel.forceMove(src)
+					driver.r_hand = null
+				driver.update_icons()
+			driver.buckled = null
+			driver.driver = FALSE
+			driver.driver_vehicle = null
+		if (currentcap)
+			currentcap.pixel_x = 0
+			currentcap.pixel_y = 0
+			currentcap.buckled = null
+			currentcap = null
+		qdel(src)
 
 /obj/structure/vehicle/boat/sailboat
 	name = "sailing outrigger"
@@ -420,7 +492,7 @@
 	spawn(timer)
 		for (var/mob/living/ML in ontop)
 			ML.forceMove(get_step(src, dir))
-		for (var/obj/structure/O in ontop_o)
+		for (var/obj/O in ontop_o)
 			O.forceMove(get_step(src, dir))
 		forceMove(get_step(src, dir))
 		updatepassdir()
@@ -432,22 +504,25 @@
 		driver.pixel_y = pixel_y
 		switch (dir)
 			if (SOUTH)
-				driver.pixel_x += 23
-				driver.pixel_y += 33
+				driver.pixel_x += 24
+				driver.pixel_y += 32
 			if (NORTH)
-				driver.pixel_x += 10
-				driver.pixel_y += 11
+				driver.pixel_x += 8
+				driver.pixel_y += 0
 			if (EAST)
-				driver.pixel_x += 5
-				driver.pixel_y += 31
+				driver.pixel_x += 0
+				driver.pixel_y += 24
 			if (WEST)
-				driver.pixel_x += 31
-				driver.pixel_y += 10
+				driver.pixel_x += 32
+				driver.pixel_y += 8
 		if (!(driver in range(1,src)))
 			ontop -= driver
 			driver.anchored = FALSE
 			driver.driver = FALSE
+			driver.pixel_x = 0
+			driver.pixel_y = 0
 			unbuckle_mob()
+			driver.buckled = null
 			driver.driver_vehicle = null
 			if (wheeled)
 				if (driver.l_hand == dwheel)
@@ -465,58 +540,50 @@
 		currentcap.pixel_y = pixel_y
 		switch (dir)
 			if (SOUTH)
-				currentcap.pixel_x += 10
-				currentcap.pixel_y += 33
+				currentcap.pixel_x += 8
+				currentcap.pixel_y += 32
 			if (NORTH)
-				currentcap.pixel_x += 25
-				currentcap.pixel_y += 11
+				currentcap.pixel_x += 24
+				currentcap.pixel_y += 0
 			if (EAST)
-				currentcap.pixel_x += 5
-				currentcap.pixel_y += 19
+				currentcap.pixel_x += 0
+				currentcap.pixel_y += 8
 			if (WEST)
-				currentcap.pixel_x += 31
-				currentcap.pixel_y += 19
+				currentcap.pixel_x += 32
+				currentcap.pixel_y += 24
 		if (!(currentcap in range(1,src)))
 			ontop -= currentcap
 			currentcap.anchored = FALSE
+			currentcap.pixel_x = 0
+			currentcap.pixel_y = 0
+			unbuckle_mob()
+			currentcap.buckled = null
 			currentcap = null
 	if (ontop_o.len > 0)
-		if(storagecapacity >= 1)
-			for(var/obj/structure/OB in ontop_o)
-				switch (dir)
-					if (SOUTH, NORTH)
-						if (istype(OB, /obj/structure/cannon))
-							OB.pixel_x = pixel_x
-							if (dir == SOUTH)
-								OB.pixel_y = pixel_y-32
-								OB.dir = dir
-							else
-								OB.pixel_y = pixel_y+32
-								OB.dir = dir
-						else
-							OB.pixel_x = pixel_x+16
-							OB.pixel_y = pixel_y+20
-							OB.dir = dir
-					if (EAST, WEST)
-						if (istype(OB, /obj/structure/cannon))
-							OB.pixel_y = pixel_y
-							if (dir == WEST)
-								OB.pixel_x = pixel_x-32
-								OB.dir = dir
-							else
-								OB.pixel_x = pixel_x+32
-								OB.dir = dir
-						else
-							OB.pixel_x = pixel_x+32
-							OB.pixel_y = pixel_y+10
-							OB.dir = dir
+		for (var/obj/OB in ontop_o)
+			OB.pixel_x = pixel_x
+			OB.pixel_y = pixel_y
+			OB.dir = dir
+			switch (dir)
+				if (NORTH)
+					OB.pixel_x += 16
+					OB.pixel_y += 38
+				if (SOUTH)
+					OB.pixel_x += 16
+					OB.pixel_y += 10
+				if (EAST)
+					OB.pixel_x += 32
+					OB.pixel_y += 24
+				if (WEST)
+					OB.pixel_x += 0
+					OB.pixel_y += 24
 
 /obj/structure/vehicle/boat/sailboat/attackby(obj/item/O as obj, mob/user as mob)
 	if (istype(O,/obj/item/weapon/hammer) && !not_disassemblable)
 		playsound(loc, 'sound/items/Screwdriver.ogg', 75, TRUE)
-		user << "<span class='notice'>You begin dismantling \the [src].</span>"
+		user << SPAN_NOTICE("You begin dismantling \the [src].")
 		if (do_after(user,25,src))
-			user << "<span class='notice'>You dismantle \the [src].</span>"//We lose some materials in the process. Some wood is no longer useful as raw.
+			user << SPAN_NOTICE("You dismantle \the [src].") //We lose some materials in the process. Some wood is no longer useful as raw.
 			new /obj/item/sail(get_turf(src))
 			var /obj/item/stack/material/wood/W = new /obj/item/stack/material/wood(get_turf(src))
 			W.amount += 9 //adds 9 boards to the stack, making it 10
@@ -525,78 +592,70 @@
 	else
 		..()
 
-/obj/structure/vehicle/boat/b400/New()
-	..()
-	engine = new/obj/structure/engine/internal/diesel
-	fueltank = new/obj/item/weapon/reagent_containers/glass/barrel/fueltank/small
-	spawn(1)
-		engine.enginesize = 400
-		engine.weight = 20*(engine.enginesize/1000)
-		engine.name = "400cc diesel engine"
-		engine.maxpower *= (engine.enginesize/1000)
-		engine.fuelefficiency *= (engine.enginesize/1000)
-		spawn(1)
-			engine.fueltank = fueltank
-			engine.connections += axis
-			dwheel.forceMove(src)
-
 /obj/structure/vehicle/boat/MouseDrop_T(atom/A, mob/living/human/user)
 	if (istype(A, /mob/living/human))
-		var/mob/living/human/M = A
-		if (M.anchored == FALSE && M.driver == FALSE && !(M in ontop))
-			visible_message("<div class='notice'>[M] starts getting on \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
-			if (do_after(M, 40, src))
-				visible_message("<div class='notice'>[M] sucessfully climbs into \the [src].</div>","<div class='notice'>You sucessfully climb into \the [src].</div>")
-				M.plane = GAME_PLANE
-				M.forceMove(get_turf(src))
-				if (!driver)
-					if (wheeled)
-						if (M.put_in_active_hand(dwheel) == FALSE)
-							M << "Your hands are full!"
-							return
+		if (!driver || !currentcap)
+			var/mob/living/human/M = A
+			if (M.anchored == FALSE && M.driver == FALSE && !(M in ontop))
+				user.visible_message(SPAN_NOTICE("[M] starts getting on \the [src]..."), SPAN_NOTICE("You start getting on \the [src]..."))
+				if (do_after(M, 40, src))
+					user.visible_message(SPAN_NOTICE("[M] sucessfully climbs onto \the [src]."), SPAN_NOTICE("You sucessfully climb onto \the [src]."))
+					M.plane = GAME_PLANE
+					M.forceMove(get_turf(src))
+					if (!driver)
+						if (wheeled)
+							if (M.put_in_active_hand(dwheel) == FALSE)
+								M << SPAN_WARNING("Your hands are full!")
+								return
 
-					M.driver = TRUE
-					M.driver_vehicle = src
-					driver = M
-					buckle_mob(driver)
-					ontop += M
-					updatepassdir()
-				else if (!currentcap)
-					currentcap = M
-					ontop += M
-					M.anchored = TRUE
-					updatepassdir()
-				update_overlay()
-				update_icon()
-				return
-	else if (istype(A, /obj))
+						M.driver = TRUE
+						M.driver_vehicle = src
+						driver = M
+						ontop += M
+						buckle_mob(driver)
+						updatepassdir()
+					else if (!currentcap)
+						currentcap = M
+						ontop += M
+						buckle_mob(currentcap)
+						updatepassdir()
+					update_overlay()
+					update_icon()
+					return
+		else
+			user << SPAN_WARNING("\The [src] is full!")
+			return
+
+	else if (istype(A, /obj/structure) || istype(A, /obj/item/weapon/gun/projectile/automatic/stationary) && storagecapacity >= 1)
 		if (src == A)
 			return
 		var/obj/structure/O = A
 		if (O.anchored == FALSE && !(O in ontop_o) && ontop_o.len < storagecapacity)
-			visible_message("<div class='notice'>[user] starts putting \the [O] on \the [src]...</div>","<div class='notice'>You start putting \the [O] on \the [src]...</div>")
+			user.visible_message(SPAN_NOTICE("[user] starts putting \the [O] on \the [src]..."), SPAN_NOTICE("You start putting \the [O] on \the [src]..."))
 			if (do_after(user, 40, src) && ontop_o.len < storagecapacity)
-				visible_message("<div class='notice'>[user] sucessfully puts \the [O] on \the [src].</div>","<div class='notice'>You sucessfully put \the [O] on \the [src].</div>")
-				O.pixel_x = pixel_x+16
-				O.pixel_y = pixel_y+16
+				user.visible_message(SPAN_NOTICE("[user] sucessfully puts \the [O] on \the [src]."), SPAN_NOTICE("You sucessfully put \the [O] on \the [src]."))
+				O.loc = get_turf(src)
+				O.pixel_x = pixel_x + 16
+				O.pixel_y = pixel_y + 16
 				ontop_o += O
-				O.dir = dir
+				O.sinkable = FALSE
 				O.anchored = TRUE
+				O.density = FALSE
+				O.dir = dir
 				if (istype(O, /obj/structure/cannon))
 					O.x = x
 					O.y = y
 					O.pixel_x = pixel_x
 					O.pixel_y = pixel_y
-					O.icon = 'icons/obj/cannon.dmi'
 				update_overlay()
 				update_icon()
 				return
 
 /obj/structure/vehicle/boat/attack_hand(mob/living/human/user as mob)
 	if ((user in ontop))
-		visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+		user.visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start leaving \the [src]...</div>")
 		if (do_after(user, 30, src))
-			visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
+			user.visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
 			ontop -= user
 			user.pixel_x = 0
 			user.pixel_y = 0
@@ -616,23 +675,31 @@
 						dwheel.forceMove(src)
 						user.r_hand = null
 					user.update_icons()
-			else if (currentcap)
+			if (user == currentcap)
+				unbuckle_mob()
 				currentcap = null
 				ontop -= user
 				user.anchored = FALSE
+				user.buckled = FALSE
 				updatepassdir()
 			update_overlay()
 			update_icon()
 			return
 	else if (ontop_o.len > 0)
-		for (var/obj/structure/O in ontop_o)
-			O.anchored = FALSE
-			ontop_o -= O
-			O.pixel_x = 0
-			O.pixel_y = 0
-			O.dir = dir
-			visible_message("[user] takes \the [O] from \the [src].","You take \the [O] from \the [src].")
+		for (var/obj/O in ontop_o)
+			if (do_after(user, 15, src))
+				O.anchored = FALSE
+				if (initial(O.density))
+					O.density = TRUE
+				ontop_o -= O
+				O.sinkable = TRUE
+				O.pixel_x = 0
+				O.pixel_y = 0
+				O.dir = dir
+				user.visible_message(SPAN_NOTICE("[user] takes \the [O] from \the [src]."), SPAN_NOTICE("You take \the [O] from \the [src]."))
+				O.loc = get_turf(user)
 		return
+
 /obj/structure/vehicle/boat/attackby(obj/item/weapon/W as obj, mob/living/human/user as mob)
 	if (istype(W, /obj/item/weapon/reagent_containers/glass))
 		var/obj/item/weapon/reagent_containers/glass/GC = W
@@ -673,13 +740,15 @@
 					engine.currentspeed = 0
 					engine.currentpower = 0
 					user << "You turn off the engine."
+					moving = FALSE
 					set_light(0)
 					playsound(loc, engine.ending_snd, 65, FALSE, 2)
+					stopmovementloop()
 					return
 
-			visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+			user.visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start leaving \the [src]...</div>")
 			if (do_after(user, 30, src))
-				visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
+				user.visible_message("<div class='notice'>[user] sucessfully leaves \the [src].</div>","<div class='notice'>You leave \the [src].</div>")
 				ontop -= user
 				user.pixel_x = 0
 				user.pixel_y = 0
@@ -698,16 +767,13 @@
 							user.remove_from_mob(dwheel)
 							dwheel.forceMove(src)
 							user.r_hand = null
-				else if (!currentcap)
-					currentcap = null
-					ontop -= user
-					user.anchored = FALSE
-					updatepassdir()
+					user.buckled = null
 				update_overlay()
 				update_icon()
 				return
 	else
 		..()
+
 /obj/structure/vehicle/boat/do_vehicle_check()
 	update_customdesc()
 	if (istype(get_turf(get_step(src,driver.dir)), /turf/floor/beach/water) || istype(get_turf(get_step(src,driver.dir)), /turf/floor/trench/flooded))
@@ -723,7 +789,11 @@
 			ontop -= driver
 			driver = null
 	else
+		moving = FALSE
+		axis.currentspeed = 0
+		stopmovementloop()
 		return FALSE
+
 /obj/structure/vehicle/boat/New()
 	..()
 	spawn(3)
@@ -832,18 +902,18 @@
 			stopmovementloop()
 			return FALSE
 		var/blocked = 0
-		for(var/obj/structure/O in get_turf(get_step(src,driver.dir)))
+		for (var/obj/structure/O in get_turf(get_step(src,driver.dir)))
 			if (O.density == TRUE)
 				blocked = 1
 				visible_message("<span class='warning'>\the [src] hits \the [O]!</span>","<span class='warning'>You hit \the [O]!</span>")
 		if (get_turf(get_step(src,driver.dir)).density == TRUE)
 			blocked = 1
 			visible_message("<span class='warning'>\the [src] hits \the [get_turf(get_step(src,driver.dir))]!</span>","<span class='warning'>You hit \the [get_turf(get_step(src,driver.dir))]!</span>")
-		for(var/obj/covers/CV in get_turf(get_step(src,driver.dir)))
+		for (var/obj/covers/CV in get_turf(get_step(src,driver.dir)))
 			if (CV.density == TRUE)
 				blocked = 1
 				visible_message("<span class='warning'>\the [src] hits \the [CV]!</span>","<span class='warning'>You hit \the [CV]!</span>")
-		for(var/mob/living/L in get_turf(get_step(src,driver.dir)))
+		for (var/mob/living/L in get_turf(get_step(src,driver.dir)))
 			if (ishuman(L))
 				var/mob/living/human/HH = L
 				HH.adjustBruteLoss(rand(7,16)*axis.currentspeed)
@@ -902,7 +972,7 @@
 			stopmovementloop()
 			return FALSE
 		var/canpass = FALSE
-		for(var/obj/covers/CVV in get_turf(get_step(src,driver.dir)))
+		for (var/obj/covers/CVV in get_turf(get_step(src,driver.dir)))
 			if (CVV.density == FALSE)
 				canpass = TRUE
 		if ((!istype(get_turf(get_step(src,driver.dir)), /turf/floor/beach/water/deep) ||  istype(get_turf(get_step(src,driver.dir)), /turf/floor/beach/water/deep) && canpass == TRUE)&& get_turf(get_step(src,driver.dir)).density == FALSE  || istype(get_turf(get_step(src,driver.dir)), /turf/floor/trench/flooded))
@@ -1446,7 +1516,10 @@
 			ontop -= driver
 			driver.anchored = FALSE
 			driver.driver = FALSE
+			driver.pixel_x = 0
+			driver.pixel_y = 0
 			unbuckle_mob()
+			driver.buckled = null
 			driver.driver_vehicle = null
 			if (wheeled)
 				if (driver.l_hand == dwheel)
@@ -1755,7 +1828,7 @@
 
 /obj/structure/vehicle/carriage/attack_hand(mob/living/human/user as mob)
 	if ((user in ontop))
-		visible_message("<div class='notice'>[user] start leaving \the [src]...</div>","<div class='notice'>You start going on \the [src]...</div>")
+		visible_message("<div class='notice'>[user] starts leaving \the [src]...</div>","<div class='notice'>You start leaving \the [src]...</div>")
 		if (do_after(user, 30, src))
 			if(bucklepoint1 == user)
 				bucklepoint1 = null
@@ -1816,12 +1889,12 @@
 		stopmovementloop()
 		return FALSE
 	var/blocked = 0
-	for(var/obj/structure/O in t1)
+	for (var/obj/structure/O in t1)
 		if (O.density == TRUE && O != src)
 			blocked = 1
 			visible_message("<span class='warning'>\the [src] hits \the [O]!</span>","<span class='warning'>You hit \the [O]!</span>")
 			break
-	for(var/obj/structure/O in t2)
+	for (var/obj/structure/O in t2)
 		if (O.density == TRUE && O != src)
 			blocked = 1
 			visible_message("<span class='warning'>\the [src] hits \the [O]!</span>","<span class='warning'>You hit \the [O]!</span>")
@@ -1834,12 +1907,12 @@
 		else
 			blocking = t2
 		visible_message("<span class='warning'>\the [src] hits \the [blocking]!</span>","<span class='warning'>You hit \the [get_turf(get_step(src,driver.dir))]!</span>")
-	for(var/obj/covers/CV in t1)
+	for (var/obj/covers/CV in t1)
 		if (CV.density == TRUE)
 			blocked = 1
 			visible_message("<span class='warning'>\the [src] hits \the [CV]!</span>","<span class='warning'>You hit \the [CV]!</span>")
 			break
-	for(var/obj/covers/CV in t2)
+	for (var/obj/covers/CV in t2)
 		if (CV.density == TRUE)
 			blocked = 1
 			visible_message("<span class='warning'>\the [src] hits \the [CV]!</span>","<span class='warning'>You hit \the [CV]!</span>")
@@ -1916,7 +1989,7 @@
 		stopmovementloop()
 		return FALSE
 	var/canpass = FALSE
-	for(var/obj/covers/CVV in get_turf(get_step(src,driver.dir)))
+	for (var/obj/covers/CVV in get_turf(get_step(src,driver.dir)))
 		if (CVV.density == FALSE)
 			canpass = TRUE
 	if ((!istype(get_turf(get_step(src,driver.dir)), /turf/floor/beach/water/deep) ||  istype(get_turf(get_step(src,driver.dir)), /turf/floor/beach/water/deep) && canpass == TRUE)&& get_turf(get_step(src,driver.dir)).density == FALSE  || istype(get_turf(get_step(src,driver.dir)), /turf/floor/trench/flooded))

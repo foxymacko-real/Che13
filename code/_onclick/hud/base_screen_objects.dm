@@ -498,6 +498,7 @@
 /obj/screen/health/process()
 	var/mob/living/human/H = parentmob
 	overlays.Cut()
+	var/is_bleeding = FALSE
 	if (parentmob.stat != DEAD)
 
 		icon_state = "healthdoll_BASE"
@@ -513,6 +514,10 @@
 				icon_num = 4
 			if(icon_num)
 				add_overlay(image(icon, "[BP.limb_name][icon_num]"))
+			if(BP.status & ORGAN_BLEEDING)
+				is_bleeding = TRUE
+		if(is_bleeding)
+			add_overlay(image(icon, "bleeding"))
 		var/list/missinglimbs = H.get_missing_limbs()
 		for(var/t in missinglimbs) //Missing limbs
 			add_overlay(image(icon, "[t]6"))
@@ -1289,6 +1294,7 @@ obj/screen/tactic
 	name = "Allow Movement"
 	icon_state = "no_walk0"
 	screen_loc = "15,3"
+	invisibility = 101
 
 /obj/screen/gun/move/Click(location, control, params)
 	if (..())
@@ -1312,6 +1318,7 @@ obj/screen/tactic
 	name = "Allow Item Use"
 	icon_state = "no_items0"
 	screen_loc = "14,2"
+	invisibility = 101
 
 /obj/screen/gun/item/Click(location, control, params)
 	if (..())

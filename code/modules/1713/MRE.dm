@@ -71,7 +71,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/american
 	name = "American MRE: Canned Meat"
 	desc = "A package of canned meat and vegetables."
-	nutriment_desc = list("canned meat" = 1, "canned vegetables" = 1)
+	nutriment_desc = list("meat" = 1, "carot" = 2, "corn" = 2, "cabbage" = 2, "potato" = 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/blugoslavian
 	name = "Blugoslavian MRE: General Combat Rations"
@@ -106,7 +106,7 @@
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/russian/modern
 	name = "Russian MRE: Combat rations"
 	desc = "A package of potatoes, canned meat, canned veggies and some tea."
-	nutriment_desc = list("potatoes" = 1, "canned meat" = 2, "canned vegetables" = 2,"tea" = 2)
+	nutriment_desc = list("meat" = 1, "carot" = 2, "corn" = 2, "cabbage" = 2, "potato" = 2)
 
 /obj/item/weapon/reagent_containers/food/snacks/MRE/generic/idf
 	name = "IDF MRE: Whitefish"
