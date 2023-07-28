@@ -4,7 +4,7 @@
 /*	Alternately, you could hardcode every mob's variation in a flat ClickOn() proc; however,
 	that's a lot of code duplication and is hard to maintain.
 	Note that this proc can be overridden, and is in the case of screen objects.*/
-/atom/Click(var/location, var/control, var/params) 
+/atom/Click(var/location, var/control, var/params)
 	if (src)
 		usr.ClickOn(src, params)
 
@@ -24,7 +24,7 @@
 	* mob/RangedAttack(atom,params) - used only ranged, only used for tk and laser eyes but could be changed */
 /mob/proc/ClickOn(var/atom/A, var/params)
 	if (world.time <= next_click) // Hard check, before anything else, to avoid crashing
-		return 
+		return
 	next_click = world.time + 1
 	/*if (client.buildmode)  //unused now
 		build_click(src, client.buildmode, params, A)
@@ -37,23 +37,23 @@
 		return
 	if (modifiers["shift"] && modifiers["middle"])
 		ShiftMiddleClickOn(A)
-		return 
+		return
 	if (modifiers["middle"])
 		MiddleClickOn(A)
-		return 
+		return
 	if (modifiers["shift"])
 		ShiftClickOn(A)
-		return 
+		return
 	if (modifiers["alt"])
 		AltClickOn(A)
-		return 
+		return
 	if (modifiers["ctrl"])
 		CtrlClickOn(A)
-		return 
+		return
 	if (ishuman(src)) //src is user who is click and human
 		var/mob/living/human/H = src
 		if (istype(H.shoes, /obj/item/clothing/shoes/football)) //TODO TO DO: move it to football.dm
-			if (H.football)  
+			if (H.football)
 				var/obj/item/football/FB = H.football
 				H.do_attack_animation(H.football)
 				H.football = null
@@ -141,7 +141,7 @@
 			transform = M
 	if (!canClick()) // in the year 2000...
 		return
-	if (istype(A, /obj/structure/multiz/ladder/ww2)) // stop looking down a ladder 
+	if (istype(A, /obj/structure/multiz/ladder/ww2)) // stop looking down a ladder
 		var/mob/living/human/H = src
 		if (istype(H) && H.laddervision)
 			H.update_laddervision(null)
@@ -186,7 +186,12 @@
 					else
 						can_fire = FALSE
 			if (can_fire)
-				MG.afterattack(A, src, FALSE, params)
+				if (MG.full_auto)
+					var/datum/firemode/F = MG.firemodes[MG.sel_mode]
+					spawn(F.burst_delay)
+						MG.afterattack(A, src, FALSE, params)
+				else
+					MG.afterattack(A, src, FALSE, params)
 	if (W && W == A) // Handle attack_self (using item in hand)
 		W.attack_self(src, icon_x, icon_y)
 		if (hand)
@@ -194,7 +199,7 @@
 		else
 			update_inv_r_hand(0)
 		return TRUE
-	for(var/obj/structure/vehicleparts/frame/F in src.loc) 
+	for(var/obj/structure/vehicleparts/frame/F in src.loc)
 		var/found = FALSE
 		if(istype(F, /obj/structure/vehicleparts/frame/ship))
 			continue
