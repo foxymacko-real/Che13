@@ -740,6 +740,82 @@
 		else
 			return
 
+/obj/item/weapon/grenade/modern/impact
+	name = "impact grenade"
+	desc = "An impact grenade that explodes when hitting the ground after being thrown."
+	icon_state = "oto35"
+	throw_range = 11
+
+/obj/item/weapon/grenade/modern/impact/attack_self(mob/user as mob)
+	if (!active)
+		user << SPAN_WARNING("You prime \the [name]!")
+		firer = user
+		active = TRUE
+		add_fingerprint(user)
+	if (user)
+		msg_admin_attack("[user.name] ([user.ckey]) primed \a [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)", user.ckey)
+		message_admins("[user.name] ([user.ckey]) primed \a [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)", user.ckey)
+		log_game("[user.name] ([user.ckey]) primed \a [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[user.x];Y=[user.y];Z=[user.z]'>JMP</a>)")
+		firer = user
+	icon_state = initial(icon_state) + "_active"
+	active = TRUE
+	playsound(loc, 'sound/weapons/armbomb.ogg', 75, TRUE, -3)
+
+	// clicking a grenade a second time turned throw mode off, this fixes that
+	if (ishuman(user))
+		var/mob/living/human/H = user
+		if(istype(H) && !H.in_throw_mode)
+			H.throw_mode_on()
+
+/obj/item/weapon/grenade/modern/impact/throw_impact(atom/hit_atom)
+	if (active)
+		prime()
+	else
+		..()
+	return
+
+/obj/item/weapon/grenade/modern/impact/oto35
+	name = "OTO Mod. 35"
+	desc = "An Italian impact fuse hand grenade that entered into service in 1935."
+	icon_state = "oto35"
+	throw_range = 10
+
+/obj/item/weapon/grenade/modern/impact/oto35/throw_impact(atom/hit_atom)
+	if (active)
+		if (prob(90))
+			prime()
+	else
+		..()
+	return
+
+/obj/item/weapon/grenade/modern/impact/rgo
+	name = "RGO defensive hand grenade"
+	desc = "A Soviet  defensive impact grenade created to supplement the RGD-5 in the soviet afghan war."
+	icon_state = "rgo"
+	throw_range = 13
+
+/obj/item/weapon/grenade/modern/impact/rgo/throw_impact(atom/hit_atom)
+	if (active)
+		if (prob(99))
+			prime()
+	else
+		..()
+	return
+
+/obj/item/weapon/grenade/modern/impact/beano
+	name = "BEANO T-13 grenade"
+	desc = "Experimental impact grenade made in the later years of WW2."
+	icon_state = "beano"
+	throw_range = 15
+
+/obj/item/weapon/grenade/modern/impact/beano/throw_impact(atom/hit_atom)
+	if (active)
+		if (prob(70))
+			prime()
+	else
+		..()
+	return
+
 /obj/item/weapon/grenade/suicide_vest
 	name = "suicide vest"
 	desc = "An IED suicide vest. Deadly!"
