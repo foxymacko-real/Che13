@@ -1,5 +1,6 @@
 # Chevilization 13
 
+PROJECT ON HALT FOR NOW.
 ![GitHub code size in bytes](https://img.shields.io/github/languages/code-size/civ13/civ13.svg?style=flat)
 ![GitHub repo size](https://img.shields.io/github/repo-size/civ13/civ13.svg?style=flat)
 
@@ -11,10 +12,10 @@ good code,mid code, good staff, ok rules, and fun most likely.
 
 
 ## Discord
-https://discord.gg/6x9aCfc6Mr
+none
 
 ## Trello
-no trello yet
+none
 
 ## Playing the game
 You will need a windows machine or a virtual machine running it from another OS.
